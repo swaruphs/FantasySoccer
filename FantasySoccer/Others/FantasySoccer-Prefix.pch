@@ -1,0 +1,148 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "FSAppDelegate.h"
+
+// categories
+
+#import "NSObject+Additions.h"
+#import "NSArray+Additions.h"
+#import "NSDictionary+Additions.h"
+
+// Models
+
+#import "FSBaseModel.h"
+#import "FSTournament.h"
+#import "FSMatch.h"
+#import "FSTopScore.h"
+
+// Managers
+
+#import "BaseManager.h"
+#import "FSNetworkManager.h"
+#import "FSUserManager.h"
+#import "FSTournamentsManager.h"
+
+
+
+
+
+// vendors
+
+#import "SVProgressHUD.h"
+
+#endif
+
+
+//------------------------------------------------------------------------------------------------------
+// Convenient macros
+
+//
+// Convenient macro to check app version
+//
+#define APP_VERSION                                 ([[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey])
+#define APP_VERSION_EQUAL_TO(v)                     ([APP_VERSION compare:v options:NSNumericSearch] == NSOrderedSame)
+#define APP_VERSION_GREATER_THAN(v)                 ([APP_VERSION compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define APP_VERSION_GREATER_THAN_OR_EQUAL_TO(v)     ([APP_VERSION compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define APP_VERSION_LESS_THAN(v)                    ([APP_VERSION compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define APP_VERSION_LESS_THAN_OR_EQUAL_TO(v)        ([APP_VERSION compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+//
+// Convenient macro to check system version
+// Source: http://stackoverflow.com/questions/3339722/check-iphone-ios-version
+//
+#define SYSTEM_VERSION                              ([[UIDevice currentDevice] systemVersion])
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([SYSTEM_VERSION compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([SYSTEM_VERSION compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([SYSTEM_VERSION compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([SYSTEM_VERSION compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([SYSTEM_VERSION compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+#define IS_LANDSCAPE                                (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
+#define IS_PORTRAIT                                 (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation))
+#define IS_SIMULATOR                                ([[[UIDevice currentDevice] model] hasSuffix:@"Simulator"])
+#define IS_IPAD                                     ([UIDevice currentDevice].userInterfaceIdiom==UIUserInterfaceIdiomPad)
+#define IS_NOT_IPAD                                 ([UIDevice currentDevice].userInterfaceIdiom!=UIUserInterfaceIdiomPad)
+#define IS_RETINA                                   ([UIScreen mainScreen].scale > 1)
+#define DEVICE_SCALE                                ([UIScreen mainScreen].scale)
+#define DEVICE_NAME                                 ([[UIDevice currentDevice] name])
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+//Convenient macro for mixing SDK7 code at compile time. Remember to accompany this with #endif
+#define SDK7                                        __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+
+#define IOS5_OR_ABOVE                               SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0")
+#define IOS6_OR_ABOVE                               SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")
+#define IOS7_OR_ABOVE                               SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")
+
+#define AUTORESIZING_MASK_ALL_SIDES                 (UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin)
+
+//This will always give dimensions for portrait orientation, don't use this
+#define APPFRAME_WIDTH_PORTRAIT                     ([[UIScreen mainScreen] applicationFrame].size.width)
+#define APPFRAME_HEIGHT_PORTRAIT                    ([[UIScreen mainScreen] applicationFrame].size.height)
+
+//Use this
+#define APPFRAME_WIDTH                              (IS_LANDSCAPE ? MAX(APPFRAME_WIDTH_PORTRAIT, APPFRAME_HEIGHT_PORTRAIT) : MIN(APPFRAME_WIDTH_PORTRAIT, APPFRAME_HEIGHT_PORTRAIT))
+#define APPFRAME_HEIGHT                             (IS_LANDSCAPE ? MIN(APPFRAME_WIDTH_PORTRAIT, APPFRAME_HEIGHT_PORTRAIT) : MAX(APPFRAME_WIDTH_PORTRAIT, APPFRAME_HEIGHT_PORTRAIT))
+
+#define STATUSBAR_FRAME                             [UIApplication sharedApplication].statusBarFrame
+#define STATUSBAR_HEIGHT                            MIN(STATUSBAR_FRAME.size.height, STATUSBAR_FRAME.size.width)
+#define STATUSBAR_WIDTH                             MAX(STATUSBAR_FRAME.size.height, STATUSBAR_FRAME.size.width)
+
+
+//
+// Source: http://iphoneincubator.com/blog/debugging/the-evolution-of-a-replacement-for-nslog
+// Source: http://www.cimgf.com/2010/05/02/my-current-prefix-pch-file/
+//
+// DLog is almost a drop-in replacement for NSLog to turn off logging for release build
+//
+// add -DDEBUG to OTHER_CFLAGS in the build user defined settings
+//
+// Usage:
+//
+// DLog();
+// DLog(@"here");
+// DLog(@"value: %d", x);
+// Unfortunately this doesn't work DLog(aStringVariable); you have to do this instead DLog(@"%@", aStringVariable);
+//
+
+#ifdef DEBUG
+#define DLog(__FORMAT__, ...) NSLog((@"%s [L:%d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define DLog(...) do {} while (0)
+#endif
+
+#if STAGING 
+
+#define API_SERVER_HOST  @"http://worldcup2359.herokuapp.com"
+
+
+#else
+
+#define API_SERVER_HOST  @""
+
+#endif
+
+
+#define API_PREFIX                 API_SERVER_HOST @"/api/v1"
+#define API_OAUTH_TOKEN            API_SERVER_HOST @"/oauth/token"
+#define API_TOURNAMENTS  API_PREFIX @"/tournaments" 
+#define API_MATCHES  API_TOURNAMENTS @"/%@/matches"
+#define API_BETTINGS API_PREFIX @"/matches/%@/bettings"
+#define API_TOP_SCORES API_PREFIX @"/players/top_scores"
+
+#define CLIENT_ID                  @"732e338b85771042971169e9d6ee9cd546259e28afec8979890fa3dd6b559885"
+#define CLIENT_SECRET              @"b0d6bf3638c58e95755a2f8b29c46d5f3a625b9c22db329fe90bee55fe88f30e"

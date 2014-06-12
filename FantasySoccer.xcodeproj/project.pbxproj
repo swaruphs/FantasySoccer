@@ -1,0 +1,1048 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07315AE81947F43E00529D4E /* FSCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ABA1947F43E00529D4E /* FSCollectionViewLayout.m */; };
+		07315AE91947F43E00529D4E /* FSFixturesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ABC1947F43E00529D4E /* FSFixturesCell.m */; };
+		07315AEA1947F43E00529D4E /* FSFixturesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07315ABD1947F43E00529D4E /* FSFixturesCell.xib */; };
+		07315AEB1947F43E00529D4E /* FSFixturesReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ABF1947F43E00529D4E /* FSFixturesReusableView.m */; };
+		07315AEC1947F43E00529D4E /* FSFixturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AC11947F43E00529D4E /* FSFixturesViewController.m */; };
+		07315AED1947F43E00529D4E /* FSFixturesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07315AC21947F43E00529D4E /* FSFixturesViewController.xib */; };
+		07315AEE1947F43E00529D4E /* FSLeaderBoardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AC51947F43E00529D4E /* FSLeaderBoardCell.m */; };
+		07315AEF1947F43E00529D4E /* FSLeaderBoardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07315AC61947F43E00529D4E /* FSLeaderBoardCell.xib */; };
+		07315AF01947F43E00529D4E /* FSLeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AC81947F43E00529D4E /* FSLeaderBoardViewController.m */; };
+		07315AF11947F43E00529D4E /* FSLeaderBoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07315AC91947F43E00529D4E /* FSLeaderBoardViewController.xib */; };
+		07315AF21947F43E00529D4E /* FSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ACC1947F43E00529D4E /* FSLoginViewController.m */; };
+		07315AF31947F43E00529D4E /* FSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07315ACD1947F43E00529D4E /* FSLoginViewController.xib */; };
+		07315AF41947F43E00529D4E /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AD11947F43E00529D4E /* AFDownloadRequestOperation.m */; };
+		07315AF51947F43E00529D4E /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AD31947F43E00529D4E /* AFHTTPClient.m */; };
+		07315AF61947F43E00529D4E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AD51947F43E00529D4E /* AFHTTPRequestOperation.m */; };
+		07315AF71947F43E00529D4E /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AD71947F43E00529D4E /* AFImageRequestOperation.m */; };
+		07315AF81947F43E00529D4E /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AD91947F43E00529D4E /* AFJSONRequestOperation.m */; };
+		07315AF91947F43E00529D4E /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ADB1947F43E00529D4E /* AFNetworkActivityIndicatorManager.m */; };
+		07315AFA1947F43E00529D4E /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ADE1947F43E00529D4E /* AFPropertyListRequestOperation.m */; };
+		07315AFB1947F43E00529D4E /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AE01947F43E00529D4E /* AFURLConnectionOperation.m */; };
+		07315AFC1947F43E00529D4E /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AE21947F43E00529D4E /* AFXMLRequestOperation.m */; };
+		07315AFD1947F43E00529D4E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07315AE31947F43E00529D4E /* FacebookSDK.framework */; };
+		07315B041947F44900529D4E /* FantasySoccer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07315AFF1947F44900529D4E /* FantasySoccer-Info.plist */; };
+		07315B051947F44900529D4E /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315B021947F44900529D4E /* FSAppDelegate.m */; };
+		07315B061947F44900529D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315B031947F44900529D4E /* main.m */; };
+		07315B1D1947F45700529D4E /* bg_gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B081947F45700529D4E /* bg_gradient.png */; };
+		07315B1E1947F45700529D4E /* bg_gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B091947F45700529D4E /* bg_gradient@2x.png */; };
+		07315B1F1947F45700529D4E /* Chad.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0A1947F45700529D4E /* Chad.png */; };
+		07315B201947F45700529D4E /* Chad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0B1947F45700529D4E /* Chad@2x.png */; };
+		07315B211947F45700529D4E /* Chile.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0C1947F45700529D4E /* Chile.png */; };
+		07315B221947F45700529D4E /* Chile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0D1947F45700529D4E /* Chile@2x.png */; };
+		07315B231947F45700529D4E /* China.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0E1947F45700529D4E /* China.png */; };
+		07315B241947F45700529D4E /* China@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0F1947F45700529D4E /* China@2x.png */; };
+		07315B251947F45700529D4E /* CIS.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B101947F45700529D4E /* CIS.png */; };
+		07315B261947F45700529D4E /* CIS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B111947F45700529D4E /* CIS@2x.png */; };
+		07315B271947F45700529D4E /* coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B121947F45700529D4E /* coins.png */; };
+		07315B281947F45700529D4E /* coins@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B131947F45700529D4E /* coins@2x.png */; };
+		07315B291947F45700529D4E /* Colombia.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B141947F45700529D4E /* Colombia.png */; };
+		07315B2A1947F45700529D4E /* Colombia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B151947F45700529D4E /* Colombia@2x.png */; };
+		07315B2B1947F45700529D4E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B161947F45700529D4E /* Default-568h@2x.png */; };
+		07315B2C1947F45700529D4E /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B171947F45700529D4E /* Default-Landscape.png */; };
+		07315B2D1947F45700529D4E /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B181947F45700529D4E /* Default-Landscape@2x.png */; };
+		07315B2E1947F45700529D4E /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B191947F45700529D4E /* Default-Portrait.png */; };
+		07315B2F1947F45700529D4E /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B1A1947F45700529D4E /* Default-Portrait@2x.png */; };
+		07315B301947F45700529D4E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B1B1947F45700529D4E /* Default.png */; };
+		07315B311947F45700529D4E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B1C1947F45700529D4E /* Default@2x.png */; };
+		07C83B2C1948063600C2D00F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B271948063600C2D00F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07C83B2D1948063600C2D00F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07C83B291948063600C2D00F /* SVProgressHUD.bundle */; };
+		07C83B2E1948063600C2D00F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B2B1948063600C2D00F /* SVProgressHUD.m */; };
+		07C83B33194806E300C2D00F /* FSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B32194806E300C2D00F /* FSNetworkManager.m */; };
+		07C83B361948085900C2D00F /* FSReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B351948085900C2D00F /* FSReachabilityManager.m */; };
+		07C83B3A1948087F00C2D00F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B391948087F00C2D00F /* Reachability.m */; };
+		07C83B3D194808BF00C2D00F /* BaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B3C194808BF00C2D00F /* BaseManager.m */; };
+		07C83B4F19483DDB00C2D00F /* FSResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B4E19483DDB00C2D00F /* FSResultsTableViewController.m */; };
+		07DE6CF0194848B600CF9563 /* FSTournamentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */; };
+		07DE6CF3194848DE00CF9563 /* FSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF2194848DE00CF9563 /* FSUserManager.m */; };
+		07DE6CF71948686900CF9563 /* FSTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF61948686900CF9563 /* FSTournament.m */; };
+		07DE6CFA194868ED00CF9563 /* FSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF9194868ED00CF9563 /* FSBaseModel.m */; };
+		07DE6D0219486A6700CF9563 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CFD19486A6700CF9563 /* NSArray+Additions.m */; };
+		07DE6D0319486A6700CF9563 /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CFF19486A6700CF9563 /* NSDictionary+Additions.m */; };
+		07DE6D0419486A6700CF9563 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6D0119486A6700CF9563 /* NSObject+Additions.m */; };
+		07DE6D0719486BFA00CF9563 /* FSMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6D0619486BFA00CF9563 /* FSMatch.m */; };
+		07DE6D0A1948790300CF9563 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6D091948790300CF9563 /* ISO8601DateFormatter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07DE6D0D19487C7F00CF9563 /* FSTopScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6D0C19487C7F00CF9563 /* FSTopScore.m */; };
+		07FC45981946AA56005640AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC45971946AA56005640AF /* Foundation.framework */; };
+		07FC459A1946AA56005640AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC45991946AA56005640AF /* CoreGraphics.framework */; };
+		07FC459C1946AA56005640AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC459B1946AA56005640AF /* UIKit.framework */; };
+		07FC45A21946AA56005640AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07FC45A01946AA56005640AF /* InfoPlist.strings */; };
+		07FC45AA1946AA56005640AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07FC45A91946AA56005640AF /* Images.xcassets */; };
+		07FC45B11946AA56005640AF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC45B01946AA56005640AF /* XCTest.framework */; };
+		07FC45B21946AA56005640AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC45971946AA56005640AF /* Foundation.framework */; };
+		07FC45B31946AA56005640AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC459B1946AA56005640AF /* UIKit.framework */; };
+		07FC45BB1946AA56005640AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07FC45B91946AA56005640AF /* InfoPlist.strings */; };
+		07FC45BD1946AA56005640AF /* FantasySoccerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC45BC1946AA56005640AF /* FantasySoccerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07FC45B41946AA56005640AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07FC458C1946AA56005640AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07FC45931946AA56005640AF;
+			remoteInfo = FantasySoccer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07315AB91947F43E00529D4E /* FSCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCollectionViewLayout.h; sourceTree = "<group>"; };
+		07315ABA1947F43E00529D4E /* FSCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCollectionViewLayout.m; sourceTree = "<group>"; };
+		07315ABB1947F43E00529D4E /* FSFixturesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFixturesCell.h; sourceTree = "<group>"; };
+		07315ABC1947F43E00529D4E /* FSFixturesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFixturesCell.m; sourceTree = "<group>"; };
+		07315ABD1947F43E00529D4E /* FSFixturesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSFixturesCell.xib; sourceTree = "<group>"; };
+		07315ABE1947F43E00529D4E /* FSFixturesReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFixturesReusableView.h; sourceTree = "<group>"; };
+		07315ABF1947F43E00529D4E /* FSFixturesReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFixturesReusableView.m; sourceTree = "<group>"; };
+		07315AC01947F43E00529D4E /* FSFixturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFixturesViewController.h; sourceTree = "<group>"; };
+		07315AC11947F43E00529D4E /* FSFixturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFixturesViewController.m; sourceTree = "<group>"; };
+		07315AC21947F43E00529D4E /* FSFixturesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSFixturesViewController.xib; sourceTree = "<group>"; };
+		07315AC41947F43E00529D4E /* FSLeaderBoardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLeaderBoardCell.h; sourceTree = "<group>"; };
+		07315AC51947F43E00529D4E /* FSLeaderBoardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLeaderBoardCell.m; sourceTree = "<group>"; };
+		07315AC61947F43E00529D4E /* FSLeaderBoardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSLeaderBoardCell.xib; sourceTree = "<group>"; };
+		07315AC71947F43E00529D4E /* FSLeaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLeaderBoardViewController.h; sourceTree = "<group>"; };
+		07315AC81947F43E00529D4E /* FSLeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLeaderBoardViewController.m; sourceTree = "<group>"; };
+		07315AC91947F43E00529D4E /* FSLeaderBoardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSLeaderBoardViewController.xib; sourceTree = "<group>"; };
+		07315ACB1947F43E00529D4E /* FSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLoginViewController.h; sourceTree = "<group>"; };
+		07315ACC1947F43E00529D4E /* FSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoginViewController.m; sourceTree = "<group>"; };
+		07315ACD1947F43E00529D4E /* FSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSLoginViewController.xib; sourceTree = "<group>"; };
+		07315AD01947F43E00529D4E /* AFDownloadRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDownloadRequestOperation.h; sourceTree = "<group>"; };
+		07315AD11947F43E00529D4E /* AFDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDownloadRequestOperation.m; sourceTree = "<group>"; };
+		07315AD21947F43E00529D4E /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		07315AD31947F43E00529D4E /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		07315AD41947F43E00529D4E /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		07315AD51947F43E00529D4E /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		07315AD61947F43E00529D4E /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		07315AD71947F43E00529D4E /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		07315AD81947F43E00529D4E /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		07315AD91947F43E00529D4E /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		07315ADA1947F43E00529D4E /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		07315ADB1947F43E00529D4E /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		07315ADC1947F43E00529D4E /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		07315ADD1947F43E00529D4E /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		07315ADE1947F43E00529D4E /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		07315ADF1947F43E00529D4E /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		07315AE01947F43E00529D4E /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		07315AE11947F43E00529D4E /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		07315AE21947F43E00529D4E /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		07315AE31947F43E00529D4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		07315AFF1947F44900529D4E /* FantasySoccer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FantasySoccer-Info.plist"; sourceTree = "<group>"; };
+		07315B001947F44900529D4E /* FantasySoccer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FantasySoccer-Prefix.pch"; sourceTree = "<group>"; };
+		07315B011947F44900529D4E /* FSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
+		07315B021947F44900529D4E /* FSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
+		07315B031947F44900529D4E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07315B081947F45700529D4E /* bg_gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_gradient.png; sourceTree = "<group>"; };
+		07315B091947F45700529D4E /* bg_gradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_gradient@2x.png"; sourceTree = "<group>"; };
+		07315B0A1947F45700529D4E /* Chad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chad.png; sourceTree = "<group>"; };
+		07315B0B1947F45700529D4E /* Chad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chad@2x.png"; sourceTree = "<group>"; };
+		07315B0C1947F45700529D4E /* Chile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chile.png; sourceTree = "<group>"; };
+		07315B0D1947F45700529D4E /* Chile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chile@2x.png"; sourceTree = "<group>"; };
+		07315B0E1947F45700529D4E /* China.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = China.png; sourceTree = "<group>"; };
+		07315B0F1947F45700529D4E /* China@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "China@2x.png"; sourceTree = "<group>"; };
+		07315B101947F45700529D4E /* CIS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CIS.png; sourceTree = "<group>"; };
+		07315B111947F45700529D4E /* CIS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CIS@2x.png"; sourceTree = "<group>"; };
+		07315B121947F45700529D4E /* coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coins.png; sourceTree = "<group>"; };
+		07315B131947F45700529D4E /* coins@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coins@2x.png"; sourceTree = "<group>"; };
+		07315B141947F45700529D4E /* Colombia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colombia.png; sourceTree = "<group>"; };
+		07315B151947F45700529D4E /* Colombia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colombia@2x.png"; sourceTree = "<group>"; };
+		07315B161947F45700529D4E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		07315B171947F45700529D4E /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		07315B181947F45700529D4E /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x.png"; sourceTree = "<group>"; };
+		07315B191947F45700529D4E /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		07315B1A1947F45700529D4E /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
+		07315B1B1947F45700529D4E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		07315B1C1947F45700529D4E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		07C83B261948063600C2D00F /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		07C83B271948063600C2D00F /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		07C83B291948063600C2D00F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		07C83B2A1948063600C2D00F /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		07C83B2B1948063600C2D00F /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		07C83B31194806E300C2D00F /* FSNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNetworkManager.h; sourceTree = "<group>"; };
+		07C83B32194806E300C2D00F /* FSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSNetworkManager.m; sourceTree = "<group>"; };
+		07C83B341948085900C2D00F /* FSReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSReachabilityManager.h; sourceTree = "<group>"; };
+		07C83B351948085900C2D00F /* FSReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSReachabilityManager.m; sourceTree = "<group>"; };
+		07C83B381948087F00C2D00F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		07C83B391948087F00C2D00F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		07C83B3B194808BF00C2D00F /* BaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseManager.h; sourceTree = "<group>"; };
+		07C83B3C194808BF00C2D00F /* BaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseManager.m; sourceTree = "<group>"; };
+		07C83B4D19483DDB00C2D00F /* FSResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSResultsTableViewController.h; sourceTree = "<group>"; };
+		07C83B4E19483DDB00C2D00F /* FSResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSResultsTableViewController.m; sourceTree = "<group>"; };
+		07DE6CEE194848B600CF9563 /* FSTournamentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTournamentsManager.h; sourceTree = "<group>"; };
+		07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTournamentsManager.m; sourceTree = "<group>"; };
+		07DE6CF1194848DE00CF9563 /* FSUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUserManager.h; sourceTree = "<group>"; };
+		07DE6CF2194848DE00CF9563 /* FSUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUserManager.m; sourceTree = "<group>"; };
+		07DE6CF51948686900CF9563 /* FSTournament.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTournament.h; sourceTree = "<group>"; };
+		07DE6CF61948686900CF9563 /* FSTournament.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTournament.m; sourceTree = "<group>"; };
+		07DE6CF8194868ED00CF9563 /* FSBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseModel.h; sourceTree = "<group>"; };
+		07DE6CF9194868ED00CF9563 /* FSBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseModel.m; sourceTree = "<group>"; };
+		07DE6CFC19486A6700CF9563 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
+		07DE6CFD19486A6700CF9563 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
+		07DE6CFE19486A6700CF9563 /* NSDictionary+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Additions.h"; sourceTree = "<group>"; };
+		07DE6CFF19486A6700CF9563 /* NSDictionary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Additions.m"; sourceTree = "<group>"; };
+		07DE6D0019486A6700CF9563 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additions.h"; sourceTree = "<group>"; };
+		07DE6D0119486A6700CF9563 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additions.m"; sourceTree = "<group>"; };
+		07DE6D0519486BFA00CF9563 /* FSMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMatch.h; sourceTree = "<group>"; };
+		07DE6D0619486BFA00CF9563 /* FSMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMatch.m; sourceTree = "<group>"; };
+		07DE6D081948790300CF9563 /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601DateFormatter.h; sourceTree = "<group>"; };
+		07DE6D091948790300CF9563 /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
+		07DE6D0B19487C7F00CF9563 /* FSTopScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTopScore.h; sourceTree = "<group>"; };
+		07DE6D0C19487C7F00CF9563 /* FSTopScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTopScore.m; sourceTree = "<group>"; };
+		07FC45941946AA56005640AF /* FantasySoccer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasySoccer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07FC45971946AA56005640AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07FC45991946AA56005640AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07FC459B1946AA56005640AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07FC45A11946AA56005640AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07FC45A91946AA56005640AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07FC45AF1946AA56005640AF /* FantasySoccerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasySoccerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07FC45B01946AA56005640AF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		07FC45B81946AA56005640AF /* FantasySoccerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FantasySoccerTests-Info.plist"; sourceTree = "<group>"; };
+		07FC45BA1946AA56005640AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07FC45BC1946AA56005640AF /* FantasySoccerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FantasySoccerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07FC45911946AA56005640AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07FC459A1946AA56005640AF /* CoreGraphics.framework in Frameworks */,
+				07315AFD1947F43E00529D4E /* FacebookSDK.framework in Frameworks */,
+				07FC459C1946AA56005640AF /* UIKit.framework in Frameworks */,
+				07FC45981946AA56005640AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07FC45AC1946AA56005640AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07FC45B11946AA56005640AF /* XCTest.framework in Frameworks */,
+				07FC45B31946AA56005640AF /* UIKit.framework in Frameworks */,
+				07FC45B21946AA56005640AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07315AB81947F43E00529D4E /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				07315AB91947F43E00529D4E /* FSCollectionViewLayout.h */,
+				07315ABA1947F43E00529D4E /* FSCollectionViewLayout.m */,
+				07315ABB1947F43E00529D4E /* FSFixturesCell.h */,
+				07315ABC1947F43E00529D4E /* FSFixturesCell.m */,
+				07315ABD1947F43E00529D4E /* FSFixturesCell.xib */,
+				07315ABE1947F43E00529D4E /* FSFixturesReusableView.h */,
+				07315ABF1947F43E00529D4E /* FSFixturesReusableView.m */,
+				07315AC01947F43E00529D4E /* FSFixturesViewController.h */,
+				07315AC11947F43E00529D4E /* FSFixturesViewController.m */,
+				07315AC21947F43E00529D4E /* FSFixturesViewController.xib */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		07315AC31947F43E00529D4E /* LeaderBoard */ = {
+			isa = PBXGroup;
+			children = (
+				07315AC41947F43E00529D4E /* FSLeaderBoardCell.h */,
+				07315AC51947F43E00529D4E /* FSLeaderBoardCell.m */,
+				07315AC61947F43E00529D4E /* FSLeaderBoardCell.xib */,
+				07315AC71947F43E00529D4E /* FSLeaderBoardViewController.h */,
+				07315AC81947F43E00529D4E /* FSLeaderBoardViewController.m */,
+				07315AC91947F43E00529D4E /* FSLeaderBoardViewController.xib */,
+			);
+			path = LeaderBoard;
+			sourceTree = "<group>";
+		};
+		07315ACA1947F43E00529D4E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				07315ACB1947F43E00529D4E /* FSLoginViewController.h */,
+				07315ACC1947F43E00529D4E /* FSLoginViewController.m */,
+				07315ACD1947F43E00529D4E /* FSLoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		07315ACE1947F43E00529D4E /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				07C83B371948087F00C2D00F /* Reachability */,
+				07C83B251948063600C2D00F /* JSONKit */,
+				07C83B281948063600C2D00F /* SVProgressHUD */,
+				07315ACF1947F43E00529D4E /* AFNetworking */,
+				07315AE31947F43E00529D4E /* FacebookSDK.framework */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		07315ACF1947F43E00529D4E /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				07315AD01947F43E00529D4E /* AFDownloadRequestOperation.h */,
+				07315AD11947F43E00529D4E /* AFDownloadRequestOperation.m */,
+				07315AD21947F43E00529D4E /* AFHTTPClient.h */,
+				07315AD31947F43E00529D4E /* AFHTTPClient.m */,
+				07315AD41947F43E00529D4E /* AFHTTPRequestOperation.h */,
+				07315AD51947F43E00529D4E /* AFHTTPRequestOperation.m */,
+				07315AD61947F43E00529D4E /* AFImageRequestOperation.h */,
+				07315AD71947F43E00529D4E /* AFImageRequestOperation.m */,
+				07315AD81947F43E00529D4E /* AFJSONRequestOperation.h */,
+				07315AD91947F43E00529D4E /* AFJSONRequestOperation.m */,
+				07315ADA1947F43E00529D4E /* AFNetworkActivityIndicatorManager.h */,
+				07315ADB1947F43E00529D4E /* AFNetworkActivityIndicatorManager.m */,
+				07315ADC1947F43E00529D4E /* AFNetworking.h */,
+				07315ADD1947F43E00529D4E /* AFPropertyListRequestOperation.h */,
+				07315ADE1947F43E00529D4E /* AFPropertyListRequestOperation.m */,
+				07315ADF1947F43E00529D4E /* AFURLConnectionOperation.h */,
+				07315AE01947F43E00529D4E /* AFURLConnectionOperation.m */,
+				07315AE11947F43E00529D4E /* AFXMLRequestOperation.h */,
+				07315AE21947F43E00529D4E /* AFXMLRequestOperation.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		07315AFE1947F44900529D4E /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				07315AFF1947F44900529D4E /* FantasySoccer-Info.plist */,
+				07315B001947F44900529D4E /* FantasySoccer-Prefix.pch */,
+				07315B011947F44900529D4E /* FSAppDelegate.h */,
+				07315B021947F44900529D4E /* FSAppDelegate.m */,
+				07315B031947F44900529D4E /* main.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		07315B071947F45700529D4E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				07315B081947F45700529D4E /* bg_gradient.png */,
+				07315B091947F45700529D4E /* bg_gradient@2x.png */,
+				07315B0A1947F45700529D4E /* Chad.png */,
+				07315B0B1947F45700529D4E /* Chad@2x.png */,
+				07315B0C1947F45700529D4E /* Chile.png */,
+				07315B0D1947F45700529D4E /* Chile@2x.png */,
+				07315B0E1947F45700529D4E /* China.png */,
+				07315B0F1947F45700529D4E /* China@2x.png */,
+				07315B101947F45700529D4E /* CIS.png */,
+				07315B111947F45700529D4E /* CIS@2x.png */,
+				07315B121947F45700529D4E /* coins.png */,
+				07315B131947F45700529D4E /* coins@2x.png */,
+				07315B141947F45700529D4E /* Colombia.png */,
+				07315B151947F45700529D4E /* Colombia@2x.png */,
+				07315B161947F45700529D4E /* Default-568h@2x.png */,
+				07315B171947F45700529D4E /* Default-Landscape.png */,
+				07315B181947F45700529D4E /* Default-Landscape@2x.png */,
+				07315B191947F45700529D4E /* Default-Portrait.png */,
+				07315B1A1947F45700529D4E /* Default-Portrait@2x.png */,
+				07315B1B1947F45700529D4E /* Default.png */,
+				07315B1C1947F45700529D4E /* Default@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		07C83B251948063600C2D00F /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				07C83B261948063600C2D00F /* JSONKit.h */,
+				07C83B271948063600C2D00F /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		07C83B281948063600C2D00F /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				07C83B291948063600C2D00F /* SVProgressHUD.bundle */,
+				07C83B2A1948063600C2D00F /* SVProgressHUD.h */,
+				07C83B2B1948063600C2D00F /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		07C83B30194806C700C2D00F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				07C83B3B194808BF00C2D00F /* BaseManager.h */,
+				07C83B3C194808BF00C2D00F /* BaseManager.m */,
+				07C83B341948085900C2D00F /* FSReachabilityManager.h */,
+				07C83B351948085900C2D00F /* FSReachabilityManager.m */,
+				07C83B31194806E300C2D00F /* FSNetworkManager.h */,
+				07C83B32194806E300C2D00F /* FSNetworkManager.m */,
+				07DE6CEE194848B600CF9563 /* FSTournamentsManager.h */,
+				07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */,
+				07DE6CF1194848DE00CF9563 /* FSUserManager.h */,
+				07DE6CF2194848DE00CF9563 /* FSUserManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		07C83B371948087F00C2D00F /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				07C83B381948087F00C2D00F /* Reachability.h */,
+				07C83B391948087F00C2D00F /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		07DE6CF41948684500CF9563 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07DE6CF8194868ED00CF9563 /* FSBaseModel.h */,
+				07DE6CF9194868ED00CF9563 /* FSBaseModel.m */,
+				07DE6CF51948686900CF9563 /* FSTournament.h */,
+				07DE6CF61948686900CF9563 /* FSTournament.m */,
+				07DE6D0519486BFA00CF9563 /* FSMatch.h */,
+				07DE6D0619486BFA00CF9563 /* FSMatch.m */,
+				07DE6D0B19487C7F00CF9563 /* FSTopScore.h */,
+				07DE6D0C19487C7F00CF9563 /* FSTopScore.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07DE6CFB19486A6700CF9563 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				07DE6CFC19486A6700CF9563 /* NSArray+Additions.h */,
+				07DE6CFD19486A6700CF9563 /* NSArray+Additions.m */,
+				07DE6CFE19486A6700CF9563 /* NSDictionary+Additions.h */,
+				07DE6CFF19486A6700CF9563 /* NSDictionary+Additions.m */,
+				07DE6D0019486A6700CF9563 /* NSObject+Additions.h */,
+				07DE6D0119486A6700CF9563 /* NSObject+Additions.m */,
+				07DE6D081948790300CF9563 /* ISO8601DateFormatter.h */,
+				07DE6D091948790300CF9563 /* ISO8601DateFormatter.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		07FC458B1946AA56005640AF = {
+			isa = PBXGroup;
+			children = (
+				07FC459D1946AA56005640AF /* FantasySoccer */,
+				07FC45B61946AA56005640AF /* FantasySoccerTests */,
+				07FC45961946AA56005640AF /* Frameworks */,
+				07FC45951946AA56005640AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07FC45951946AA56005640AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07FC45941946AA56005640AF /* FantasySoccer.app */,
+				07FC45AF1946AA56005640AF /* FantasySoccerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07FC45961946AA56005640AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07FC45971946AA56005640AF /* Foundation.framework */,
+				07FC45991946AA56005640AF /* CoreGraphics.framework */,
+				07FC459B1946AA56005640AF /* UIKit.framework */,
+				07FC45B01946AA56005640AF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07FC459D1946AA56005640AF /* FantasySoccer */ = {
+			isa = PBXGroup;
+			children = (
+				07DE6CFB19486A6700CF9563 /* Categories */,
+				07315AB81947F43E00529D4E /* Fixtures */,
+				07315AC31947F43E00529D4E /* LeaderBoard */,
+				07315ACA1947F43E00529D4E /* Login */,
+				07C83B30194806C700C2D00F /* Managers */,
+				07DE6CF41948684500CF9563 /* Models */,
+				07315ACE1947F43E00529D4E /* Vendors */,
+				07FC45A91946AA56005640AF /* Images.xcassets */,
+				07FC459E1946AA56005640AF /* Supporting Files */,
+				07C83B4D19483DDB00C2D00F /* FSResultsTableViewController.h */,
+				07C83B4E19483DDB00C2D00F /* FSResultsTableViewController.m */,
+			);
+			path = FantasySoccer;
+			sourceTree = "<group>";
+		};
+		07FC459E1946AA56005640AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07315B071947F45700529D4E /* Images */,
+				07315AFE1947F44900529D4E /* Others */,
+				07FC45A01946AA56005640AF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07FC45B61946AA56005640AF /* FantasySoccerTests */ = {
+			isa = PBXGroup;
+			children = (
+				07FC45BC1946AA56005640AF /* FantasySoccerTests.m */,
+				07FC45B71946AA56005640AF /* Supporting Files */,
+			);
+			path = FantasySoccerTests;
+			sourceTree = "<group>";
+		};
+		07FC45B71946AA56005640AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07FC45B81946AA56005640AF /* FantasySoccerTests-Info.plist */,
+				07FC45B91946AA56005640AF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07FC45931946AA56005640AF /* FantasySoccer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07FC45C01946AA56005640AF /* Build configuration list for PBXNativeTarget "FantasySoccer" */;
+			buildPhases = (
+				07FC45901946AA56005640AF /* Sources */,
+				07FC45911946AA56005640AF /* Frameworks */,
+				07FC45921946AA56005640AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FantasySoccer;
+			productName = FantasySoccer;
+			productReference = 07FC45941946AA56005640AF /* FantasySoccer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07FC45AE1946AA56005640AF /* FantasySoccerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07FC45C31946AA56005640AF /* Build configuration list for PBXNativeTarget "FantasySoccerTests" */;
+			buildPhases = (
+				07FC45AB1946AA56005640AF /* Sources */,
+				07FC45AC1946AA56005640AF /* Frameworks */,
+				07FC45AD1946AA56005640AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07FC45B51946AA56005640AF /* PBXTargetDependency */,
+			);
+			name = FantasySoccerTests;
+			productName = FantasySoccerTests;
+			productReference = 07FC45AF1946AA56005640AF /* FantasySoccerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07FC458C1946AA56005640AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "2359 Media";
+				TargetAttributes = {
+					07FC45AE1946AA56005640AF = {
+						TestTargetID = 07FC45931946AA56005640AF;
+					};
+				};
+			};
+			buildConfigurationList = 07FC458F1946AA56005640AF /* Build configuration list for PBXProject "FantasySoccer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 07FC458B1946AA56005640AF;
+			productRefGroup = 07FC45951946AA56005640AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07FC45931946AA56005640AF /* FantasySoccer */,
+				07FC45AE1946AA56005640AF /* FantasySoccerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07FC45921946AA56005640AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07315B291947F45700529D4E /* Colombia.png in Resources */,
+				07315B041947F44900529D4E /* FantasySoccer-Info.plist in Resources */,
+				07315B281947F45700529D4E /* coins@2x.png in Resources */,
+				07315B1E1947F45700529D4E /* bg_gradient@2x.png in Resources */,
+				07315B221947F45700529D4E /* Chile@2x.png in Resources */,
+				07315B2C1947F45700529D4E /* Default-Landscape.png in Resources */,
+				07315B211947F45700529D4E /* Chile.png in Resources */,
+				07FC45A21946AA56005640AF /* InfoPlist.strings in Resources */,
+				07315B1F1947F45700529D4E /* Chad.png in Resources */,
+				07315B2A1947F45700529D4E /* Colombia@2x.png in Resources */,
+				07315B1D1947F45700529D4E /* bg_gradient.png in Resources */,
+				07315B301947F45700529D4E /* Default.png in Resources */,
+				07FC45AA1946AA56005640AF /* Images.xcassets in Resources */,
+				07315B2F1947F45700529D4E /* Default-Portrait@2x.png in Resources */,
+				07315B2E1947F45700529D4E /* Default-Portrait.png in Resources */,
+				07315B261947F45700529D4E /* CIS@2x.png in Resources */,
+				07315AEF1947F43E00529D4E /* FSLeaderBoardCell.xib in Resources */,
+				07315B271947F45700529D4E /* coins.png in Resources */,
+				07315AF11947F43E00529D4E /* FSLeaderBoardViewController.xib in Resources */,
+				07315B201947F45700529D4E /* Chad@2x.png in Resources */,
+				07315AEA1947F43E00529D4E /* FSFixturesCell.xib in Resources */,
+				07315B2B1947F45700529D4E /* Default-568h@2x.png in Resources */,
+				07315B241947F45700529D4E /* China@2x.png in Resources */,
+				07315B251947F45700529D4E /* CIS.png in Resources */,
+				07315AED1947F43E00529D4E /* FSFixturesViewController.xib in Resources */,
+				07C83B2D1948063600C2D00F /* SVProgressHUD.bundle in Resources */,
+				07315B231947F45700529D4E /* China.png in Resources */,
+				07315B311947F45700529D4E /* Default@2x.png in Resources */,
+				07315B2D1947F45700529D4E /* Default-Landscape@2x.png in Resources */,
+				07315AF31947F43E00529D4E /* FSLoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07FC45AD1946AA56005640AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07FC45BB1946AA56005640AF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07FC45901946AA56005640AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DE6D0319486A6700CF9563 /* NSDictionary+Additions.m in Sources */,
+				07315AF41947F43E00529D4E /* AFDownloadRequestOperation.m in Sources */,
+				07315AE91947F43E00529D4E /* FSFixturesCell.m in Sources */,
+				07315B051947F44900529D4E /* FSAppDelegate.m in Sources */,
+				07DE6CF71948686900CF9563 /* FSTournament.m in Sources */,
+				07DE6D0219486A6700CF9563 /* NSArray+Additions.m in Sources */,
+				07315AF81947F43E00529D4E /* AFJSONRequestOperation.m in Sources */,
+				07DE6D0A1948790300CF9563 /* ISO8601DateFormatter.m in Sources */,
+				07DE6CF3194848DE00CF9563 /* FSUserManager.m in Sources */,
+				07315AF61947F43E00529D4E /* AFHTTPRequestOperation.m in Sources */,
+				07DE6CF0194848B600CF9563 /* FSTournamentsManager.m in Sources */,
+				07315AFC1947F43E00529D4E /* AFXMLRequestOperation.m in Sources */,
+				07C83B3D194808BF00C2D00F /* BaseManager.m in Sources */,
+				07315AFB1947F43E00529D4E /* AFURLConnectionOperation.m in Sources */,
+				07315AF71947F43E00529D4E /* AFImageRequestOperation.m in Sources */,
+				07C83B4F19483DDB00C2D00F /* FSResultsTableViewController.m in Sources */,
+				07C83B361948085900C2D00F /* FSReachabilityManager.m in Sources */,
+				07315AF51947F43E00529D4E /* AFHTTPClient.m in Sources */,
+				07DE6D0419486A6700CF9563 /* NSObject+Additions.m in Sources */,
+				07315AF01947F43E00529D4E /* FSLeaderBoardViewController.m in Sources */,
+				07315AEB1947F43E00529D4E /* FSFixturesReusableView.m in Sources */,
+				07315AFA1947F43E00529D4E /* AFPropertyListRequestOperation.m in Sources */,
+				07315AE81947F43E00529D4E /* FSCollectionViewLayout.m in Sources */,
+				07315AF91947F43E00529D4E /* AFNetworkActivityIndicatorManager.m in Sources */,
+				07315AF21947F43E00529D4E /* FSLoginViewController.m in Sources */,
+				07315AEE1947F43E00529D4E /* FSLeaderBoardCell.m in Sources */,
+				07DE6D0D19487C7F00CF9563 /* FSTopScore.m in Sources */,
+				07DE6CFA194868ED00CF9563 /* FSBaseModel.m in Sources */,
+				07C83B3A1948087F00C2D00F /* Reachability.m in Sources */,
+				07C83B2C1948063600C2D00F /* JSONKit.m in Sources */,
+				07C83B2E1948063600C2D00F /* SVProgressHUD.m in Sources */,
+				07315B061947F44900529D4E /* main.m in Sources */,
+				07315AEC1947F43E00529D4E /* FSFixturesViewController.m in Sources */,
+				07DE6D0719486BFA00CF9563 /* FSMatch.m in Sources */,
+				07C83B33194806E300C2D00F /* FSNetworkManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07FC45AB1946AA56005640AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07FC45BD1946AA56005640AF /* FantasySoccerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07FC45B51946AA56005640AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07FC45931946AA56005640AF /* FantasySoccer */;
+			targetProxy = 07FC45B41946AA56005640AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07FC45A01946AA56005640AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07FC45A11946AA56005640AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07FC45B91946AA56005640AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07FC45BA1946AA56005640AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07C83B1F1947F9AF00C2D00F /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Production;
+		};
+		07C83B201947F9AF00C2D00F /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FantasySoccer/Vendors",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasySoccer/Others/FantasySoccer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Production;
+		};
+		07C83B211947F9AF00C2D00F /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FantasySoccer.app/FantasySoccer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasySoccer/FantasySoccer-Prefix.pch";
+				INFOPLIST_FILE = "FantasySoccerTests/FantasySoccerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Production;
+		};
+		07C83B221947F9B300C2D00F /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"STAGING=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Staging;
+		};
+		07C83B231947F9B300C2D00F /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FantasySoccer/Vendors",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasySoccer/Others/FantasySoccer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Staging;
+		};
+		07C83B241947F9B300C2D00F /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FantasySoccer.app/FantasySoccer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasySoccer/FantasySoccer-Prefix.pch";
+				INFOPLIST_FILE = "FantasySoccerTests/FantasySoccerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Staging;
+		};
+		07FC45BE1946AA56005640AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		07FC45BF1946AA56005640AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07FC45C11946AA56005640AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FantasySoccer/Vendors",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasySoccer/Others/FantasySoccer-Prefix.pch";
+				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07FC45C21946AA56005640AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FantasySoccer/Vendors",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasySoccer/Others/FantasySoccer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		07FC45C41946AA56005640AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FantasySoccer.app/FantasySoccer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasySoccer/FantasySoccer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FantasySoccerTests/FantasySoccerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		07FC45C51946AA56005640AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FantasySoccer.app/FantasySoccer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasySoccer/FantasySoccer-Prefix.pch";
+				INFOPLIST_FILE = "FantasySoccerTests/FantasySoccerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07FC458F1946AA56005640AF /* Build configuration list for PBXProject "FantasySoccer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07FC45BE1946AA56005640AF /* Debug */,
+				07FC45BF1946AA56005640AF /* Release */,
+				07C83B221947F9B300C2D00F /* Staging */,
+				07C83B1F1947F9AF00C2D00F /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07FC45C01946AA56005640AF /* Build configuration list for PBXNativeTarget "FantasySoccer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07FC45C11946AA56005640AF /* Debug */,
+				07FC45C21946AA56005640AF /* Release */,
+				07C83B231947F9B300C2D00F /* Staging */,
+				07C83B201947F9AF00C2D00F /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07FC45C31946AA56005640AF /* Build configuration list for PBXNativeTarget "FantasySoccerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07FC45C41946AA56005640AF /* Debug */,
+				07FC45C51946AA56005640AF /* Release */,
+				07C83B241947F9B300C2D00F /* Staging */,
+				07C83B211947F9AF00C2D00F /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07FC458C1946AA56005640AF /* Project object */;
+}

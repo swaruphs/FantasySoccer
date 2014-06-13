@@ -11,8 +11,6 @@
 
 @implementation FSMatch
 
-static ISO8601DateFormatter *formatter =  nil;
-
 - (void)updateWithDictionary:(NSDictionary *)jsonDic
 {
     self.matchID = [jsonDic numberForKey:@"id"];
@@ -23,13 +21,7 @@ static ISO8601DateFormatter *formatter =  nil;
     self.status = [jsonDic stringForKey:@"status"];
 
     NSString *dateString = [jsonDic stringForKey:@"start_time"];
-    if (formatter == nil) {
-        formatter = [[ISO8601DateFormatter alloc] init];
-    }
-    self.startTime = [formatter dateFromString:dateString];
+    self.startTime = [[FSUtilityManager sharedInstance] getISODateFromString:dateString];
 }
-
-
-
 
 @end

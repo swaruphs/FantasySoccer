@@ -8,7 +8,6 @@
 
 #import "FSFixturesViewController.h"
 #import "FSLeaderBoardViewController.h"
-#import "FSCollectionViewLayout.h"
 #import "FSFixturesCell.h"
 
 @interface FSFixturesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FSFixturesCellDelegate>
@@ -23,6 +22,8 @@
 @property (nonatomic, retain) NSIndexPath *previousIndexpath;
 @property (nonatomic, retain) UILabel *lblScore;
 @property (nonatomic) CGPoint scrollSpeed;
+@property (nonatomic, strong) FSTournament * tournament;
+@property (nonatomic, strong) NSArray *teamsArray;
 
 @end
 
@@ -42,12 +43,7 @@
 {
     [super viewDidLoad];
     [self _init];
-    
-    
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Leader Board" style:UIBarButtonItemStyleBordered target:self action:@selector(onBtnLeaderBoardTap:)];
-    
-    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
-    // Do any additional setup after loading the view from its nib.
+    [self populateData];
 }
 
 -(void)_init
@@ -56,60 +52,102 @@
     UINib *cellNib= [UINib nibWithNibName:NSStringFromClass([FSFixturesCell class]) bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:cellIdentifier];
     self.cellSizeDic = [[NSMutableDictionary alloc] init];
-    [self setCoinView];
+    self.teamsArray  = [[FSTournamentsManager sharedInstance] teamArray];
+
 }
 
-- (void)setCoinView
+- (void)populateData
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(35, 10, 24, 24)];
-    imageView.image = [UIImage imageNamed:@"coins"];
-    
-    self.lblScore = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 44)];
-    self.lblScore.backgroundColor = [UIColor clearColor];
-    [self.lblScore setTextAlignment:NSTextAlignmentRight];
-    [self.lblScore setText:@"200"];
-    
-    
-    UIView *aView  =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
-    [aView addSubview:self.lblScore];
-    [aView addSubview:imageView];
-    self.navigationItem.titleView = aView;
-    
+    if (![[FSTournamentsManager sharedInstance] tournamentArray]) {
+        [self getTournaments];
+    }
+    else {
+        self.tournament = [[[FSTournamentsManager sharedInstance] tournamentArray] firstObjectOrNil];
+        if(![[FSTournamentsManager sharedInstance] teamArray]) {
+            [self getTeams];
+        }
+        else {
+            [self getAllMatchesForTournament:self.tournament];
+        }
+    }
 }
 
-- (void)onBtnLeaderBoardTap:(id)sender
+- (void)getTournaments
 {
-    NSLog(@"Leader board did tap");
-    FSLeaderBoardViewController *controller = [[FSLeaderBoardViewController alloc] initWithNibName:@"FSLeaderBoardViewController" bundle:nil];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
-    [self presentViewController:navController animated:TRUE completion:nil];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    [[FSTournamentsManager sharedInstance] getAllTournamentsOnSuccess:^(NSMutableArray *resultsArray) {
+        self.tournament = [resultsArray firstObjectOrNil];
+        [self getTeams];
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+    }];
+}
+
+- (void)getTeams
+{
+    [[FSTournamentsManager sharedInstance] getTeamsForTournament:self.tournament success:^(NSMutableArray *resultsArray) {
+        self.teamsArray = resultsArray;
+        [self getAllMatchesForTournament:self.tournament];
+        
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+    }];
+}
+
+- (void)getAllMatchesForTournament:(FSTournament *)tournament
+{
+    if (![SVProgressHUD isVisible]) {
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    }
+    if (!tournament) {
+        [SVProgressHUD showErrorWithStatus:@"Error fetching matches"];
+        return;
+    }
     
+    [[FSTournamentsManager sharedInstance] getMatchesForTournament:tournament fromCache:TRUE success:^(NSMutableArray *resultsArray) {
+        [SVProgressHUD dismiss];
+        if ([resultsArray isValidObject]) {
+            self.dataArray = resultsArray;
+            [self generateDataModel];
+            [self.collectionView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+    }];
+}
+
+- (void)generateDataModel
+{
+    NSMutableArray *resultsArray = [NSMutableArray array];
+    for (FSMatch *match in self.dataArray) {
+    
+        NSNumber *lTeamID = match.lTeamID;
+        NSNumber *rTeamID = match.rTeamID;
+        FSTeam *lTeam = [self.teamsArray firstObjectWithValue:lTeamID forKeyPath:@"teamID"];
+        FSTeam *rTeam = [self.teamsArray firstObjectWithValue:rTeamID forKeyPath:@"teamID"];
+        
+        NSDictionary *aDic = @{@"match":match,
+                               @"lteam":lTeam,
+                               @"rteam":rTeam};
+        [resultsArray addObject:aDic];
+    }
+    self.dataArray = resultsArray;
 }
 
 #pragma mark - UICollectionView Datasource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return  50;
+    return  [self.dataArray count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     FSFixturesCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([self class]) forIndexPath:indexPath];
     cell.delegate =  self;
-
-    [cell configureData:nil];
-    float speed = self.scrollSpeed.y;
-    float normalizedSpeed = MAX(-1.0f, MIN(1.0f, speed/20.0f));
-    
-    [self waveAnimateCells:cell speed:normalizedSpeed];
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3];
-    cell.layer.transform = CATransform3DIdentity;
-    cell.layer.opacity = 1.0f;
-    [UIView commitAnimations];
-
-    
+    NSDictionary *datDic = [self.dataArray objectAtIndex:indexPath.row];
+    [cell configureData:datDic];
     return cell;
 }
 
@@ -154,13 +192,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fixtureCellDidSelectButton:(FSFixtureCellTap)fixtureCellTap
+- (void)fixtureCellDidSelectButton:(NSString *)selection
 {
     if (self.previousIndexpath) {
         [self setNormalHeightForIndexPath:self.previousIndexpath];
         self.previousIndexpath = nil;
         [self resetCollectionViewLayout];
     }
+    
+    FSMatch *match = [self.dataArray objectAtIndex:0][@"match"];
+    
+    
+    [[FSTournamentsManager sharedInstance] postBettingForMatch:match points:@(10) selection:selection success:^(BOOL success) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 - (void)resetCollectionViewLayout
@@ -169,6 +216,7 @@
     [collectionViewLayout setMinimumLineSpacing:1];
     [self.collectionView setCollectionViewLayout:collectionViewLayout animated:YES];
 }
+
 
 #pragma mark  - UIScrollViewDelegate
 

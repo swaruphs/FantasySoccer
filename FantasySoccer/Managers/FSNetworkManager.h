@@ -18,8 +18,6 @@
 
 @interface FSNetworkManager : BaseManager
 
-- (NSMutableDictionary *)getAuthParams;
-
 - (void)getResponseAsArrayForPath:(NSString *) path
                        parameters:(NSDictionary *) parameters
                           success:(void (^)(NSMutableArray * outputArray))success

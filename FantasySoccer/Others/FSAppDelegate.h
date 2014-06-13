@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IIViewDeckController.h"
+#import <FacebookSDK/FacebookSDK.h>
+
+
 
 @interface FSAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) IIViewDeckController *viewDeckController;
 
-- (void)showMainView;
+- (void)changeCenterViewControllerToViewController:(UIViewController *)controller;
+- (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error;
 
 @end

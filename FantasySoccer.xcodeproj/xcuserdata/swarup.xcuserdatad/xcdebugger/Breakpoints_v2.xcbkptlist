@@ -9,13 +9,137 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FantasySoccer/Models/FSMatch.m"
-            timestampString = "424180283.243812"
+            filePath = "FantasySoccer/Login/FSLoginViewController.m"
+            timestampString = "424260260.884357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-updateWithDictionary:"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-buttonTouched:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FantasySoccer/Others/FSAppDelegate.m"
+            timestampString = "424333526.344578"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-accessFBToken"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FantasySoccer/Fixtures/FSFixturesViewController.m"
+            timestampString = "424336357.399846"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "-fixtureCellDidSelectButton:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[FSFixturesViewController fixtureCellDidSelectButton:]"
+                  moduleName = "FantasySoccer"
+                  urlString = "file:///Users/swarup/Documents/Personal/Projects/FantasySoccer/FantasySoccer/Fixtures/FSFixturesViewController.m"
+                  timestampString = "424336586.58232"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "407">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__55-[FSFixturesViewController fixtureCellDidSelectButton:]_block_invoke"
+                  moduleName = "FantasySoccer"
+                  urlString = "file:///Users/swarup/Documents/Personal/Projects/FantasySoccer/FantasySoccer/Fixtures/FSFixturesViewController.m"
+                  timestampString = "424336586.584754"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "208"
+                  endingLineNumber = "208"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FantasySoccer/Managers/FSTournamentsManager.m"
+            timestampString = "424336582.542996"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-postBettingForMatch:points:selection:success:failure:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__77-[FSTournamentsManager postBettingForMatch:points:selection:success:failure:]_block_invoke"
+                  moduleName = "FantasySoccer"
+                  urlString = "file:///Users/swarup/Documents/Personal/Projects/FantasySoccer/FantasySoccer/Managers/FSTournamentsManager.m"
+                  timestampString = "424336586.604264"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__77-[FSTournamentsManager postBettingForMatch:points:selection:success:failure:]_block_invoke_2"
+                  moduleName = "FantasySoccer"
+                  urlString = "file:///Users/swarup/Documents/Personal/Projects/FantasySoccer/FantasySoccer/Managers/FSTournamentsManager.m"
+                  timestampString = "424336586.604579"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FantasySoccer/Managers/FSTournamentsManager.m"
+            timestampString = "424336583.566458"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "-postBettingForMatch:points:selection:success:failure:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

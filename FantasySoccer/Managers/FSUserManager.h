@@ -11,11 +11,17 @@
 
 @interface FSUserManager : BaseManager
 
+
+@property (nonatomic, strong) FSUserProfile *userProfile;
 - (void)loginWithUsernameOrEmail:(id<FBGraphUser>)fbUser
                          fbToken:(NSString *)token
                          success:(void (^)(BOOL success))success
                          failure:(void (^)(NSError *error))failure;
 
+- (void)getPlayerProfileWithSuccess:(void (^)(FSUserProfile  *userProfile))success
+                            failure:(void (^)(NSError *error))failure;
+
 - (NSDictionary *)getAuthParams;
+- (void)clearUserProfile;
 - (void)logout;
 @end

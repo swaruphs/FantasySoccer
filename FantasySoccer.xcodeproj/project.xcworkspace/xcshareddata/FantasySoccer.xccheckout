@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5F5BD9A9-6B72-4845-A5C4-E4EC4436E577</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FantasySoccer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0467E32E-1092-42A3-BCC7-269C86223471</key>
+		<string>https://github.com/swaruphs/FantasySoccer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FantasySoccer.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0467E32E-1092-42A3-BCC7-269C86223471</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/swaruphs/FantasySoccer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0467E32E-1092-42A3-BCC7-269C86223471</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0467E32E-1092-42A3-BCC7-269C86223471</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FantasySoccer</string>
+		</dict>
+	</array>
+</dict>
+</plist>

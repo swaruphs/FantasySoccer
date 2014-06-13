@@ -28,7 +28,7 @@
 }
 
 - (NSArray *) deepCopy {
-  unsigned int count = [self count];
+  unsigned long count = [self count];
   NSMutableArray *newArray = [[NSMutableArray alloc] initWithCapacity:count];
   
   for (unsigned int i = 0; i < count; ++i) {

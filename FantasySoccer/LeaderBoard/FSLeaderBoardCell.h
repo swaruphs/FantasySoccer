@@ -10,6 +10,6 @@
 
 @interface FSLeaderBoardCell : UITableViewCell
 
-- (void)configureData:(NSDictionary *)dataDic;
+- (void)configureData:(FSTopScore *)topScore;
 
 @end

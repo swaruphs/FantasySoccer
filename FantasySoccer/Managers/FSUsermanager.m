@@ -34,7 +34,8 @@ SINGLETON_MACRO
     [[FSNetworkManager sharedInstance] getRawResponseForPath:API_OAUTH_TOKEN parameters:params method:POST_METHOD success:^(id responseObject) {
         
         NSLog(@"response got is %@",responseObject);
-        self.accessToken = responseObject[@"access_token"];
+        self.accessToken = [responseObject stringForKey:@"access_token"];
+        [[FSCredentialsManager sharedInstance] saveAccessToken:self.accessToken];
         success(TRUE);
         
         
@@ -44,22 +45,46 @@ SINGLETON_MACRO
     }];
 }
 
-- (NSDictionary *)getAuthParams
+- (void)getPlayerProfileWithSuccess:(void (^)(FSUserProfile * userProfile))success
+                            failure:(void (^)(NSError *error))failure
 {
-    if (!self.accessToken) {
-        return nil;
-    }
-    return @{@"access_token":self.accessToken};
+    NSDictionary *params = [self getAuthParams];
+    [[FSNetworkManager sharedInstance] getRawResponseForPath:API_PLAYER_PROFILE parameters:params success:^(id responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+        
+            FSUserProfile *profile = [[FSUserProfile alloc] initWithDictionary:responseObject];
+            self.userProfile  = profile;
+            success(profile);
+        }
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
 }
 
+- (NSDictionary *)getAuthParams
+{
+    if (![[FSCredentialsManager sharedInstance] getSavedToken]) {
+        return nil;
+    }
+    NSString *token = [[FSCredentialsManager sharedInstance] getSavedToken];
+    return @{@"access_token":token};
+}
 
 - (void)logout
 {
     self.accessToken = nil;
+    [[FSCredentialsManager sharedInstance] clearSavedToken];
 }
 
 - (void)notifyUserLogout
 {
-
+    
 }
+
+- (void)clearUserProfile
+{
+    self.accessToken = nil;
+    self.userProfile =  nil;
+}
+
 @end

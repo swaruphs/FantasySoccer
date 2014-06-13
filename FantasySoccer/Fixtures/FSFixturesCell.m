@@ -7,6 +7,7 @@
 //
 
 #import "FSFixturesCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 @interface FSFixturesCell()
@@ -32,21 +33,36 @@
 
 - (void)configureData:(NSDictionary *)dataDic
 {
-    UIImage *imgTeamOne = [UIImage imageNamed:dataDic[@"imgTeamOne"]];
-    UIImage *imgTeamTwo = [UIImage imageNamed:dataDic[@"imgTeamTwo"]];
-    NSString *teamOne = dataDic[@"teamOne"];
-    NSString *teamTwo = dataDic[@"teamTwo"];
     
-    self.teamOneImageView.image = [UIImage imageNamed:@"CIS"];
-    self.teamTwoImageView.image = [UIImage imageNamed:@"Chile"];
-    self.lblTeamOne.text = @"CIS";
-    self.lblTeamTwo.text = @"CHI";
+    FSTeam *lTeam = [dataDic objectForKey:@"lteam"];
+    FSTeam *rTeam = [dataDic objectForKey:@"rteam"];
+    
+    [self.teamOneImageView setImageWithURL:[NSURL URLWithString:lTeam.iconURL]];
+    [self.teamTwoImageView setImageWithURL:[NSURL URLWithString:rTeam.iconURL]];
+    self.lblTeamOne.text = lTeam.name;
+    self.lblTeamTwo.text = rTeam.name;
 }
 
 
-- (IBAction)onBtnTap:(id)sender
+- (IBAction)onBtnTap:(UIButton *)sender
 {
-    [self.delegate fixtureCellDidSelectButton:[sender tag]];
+    NSString *selection =  nil;
+    switch (sender.tag) {
+        case 1:
+            selection = @"left";
+            break;
+        case 2:
+            selection = @"draw";
+            break;
+        case 3:
+            selection = @"right";
+            break;
+        default:
+            selection = @"draw";
+            break;
+    }
+    
+    [self.delegate fixtureCellDidSelectButton:selection];
 }
 
 /*

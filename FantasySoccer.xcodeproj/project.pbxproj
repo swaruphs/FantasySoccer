@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07315AE81947F43E00529D4E /* FSCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ABA1947F43E00529D4E /* FSCollectionViewLayout.m */; };
+		07020E0819497E0E0022D86C /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07020E0319497E0E0022D86C /* IISideController.m */; };
+		07020E0919497E0E0022D86C /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07020E0519497E0E0022D86C /* IIViewDeckController.m */; };
+		07020E0A19497E0E0022D86C /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07020E0719497E0E0022D86C /* IIWrapController.m */; };
 		07315AE91947F43E00529D4E /* FSFixturesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ABC1947F43E00529D4E /* FSFixturesCell.m */; };
 		07315AEA1947F43E00529D4E /* FSFixturesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07315ABD1947F43E00529D4E /* FSFixturesCell.xib */; };
-		07315AEB1947F43E00529D4E /* FSFixturesReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ABF1947F43E00529D4E /* FSFixturesReusableView.m */; };
 		07315AEC1947F43E00529D4E /* FSFixturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AC11947F43E00529D4E /* FSFixturesViewController.m */; };
 		07315AED1947F43E00529D4E /* FSFixturesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07315AC21947F43E00529D4E /* FSFixturesViewController.xib */; };
 		07315AEE1947F43E00529D4E /* FSLeaderBoardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AC51947F43E00529D4E /* FSLeaderBoardCell.m */; };
@@ -47,12 +48,16 @@
 		07315B291947F45700529D4E /* Colombia.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B141947F45700529D4E /* Colombia.png */; };
 		07315B2A1947F45700529D4E /* Colombia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B151947F45700529D4E /* Colombia@2x.png */; };
 		07315B2B1947F45700529D4E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B161947F45700529D4E /* Default-568h@2x.png */; };
-		07315B2C1947F45700529D4E /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B171947F45700529D4E /* Default-Landscape.png */; };
-		07315B2D1947F45700529D4E /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B181947F45700529D4E /* Default-Landscape@2x.png */; };
-		07315B2E1947F45700529D4E /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B191947F45700529D4E /* Default-Portrait.png */; };
-		07315B2F1947F45700529D4E /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B1A1947F45700529D4E /* Default-Portrait@2x.png */; };
 		07315B301947F45700529D4E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B1B1947F45700529D4E /* Default.png */; };
 		07315B311947F45700529D4E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B1C1947F45700529D4E /* Default@2x.png */; };
+		0787BA561949880700BF03DD /* FSUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0787BA551949880700BF03DD /* FSUserProfile.m */; };
+		0787BA5919498AC900BF03DD /* FSUtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0787BA5819498AC900BF03DD /* FSUtilityManager.m */; };
+		0787BA5C1949953000BF03DD /* FSTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 0787BA5B1949953000BF03DD /* FSTeam.m */; };
+		0787BA5E1949A55700BF03DD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0787BA5D1949A55700BF03DD /* SystemConfiguration.framework */; };
+		0787BA601949A68000BF03DD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0787BA5F1949A68000BF03DD /* MobileCoreServices.framework */; };
+		07A0535A194AA03800E58825 /* FSCredentialsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A05359194AA03800E58825 /* FSCredentialsManager.m */; };
+		07A0535C194AAF4200E58825 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0535B194AAF4200E58825 /* SDWebImage.framework */; };
+		07A0535E194AB16300E58825 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0535D194AB16300E58825 /* ImageIO.framework */; };
 		07C83B2C1948063600C2D00F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B271948063600C2D00F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07C83B2D1948063600C2D00F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07C83B291948063600C2D00F /* SVProgressHUD.bundle */; };
 		07C83B2E1948063600C2D00F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B2B1948063600C2D00F /* SVProgressHUD.m */; };
@@ -60,7 +65,6 @@
 		07C83B361948085900C2D00F /* FSReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B351948085900C2D00F /* FSReachabilityManager.m */; };
 		07C83B3A1948087F00C2D00F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B391948087F00C2D00F /* Reachability.m */; };
 		07C83B3D194808BF00C2D00F /* BaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B3C194808BF00C2D00F /* BaseManager.m */; };
-		07C83B4F19483DDB00C2D00F /* FSResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B4E19483DDB00C2D00F /* FSResultsTableViewController.m */; };
 		07DE6CF0194848B600CF9563 /* FSTournamentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */; };
 		07DE6CF3194848DE00CF9563 /* FSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF2194848DE00CF9563 /* FSUserManager.m */; };
 		07DE6CF71948686900CF9563 /* FSTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF61948686900CF9563 /* FSTournament.m */; };
@@ -71,6 +75,8 @@
 		07DE6D0719486BFA00CF9563 /* FSMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6D0619486BFA00CF9563 /* FSMatch.m */; };
 		07DE6D0A1948790300CF9563 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6D091948790300CF9563 /* ISO8601DateFormatter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07DE6D0D19487C7F00CF9563 /* FSTopScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6D0C19487C7F00CF9563 /* FSTopScore.m */; };
+		07F4444F1949B802002DA76C /* FSSidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4444D1949B802002DA76C /* FSSidePanelViewController.m */; };
+		07F444501949B802002DA76C /* FSSidePanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F4444E1949B802002DA76C /* FSSidePanelViewController.xib */; };
 		07FC45981946AA56005640AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC45971946AA56005640AF /* Foundation.framework */; };
 		07FC459A1946AA56005640AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC45991946AA56005640AF /* CoreGraphics.framework */; };
 		07FC459C1946AA56005640AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC459B1946AA56005640AF /* UIKit.framework */; };
@@ -94,13 +100,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07315AB91947F43E00529D4E /* FSCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCollectionViewLayout.h; sourceTree = "<group>"; };
-		07315ABA1947F43E00529D4E /* FSCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCollectionViewLayout.m; sourceTree = "<group>"; };
+		07020E0219497E0E0022D86C /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
+		07020E0319497E0E0022D86C /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
+		07020E0419497E0E0022D86C /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		07020E0519497E0E0022D86C /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		07020E0619497E0E0022D86C /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
+		07020E0719497E0E0022D86C /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
 		07315ABB1947F43E00529D4E /* FSFixturesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFixturesCell.h; sourceTree = "<group>"; };
 		07315ABC1947F43E00529D4E /* FSFixturesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFixturesCell.m; sourceTree = "<group>"; };
 		07315ABD1947F43E00529D4E /* FSFixturesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSFixturesCell.xib; sourceTree = "<group>"; };
-		07315ABE1947F43E00529D4E /* FSFixturesReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFixturesReusableView.h; sourceTree = "<group>"; };
-		07315ABF1947F43E00529D4E /* FSFixturesReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFixturesReusableView.m; sourceTree = "<group>"; };
 		07315AC01947F43E00529D4E /* FSFixturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFixturesViewController.h; sourceTree = "<group>"; };
 		07315AC11947F43E00529D4E /* FSFixturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFixturesViewController.m; sourceTree = "<group>"; };
 		07315AC21947F43E00529D4E /* FSFixturesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSFixturesViewController.xib; sourceTree = "<group>"; };
@@ -153,12 +161,20 @@
 		07315B141947F45700529D4E /* Colombia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colombia.png; sourceTree = "<group>"; };
 		07315B151947F45700529D4E /* Colombia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colombia@2x.png"; sourceTree = "<group>"; };
 		07315B161947F45700529D4E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		07315B171947F45700529D4E /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
-		07315B181947F45700529D4E /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x.png"; sourceTree = "<group>"; };
-		07315B191947F45700529D4E /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
-		07315B1A1947F45700529D4E /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
 		07315B1B1947F45700529D4E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		07315B1C1947F45700529D4E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0787BA541949880700BF03DD /* FSUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUserProfile.h; sourceTree = "<group>"; };
+		0787BA551949880700BF03DD /* FSUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUserProfile.m; sourceTree = "<group>"; };
+		0787BA5719498AC900BF03DD /* FSUtilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtilityManager.h; sourceTree = "<group>"; };
+		0787BA5819498AC900BF03DD /* FSUtilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUtilityManager.m; sourceTree = "<group>"; };
+		0787BA5A1949953000BF03DD /* FSTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTeam.h; sourceTree = "<group>"; };
+		0787BA5B1949953000BF03DD /* FSTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTeam.m; sourceTree = "<group>"; };
+		0787BA5D1949A55700BF03DD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0787BA5F1949A68000BF03DD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		07A05358194AA03800E58825 /* FSCredentialsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCredentialsManager.h; sourceTree = "<group>"; };
+		07A05359194AA03800E58825 /* FSCredentialsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCredentialsManager.m; sourceTree = "<group>"; };
+		07A0535B194AAF4200E58825 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		07A0535D194AB16300E58825 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		07C83B261948063600C2D00F /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		07C83B271948063600C2D00F /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		07C83B291948063600C2D00F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -172,8 +188,6 @@
 		07C83B391948087F00C2D00F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		07C83B3B194808BF00C2D00F /* BaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseManager.h; sourceTree = "<group>"; };
 		07C83B3C194808BF00C2D00F /* BaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseManager.m; sourceTree = "<group>"; };
-		07C83B4D19483DDB00C2D00F /* FSResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSResultsTableViewController.h; sourceTree = "<group>"; };
-		07C83B4E19483DDB00C2D00F /* FSResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSResultsTableViewController.m; sourceTree = "<group>"; };
 		07DE6CEE194848B600CF9563 /* FSTournamentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTournamentsManager.h; sourceTree = "<group>"; };
 		07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTournamentsManager.m; sourceTree = "<group>"; };
 		07DE6CF1194848DE00CF9563 /* FSUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUserManager.h; sourceTree = "<group>"; };
@@ -194,6 +208,9 @@
 		07DE6D091948790300CF9563 /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
 		07DE6D0B19487C7F00CF9563 /* FSTopScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTopScore.h; sourceTree = "<group>"; };
 		07DE6D0C19487C7F00CF9563 /* FSTopScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTopScore.m; sourceTree = "<group>"; };
+		07F4444C1949B802002DA76C /* FSSidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSidePanelViewController.h; sourceTree = "<group>"; };
+		07F4444D1949B802002DA76C /* FSSidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSidePanelViewController.m; sourceTree = "<group>"; };
+		07F4444E1949B802002DA76C /* FSSidePanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSSidePanelViewController.xib; sourceTree = "<group>"; };
 		07FC45941946AA56005640AF /* FantasySoccer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasySoccer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FC45971946AA56005640AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07FC45991946AA56005640AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -212,8 +229,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A0535E194AB16300E58825 /* ImageIO.framework in Frameworks */,
+				0787BA601949A68000BF03DD /* MobileCoreServices.framework in Frameworks */,
+				0787BA5E1949A55700BF03DD /* SystemConfiguration.framework in Frameworks */,
 				07FC459A1946AA56005640AF /* CoreGraphics.framework in Frameworks */,
 				07315AFD1947F43E00529D4E /* FacebookSDK.framework in Frameworks */,
+				07A0535C194AAF4200E58825 /* SDWebImage.framework in Frameworks */,
 				07FC459C1946AA56005640AF /* UIKit.framework in Frameworks */,
 				07FC45981946AA56005640AF /* Foundation.framework in Frameworks */,
 			);
@@ -232,19 +253,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07020E0119497E0E0022D86C /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				07020E0219497E0E0022D86C /* IISideController.h */,
+				07020E0319497E0E0022D86C /* IISideController.m */,
+				07020E0419497E0E0022D86C /* IIViewDeckController.h */,
+				07020E0519497E0E0022D86C /* IIViewDeckController.m */,
+				07020E0619497E0E0022D86C /* IIWrapController.h */,
+				07020E0719497E0E0022D86C /* IIWrapController.m */,
+			);
+			path = ViewDeck;
+			sourceTree = "<group>";
+		};
 		07315AB81947F43E00529D4E /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				07315AB91947F43E00529D4E /* FSCollectionViewLayout.h */,
-				07315ABA1947F43E00529D4E /* FSCollectionViewLayout.m */,
 				07315ABB1947F43E00529D4E /* FSFixturesCell.h */,
 				07315ABC1947F43E00529D4E /* FSFixturesCell.m */,
 				07315ABD1947F43E00529D4E /* FSFixturesCell.xib */,
-				07315ABE1947F43E00529D4E /* FSFixturesReusableView.h */,
-				07315ABF1947F43E00529D4E /* FSFixturesReusableView.m */,
 				07315AC01947F43E00529D4E /* FSFixturesViewController.h */,
 				07315AC11947F43E00529D4E /* FSFixturesViewController.m */,
 				07315AC21947F43E00529D4E /* FSFixturesViewController.xib */,
+				07F4444C1949B802002DA76C /* FSSidePanelViewController.h */,
+				07F4444D1949B802002DA76C /* FSSidePanelViewController.m */,
+				07F4444E1949B802002DA76C /* FSSidePanelViewController.xib */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -275,11 +308,13 @@
 		07315ACE1947F43E00529D4E /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				07020E0119497E0E0022D86C /* ViewDeck */,
 				07C83B371948087F00C2D00F /* Reachability */,
 				07C83B251948063600C2D00F /* JSONKit */,
 				07C83B281948063600C2D00F /* SVProgressHUD */,
 				07315ACF1947F43E00529D4E /* AFNetworking */,
 				07315AE31947F43E00529D4E /* FacebookSDK.framework */,
+				07A0535B194AAF4200E58825 /* SDWebImage.framework */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -340,10 +375,6 @@
 				07315B141947F45700529D4E /* Colombia.png */,
 				07315B151947F45700529D4E /* Colombia@2x.png */,
 				07315B161947F45700529D4E /* Default-568h@2x.png */,
-				07315B171947F45700529D4E /* Default-Landscape.png */,
-				07315B181947F45700529D4E /* Default-Landscape@2x.png */,
-				07315B191947F45700529D4E /* Default-Portrait.png */,
-				07315B1A1947F45700529D4E /* Default-Portrait@2x.png */,
 				07315B1B1947F45700529D4E /* Default.png */,
 				07315B1C1947F45700529D4E /* Default@2x.png */,
 			);
@@ -382,6 +413,10 @@
 				07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */,
 				07DE6CF1194848DE00CF9563 /* FSUserManager.h */,
 				07DE6CF2194848DE00CF9563 /* FSUserManager.m */,
+				0787BA5719498AC900BF03DD /* FSUtilityManager.h */,
+				0787BA5819498AC900BF03DD /* FSUtilityManager.m */,
+				07A05358194AA03800E58825 /* FSCredentialsManager.h */,
+				07A05359194AA03800E58825 /* FSCredentialsManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -406,6 +441,10 @@
 				07DE6D0619486BFA00CF9563 /* FSMatch.m */,
 				07DE6D0B19487C7F00CF9563 /* FSTopScore.h */,
 				07DE6D0C19487C7F00CF9563 /* FSTopScore.m */,
+				0787BA541949880700BF03DD /* FSUserProfile.h */,
+				0787BA551949880700BF03DD /* FSUserProfile.m */,
+				0787BA5A1949953000BF03DD /* FSTeam.h */,
+				0787BA5B1949953000BF03DD /* FSTeam.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -447,6 +486,9 @@
 		07FC45961946AA56005640AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07A0535D194AB16300E58825 /* ImageIO.framework */,
+				0787BA5F1949A68000BF03DD /* MobileCoreServices.framework */,
+				0787BA5D1949A55700BF03DD /* SystemConfiguration.framework */,
 				07FC45971946AA56005640AF /* Foundation.framework */,
 				07FC45991946AA56005640AF /* CoreGraphics.framework */,
 				07FC459B1946AA56005640AF /* UIKit.framework */,
@@ -467,8 +509,6 @@
 				07315ACE1947F43E00529D4E /* Vendors */,
 				07FC45A91946AA56005640AF /* Images.xcassets */,
 				07FC459E1946AA56005640AF /* Supporting Files */,
-				07C83B4D19483DDB00C2D00F /* FSResultsTableViewController.h */,
-				07C83B4E19483DDB00C2D00F /* FSResultsTableViewController.m */,
 			);
 			path = FantasySoccer;
 			sourceTree = "<group>";
@@ -582,16 +622,14 @@
 				07315B281947F45700529D4E /* coins@2x.png in Resources */,
 				07315B1E1947F45700529D4E /* bg_gradient@2x.png in Resources */,
 				07315B221947F45700529D4E /* Chile@2x.png in Resources */,
-				07315B2C1947F45700529D4E /* Default-Landscape.png in Resources */,
 				07315B211947F45700529D4E /* Chile.png in Resources */,
 				07FC45A21946AA56005640AF /* InfoPlist.strings in Resources */,
 				07315B1F1947F45700529D4E /* Chad.png in Resources */,
+				07F444501949B802002DA76C /* FSSidePanelViewController.xib in Resources */,
 				07315B2A1947F45700529D4E /* Colombia@2x.png in Resources */,
 				07315B1D1947F45700529D4E /* bg_gradient.png in Resources */,
 				07315B301947F45700529D4E /* Default.png in Resources */,
 				07FC45AA1946AA56005640AF /* Images.xcassets in Resources */,
-				07315B2F1947F45700529D4E /* Default-Portrait@2x.png in Resources */,
-				07315B2E1947F45700529D4E /* Default-Portrait.png in Resources */,
 				07315B261947F45700529D4E /* CIS@2x.png in Resources */,
 				07315AEF1947F43E00529D4E /* FSLeaderBoardCell.xib in Resources */,
 				07315B271947F45700529D4E /* coins.png in Resources */,
@@ -605,7 +643,6 @@
 				07C83B2D1948063600C2D00F /* SVProgressHUD.bundle in Resources */,
 				07315B231947F45700529D4E /* China.png in Resources */,
 				07315B311947F45700529D4E /* Default@2x.png in Resources */,
-				07315B2D1947F45700529D4E /* Default-Landscape@2x.png in Resources */,
 				07315AF31947F43E00529D4E /* FSLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,9 +665,11 @@
 				07DE6D0319486A6700CF9563 /* NSDictionary+Additions.m in Sources */,
 				07315AF41947F43E00529D4E /* AFDownloadRequestOperation.m in Sources */,
 				07315AE91947F43E00529D4E /* FSFixturesCell.m in Sources */,
+				0787BA5919498AC900BF03DD /* FSUtilityManager.m in Sources */,
 				07315B051947F44900529D4E /* FSAppDelegate.m in Sources */,
 				07DE6CF71948686900CF9563 /* FSTournament.m in Sources */,
 				07DE6D0219486A6700CF9563 /* NSArray+Additions.m in Sources */,
+				07020E0919497E0E0022D86C /* IIViewDeckController.m in Sources */,
 				07315AF81947F43E00529D4E /* AFJSONRequestOperation.m in Sources */,
 				07DE6D0A1948790300CF9563 /* ISO8601DateFormatter.m in Sources */,
 				07DE6CF3194848DE00CF9563 /* FSUserManager.m in Sources */,
@@ -640,23 +679,26 @@
 				07C83B3D194808BF00C2D00F /* BaseManager.m in Sources */,
 				07315AFB1947F43E00529D4E /* AFURLConnectionOperation.m in Sources */,
 				07315AF71947F43E00529D4E /* AFImageRequestOperation.m in Sources */,
-				07C83B4F19483DDB00C2D00F /* FSResultsTableViewController.m in Sources */,
 				07C83B361948085900C2D00F /* FSReachabilityManager.m in Sources */,
 				07315AF51947F43E00529D4E /* AFHTTPClient.m in Sources */,
 				07DE6D0419486A6700CF9563 /* NSObject+Additions.m in Sources */,
+				0787BA561949880700BF03DD /* FSUserProfile.m in Sources */,
 				07315AF01947F43E00529D4E /* FSLeaderBoardViewController.m in Sources */,
-				07315AEB1947F43E00529D4E /* FSFixturesReusableView.m in Sources */,
 				07315AFA1947F43E00529D4E /* AFPropertyListRequestOperation.m in Sources */,
-				07315AE81947F43E00529D4E /* FSCollectionViewLayout.m in Sources */,
 				07315AF91947F43E00529D4E /* AFNetworkActivityIndicatorManager.m in Sources */,
 				07315AF21947F43E00529D4E /* FSLoginViewController.m in Sources */,
 				07315AEE1947F43E00529D4E /* FSLeaderBoardCell.m in Sources */,
+				07020E0A19497E0E0022D86C /* IIWrapController.m in Sources */,
+				07A0535A194AA03800E58825 /* FSCredentialsManager.m in Sources */,
 				07DE6D0D19487C7F00CF9563 /* FSTopScore.m in Sources */,
 				07DE6CFA194868ED00CF9563 /* FSBaseModel.m in Sources */,
 				07C83B3A1948087F00C2D00F /* Reachability.m in Sources */,
 				07C83B2C1948063600C2D00F /* JSONKit.m in Sources */,
 				07C83B2E1948063600C2D00F /* SVProgressHUD.m in Sources */,
 				07315B061947F44900529D4E /* main.m in Sources */,
+				0787BA5C1949953000BF03DD /* FSTeam.m in Sources */,
+				07F4444F1949B802002DA76C /* FSSidePanelViewController.m in Sources */,
+				07020E0819497E0E0022D86C /* IISideController.m in Sources */,
 				07315AEC1947F43E00529D4E /* FSFixturesViewController.m in Sources */,
 				07DE6D0719486BFA00CF9563 /* FSMatch.m in Sources */,
 				07C83B33194806E300C2D00F /* FSNetworkManager.m in Sources */,
@@ -750,7 +792,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
@@ -827,7 +869,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
@@ -937,7 +979,7 @@
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
@@ -959,7 +1001,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;

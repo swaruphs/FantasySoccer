@@ -30,9 +30,9 @@
 }
 
 
-- (void)configureData:(NSDictionary *)dataDic
+- (void)configureData:(FSTopScore *)topScore
 {
-    self.lblCoins.text = dataDic[@"coins"];
-    self.lblTitle.text =  dataDic[@"name"];
+    self.lblCoins.text = [NSString stringWithFormat:@"%@",topScore.points];
+    self.lblTitle.text = topScore.name;
 }
 @end

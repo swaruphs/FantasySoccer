@@ -13,7 +13,19 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import "FSAppDelegate.h"
+    #import <SystemConfiguration/SystemConfiguration.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+
+
+
+//view controllers
+#import "FSAppDelegate.h"
+#import "FSLeaderBoardViewController.h"
+#import "FSFixturesViewController.h"
+#import "FSLoginViewController.h"
+#import "FSSidePanelViewController.h"
+
+
 
 // categories
 
@@ -27,21 +39,22 @@
 #import "FSTournament.h"
 #import "FSMatch.h"
 #import "FSTopScore.h"
+#import "FSUserProfile.h"
+#import "FSTeam.h"
 
 // Managers
 
 #import "BaseManager.h"
 #import "FSNetworkManager.h"
 #import "FSUserManager.h"
+#import "FSUtilityManager.h"
 #import "FSTournamentsManager.h"
-
-
-
-
+#import "FSCredentialsManager.h"
 
 // vendors
 
 #import "SVProgressHUD.h"
+#import "IIViewDeckController.h"
 
 #endif
 
@@ -125,7 +138,7 @@
 #define DLog(...) do {} while (0)
 #endif
 
-#if STAGING 
+#if STAGING
 
 #define API_SERVER_HOST  @"http://worldcup2359.herokuapp.com"
 
@@ -137,12 +150,15 @@
 #endif
 
 
-#define API_PREFIX                 API_SERVER_HOST @"/api/v1"
+#define API_PREFIX          API_SERVER_HOST @"/api/v1"
 #define API_OAUTH_TOKEN            API_SERVER_HOST @"/oauth/token"
-#define API_TOURNAMENTS  API_PREFIX @"/tournaments" 
+#define API_TOURNAMENTS            API_PREFIX @"/tournaments"
+#define API_TOURNAMENTS_TEAMS API_TOURNAMENTS @"/%@/teams"
 #define API_MATCHES  API_TOURNAMENTS @"/%@/matches"
 #define API_BETTINGS API_PREFIX @"/matches/%@/bettings"
 #define API_TOP_SCORES API_PREFIX @"/players/top_scores"
+#define API_PLAYER_PROFILE API_PREFIX @"/players/profile"
+
 
 #define CLIENT_ID                  @"732e338b85771042971169e9d6ee9cd546259e28afec8979890fa3dd6b559885"
 #define CLIENT_SECRET              @"b0d6bf3638c58e95755a2f8b29c46d5f3a625b9c22db329fe90bee55fe88f30e"

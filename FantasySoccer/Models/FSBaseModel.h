@@ -11,5 +11,6 @@
 @interface FSBaseModel : NSObject
 
 - (id)initWithDictionary:(NSDictionary *)jsonDic;
+- (void)updateWithDictionary:(NSDictionary *)jsonDic;
 + (NSMutableArray *)populateModelWithData:(NSArray *)dataArray;
 @end

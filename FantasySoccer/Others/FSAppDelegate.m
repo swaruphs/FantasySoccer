@@ -7,9 +7,13 @@
 //
 
 #import "FSAppDelegate.h"
-#import "FSFixturesViewController.h"
-#import  "FSLoginViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+
+@interface FSAppDelegate()
+
+@property (nonatomic, strong) UIImageView *splashImageView;
+
+@end
 
 @implementation FSAppDelegate
 
@@ -21,23 +25,14 @@
     [[UINavigationBar appearance] setTintColor:[UIColor grayColor]];
     
     // Whenever a person opens the app, check for a cached session
-    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
-        NSLog(@"Found a cached session");
-        // If there's one, just open the session silently, without showing the user the login UI
-        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile",@"email"]
-                                           allowLoginUI:NO
-                                      completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
-                                          // Handler for session state changes
-                                          // This method will be called EACH time the session state changes,
-                                          // also for intermediate states and NOT just when the session open
-                                          [self sessionStateChanged:session state:state error:error];
-                                      }];
-        
-        
-    } else {
-        [self showLoginView];
-    }
 
+    if ([[[FSCredentialsManager sharedInstance] getSavedToken] isValidObject]) {
+        [self getUserProfile];
+        [self showMainView];
+    }
+    else  {
+        [self accessFBToken];
+    }
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -52,6 +47,8 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [[FSTournamentsManager sharedInstance] clearSavedData];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -67,59 +64,89 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    [[FSTournamentsManager sharedInstance] clearSavedData];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)showMainView
+- (void)accessFBToken
+{
+    [self showLoginView];
+    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        NSLog(@"Found a cached session");
+        // If there's one, just open the session silently, without showing the user the login UI
+        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile"]
+                                           allowLoginUI:NO
+                                      completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
+                                          // Handler for session state changes
+                                          // This method will be called EACH time the session state changes,
+                                          // also for intermediate states and NOT just when the session open
+                                          [self sessionStateChanged:session state:state error:error];
+                                      }];
+    }
+}
+
+- (void)getFBUser
 {
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     if (FBSession.activeSession.isOpen) {
         [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
-            
-            [[FSUserManager sharedInstance] loginWithUsernameOrEmail:user fbToken:FBSession.activeSession.accessTokenData.accessToken  success:^(BOOL success) {
-                
-                [self getTournaments];
-                
-            } failure:^(NSError *error) {
-                
-            }];
+            if ([error isValidObject]) {
+                [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+                return;
+            }
+            [self loginUser:user];
         }];
     }
 }
 
-- (void)getTournaments{
-    
-    [[FSTournamentsManager sharedInstance] getAllTournamentsOnSuccess:^(NSMutableArray *resultsArray) {
+
+- (void)loginUser:(NSDictionary<FBGraphUser> *)user
+{
+    [[FSUserManager sharedInstance] loginWithUsernameOrEmail:user fbToken:FBSession.activeSession.accessTokenData.accessToken  success:^(BOOL success) {
         
-        [self getAllMatchesForTournament:[resultsArray firstObjectOrNil]];
+        [self getUserProfile];
         
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
     }];
 }
 
-- (void)getAllMatchesForTournament:(FSTournament *)tournament
+- (void)getUserProfile
 {
-    if (tournament == nil) {
-        [SVProgressHUD showErrorWithStatus:@"No matches for Now"];
-    }
-    [[FSTournamentsManager sharedInstance] getMatchesForTournament:tournament success:^(NSMutableArray *resultsArray) {
-        
-        FSFixturesViewController *rootViewController = [[FSFixturesViewController alloc] initWithNibName:NSStringFromClass([FSFixturesViewController class]) bundle:nil];
-        
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-        self.window.rootViewController = navController;
-        
+    [[FSUserManager sharedInstance] getPlayerProfileWithSuccess:^(FSUserProfile *userProfile) {
+        [SVProgressHUD dismiss];
+        [self showMainView];
         
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
     }];
 }
+
 - (void)showLoginView
 {
     FSLoginViewController *loginViewController = [[FSLoginViewController alloc] initWithNibName:@"FSLoginViewController" bundle:nil];
     self.window.rootViewController = loginViewController;
 }
+
+- (void)showMainView
+{    
+    FSFixturesViewController *rootViewController = [[FSFixturesViewController alloc] initWithNibName:NSStringFromClass([FSFixturesViewController class]) bundle:nil];
+    UINavigationController *fixNavController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    FSSidePanelViewController *sidePanelViewController = [[FSSidePanelViewController alloc] initWithNibName:NSStringFromClass([FSSidePanelViewController class]) bundle:nil];
+    UINavigationController *spNavController = [[UINavigationController alloc] initWithRootViewController:sidePanelViewController];
+    
+    IIViewDeckController *viewDeckController = [[IIViewDeckController alloc] initWithCenterViewController:fixNavController leftViewController:spNavController];
+    self.viewDeckController =  viewDeckController;
+    self.window.rootViewController = viewDeckController;
+}
+
+- (void)changeCenterViewControllerToViewController:(UIViewController *)controller
+{
+    self.viewDeckController.centerController = controller;
+    [self.viewDeckController closeLeftView];
+}
+
 
 // During the Facebook login flow, your app passes control to the Facebook iOS app or Facebook in a mobile browser.
 // After authentication, your app will be called back with the session information.
@@ -139,7 +166,7 @@
     if (!error && state == FBSessionStateOpen){
         NSLog(@"Session opened");
         // Show the user the logged-in UI
-        [self showMainView];
+        [self getFBUser];
         return;
     }
     if (state == FBSessionStateClosed || state == FBSessionStateClosedLoginFailed){
@@ -189,5 +216,4 @@
         [self showLoginView];
     }
 }
-
 @end

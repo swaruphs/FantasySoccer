@@ -114,16 +114,11 @@ SINGLETON_MACRO
                    success:(void (^)(NSHTTPURLResponse *response, id responseObject))success
                    failure:(void (^)(NSError *error))failure
 {
-    NSMutableDictionary *params = [self getAuthParams];
-    if ([parameters count] > 0){
-        [params addEntriesFromDictionary:parameters];
-    }
-    
     if ([method length] <= 0){
         method = GET_METHOD;
     }
     
-    NSMutableURLRequest *request = [self.httpClient requestWithMethod:method path:path parameters:params];
+    NSMutableURLRequest *request = [self.httpClient requestWithMethod:method path:path parameters:parameters];
     [self.httpClient setParameterEncoding:AFJSONParameterEncoding];
     [self sendRequest:request success:success failure:failure];
 }
@@ -132,15 +127,6 @@ SINGLETON_MACRO
             success:(void (^)(NSHTTPURLResponse *response, id responseObject))success
             failure:(void (^)(NSError *error))failure
 {
-    
-    BOOL accessible = [[FSReachabilityManager sharedInstance] accessibleToInternet];
-    if (!accessible){
-        NSDictionary *noAccessible = @{@"status": @(9999),
-                                       @"error" :@"No internet accessible" };
-        [self handleServerError:noAccessible response:nil failure:failure];
-        return;
-    }
-    
     AFJSONRequestOperation *operation =    [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id json){
         
         [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
@@ -158,19 +144,9 @@ SINGLETON_MACRO
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id responseObject) {
         
         [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
-        
-        //Check if is valid error
-        if ([responseObject isKindOfClass:[NSDictionary class]]) {
-            BOOL hasError = [self handleServerError:responseObject response:response failure:failure];
-            if (hasError){
-                return;
-            }
-        }
-        
         if (failure){
             failure(error);
         }
-        
     }];
     [[AFNetworkActivityIndicatorManager sharedManager] incrementActivityCount];
     [self.httpClient enqueueHTTPRequestOperation:operation];
@@ -179,17 +155,6 @@ SINGLETON_MACRO
 
 
 #pragma mark  -  Private Helper Methods
-
-- (NSMutableDictionary *)getAuthParams
-{
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    NSDictionary *oAuthParams =     [[FSUserManager sharedInstance] getAuthParams];
-    if (oAuthParams) {
-        [dictionary addEntriesFromDictionary:oAuthParams];
-    }
-    
-    return dictionary;
-}
 
 - (BOOL)handleServerError:(NSDictionary*)json response:(NSHTTPURLResponse*)response failure:(void (^)(NSError *error))failure
 {

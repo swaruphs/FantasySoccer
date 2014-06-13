@@ -25,20 +25,4 @@
 - (BOOL)use3g;
 - (BOOL) isValidObject;
 
-
-#pragma mark - Social Helpers
-
-- (BOOL)hasNativeFacebookApp;
-- (BOOL)openFacebookPageID:(NSString*)pageID;
-- (BOOL)hasNativeTwitterApp;
-- (BOOL)openTwitterScreenName:(NSString*)screenName;
-
-
-/*
- * Analytics
- */
-- (void)trackAnalyticsEventName:(NSString*)eventName;
-- (void)trackAnalyticsEventName:(NSString*)eventName parameters:(NSDictionary *)params;
-- (void)trackCritercismBreadCrumb:(NSUInteger)lineNumber;
-
 @end

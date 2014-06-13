@@ -43,22 +43,22 @@ static NSString *cellIdentifier = @"leaderBoardCellIdentifier";
     self.dataArray = [NSMutableArray array];
     UINib *aNib = [UINib nibWithNibName:@"FSLeaderBoardCell" bundle:nil];
     [self.tableView registerNib:aNib forCellReuseIdentifier:cellIdentifier];
-    
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onBtnDoneTap:)];
-    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
-    [self populateDummyData];
+
+    [self populateData];
 }
 
-- (void)populateDummyData
+- (void)populateData
 {
-    NSArray * dummyArray = @[@{@"name": @"Kimi Raikonen",
-                               @"coins": @"200"},
-                               @{@"name":@"Vettel",
-                                 @"coins":@"100"},
-                             @{@"name":@"Alonso",
-                               @"coins":@"1"}];
-    
-    [self.dataArray addObjectsFromArray:dummyArray];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    [[FSTournamentsManager sharedInstance] getTopScoresFromCache:YES
+ success:^(NSMutableArray *resultsArray) {
+     [SVProgressHUD dismiss];
+     self.dataArray = resultsArray;
+     [self.tableView reloadData];
+     
+ } failure:^(NSError *error) {
+     [SVProgressHUD showErrorWithStatus:@"Error fetching Top scores"];
+ }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,8 +84,8 @@ static NSString *cellIdentifier = @"leaderBoardCellIdentifier";
 {
     FSLeaderBoardCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    NSDictionary *dataDic = [self.dataArray objectAtIndex:indexPath.row % 3];
-    [cell configureData:dataDic];
+    FSTopScore *topScore = [self.dataArray objectAtIndex:indexPath.row];
+    [cell configureData:topScore];
     return cell;
 }
 

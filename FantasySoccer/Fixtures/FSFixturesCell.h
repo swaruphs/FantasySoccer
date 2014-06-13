@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    FSFixtureCellWin = 1,
+    FSFixtureCellLeft  = 1,
     FSFixtureCellDraw = 2,
-    FSFixtureCellLose = 3,
+    FSFixtureCellRight = 3,
 } FSFixtureCellTap;
 
 @protocol FSFixturesCellDelegate <NSObject>
 
-- (void)fixtureCellDidSelectButton:(FSFixtureCellTap)fixtureCellTap;
+- (void)fixtureCellDidSelectButton:(NSString *)selection;
 
 @end
 

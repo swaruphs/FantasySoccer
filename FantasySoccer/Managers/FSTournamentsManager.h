@@ -37,7 +37,7 @@
 - (void)postBettingForMatch:(FSMatch *)match
                      points:(NSNumber *)points
                   selection:(NSString *)selection
-                    success:(void(^)(BOOL success))success
+                    success:(void(^)(FSBettings *success))success
                     failure:(void(^)(NSError *error))failure;
 
 - (void)clearSavedData;

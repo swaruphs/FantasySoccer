@@ -87,4 +87,15 @@ SINGLETON_MACRO
     self.userProfile =  nil;
 }
 
+- (BOOL)updatePoints:(NSUInteger)points
+{
+    if (self.userProfile) {
+       NSUInteger userpoints =  [self.userProfile.points integerValue];
+        userpoints = userpoints - points;
+        self.userProfile.points =  @(userpoints);
+        return  TRUE;
+    }
+    return FALSE;
+}
+
 @end

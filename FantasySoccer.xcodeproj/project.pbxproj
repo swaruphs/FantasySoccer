@@ -10,6 +10,19 @@
 		07020E0819497E0E0022D86C /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07020E0319497E0E0022D86C /* IISideController.m */; };
 		07020E0919497E0E0022D86C /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07020E0519497E0E0022D86C /* IIViewDeckController.m */; };
 		07020E0A19497E0E0022D86C /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07020E0719497E0E0022D86C /* IIWrapController.m */; };
+		0706DD89194B02A5007F3D07 /* arrow_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706DD82194B02A5007F3D07 /* arrow_up@2x.png */; };
+		0706DD8A194B02A5007F3D07 /* bg_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706DD83194B02A5007F3D07 /* bg_login@2x.png */; };
+		0706DD8B194B02A5007F3D07 /* btn_drawer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706DD84194B02A5007F3D07 /* btn_drawer@2x.png */; };
+		0706DD8C194B02A5007F3D07 /* btn_fb-signin_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706DD85194B02A5007F3D07 /* btn_fb-signin_normal@2x.png */; };
+		0706DD8D194B02A5007F3D07 /* btn_fb-signin_onpress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706DD86194B02A5007F3D07 /* btn_fb-signin_onpress@2x.png */; };
+		0706DD8E194B02A5007F3D07 /* icn_coins-inline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706DD87194B02A5007F3D07 /* icn_coins-inline@2x.png */; };
+		0706DD8F194B02A5007F3D07 /* icn_coins@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706DD88194B02A5007F3D07 /* icn_coins@2x.png */; };
+		0706DD90194B0408007F3D07 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0535B194AAF4200E58825 /* SDWebImage.framework */; };
+		0706DDC5194B060D007F3D07 /* NeutraText-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0706DD9D194B060D007F3D07 /* NeutraText-Book.otf */; };
+		0706DDD9194B060D007F3D07 /* NeutraText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0706DDB1194B060D007F3D07 /* NeutraText-Light.otf */; };
+		0706DDEA194B077D007F3D07 /* UIFont+AppFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0706DDE9194B077D007F3D07 /* UIFont+AppFonts.m */; };
+		07200643194D676400A77D2F /* UIImage+BlurAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07200640194D676400A77D2F /* UIImage+BlurAdditions.m */; };
+		07200644194D676400A77D2F /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 07200642194D676400A77D2F /* UIImage+ImageEffects.m */; };
 		07315AE91947F43E00529D4E /* FSFixturesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315ABC1947F43E00529D4E /* FSFixturesCell.m */; };
 		07315AEA1947F43E00529D4E /* FSFixturesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07315ABD1947F43E00529D4E /* FSFixturesCell.xib */; };
 		07315AEC1947F43E00529D4E /* FSFixturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315AC11947F43E00529D4E /* FSFixturesViewController.m */; };
@@ -33,30 +46,19 @@
 		07315B041947F44900529D4E /* FantasySoccer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07315AFF1947F44900529D4E /* FantasySoccer-Info.plist */; };
 		07315B051947F44900529D4E /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315B021947F44900529D4E /* FSAppDelegate.m */; };
 		07315B061947F44900529D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315B031947F44900529D4E /* main.m */; };
-		07315B1D1947F45700529D4E /* bg_gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B081947F45700529D4E /* bg_gradient.png */; };
-		07315B1E1947F45700529D4E /* bg_gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B091947F45700529D4E /* bg_gradient@2x.png */; };
-		07315B1F1947F45700529D4E /* Chad.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0A1947F45700529D4E /* Chad.png */; };
-		07315B201947F45700529D4E /* Chad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0B1947F45700529D4E /* Chad@2x.png */; };
-		07315B211947F45700529D4E /* Chile.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0C1947F45700529D4E /* Chile.png */; };
-		07315B221947F45700529D4E /* Chile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0D1947F45700529D4E /* Chile@2x.png */; };
-		07315B231947F45700529D4E /* China.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0E1947F45700529D4E /* China.png */; };
-		07315B241947F45700529D4E /* China@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B0F1947F45700529D4E /* China@2x.png */; };
-		07315B251947F45700529D4E /* CIS.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B101947F45700529D4E /* CIS.png */; };
-		07315B261947F45700529D4E /* CIS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B111947F45700529D4E /* CIS@2x.png */; };
-		07315B271947F45700529D4E /* coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B121947F45700529D4E /* coins.png */; };
-		07315B281947F45700529D4E /* coins@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B131947F45700529D4E /* coins@2x.png */; };
-		07315B291947F45700529D4E /* Colombia.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B141947F45700529D4E /* Colombia.png */; };
-		07315B2A1947F45700529D4E /* Colombia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B151947F45700529D4E /* Colombia@2x.png */; };
 		07315B2B1947F45700529D4E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B161947F45700529D4E /* Default-568h@2x.png */; };
 		07315B301947F45700529D4E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B1B1947F45700529D4E /* Default.png */; };
 		07315B311947F45700529D4E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07315B1C1947F45700529D4E /* Default@2x.png */; };
+		07576083194D966800904291 /* FSBettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07576082194D966800904291 /* FSBettingsView.m */; };
+		07576085194D968000904291 /* FSBettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07576084194D968000904291 /* FSBettingsView.xib */; };
+		077B6CDE194DF698005E541F /* FSBettingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B6CDD194DF698005E541F /* FSBettingButton.m */; };
 		0787BA561949880700BF03DD /* FSUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0787BA551949880700BF03DD /* FSUserProfile.m */; };
 		0787BA5919498AC900BF03DD /* FSUtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0787BA5819498AC900BF03DD /* FSUtilityManager.m */; };
 		0787BA5C1949953000BF03DD /* FSTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 0787BA5B1949953000BF03DD /* FSTeam.m */; };
 		0787BA5E1949A55700BF03DD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0787BA5D1949A55700BF03DD /* SystemConfiguration.framework */; };
 		0787BA601949A68000BF03DD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0787BA5F1949A68000BF03DD /* MobileCoreServices.framework */; };
+		078CB21C194EA0AA002E8B59 /* FSBettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 078CB21B194EA0AA002E8B59 /* FSBettings.m */; };
 		07A0535A194AA03800E58825 /* FSCredentialsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A05359194AA03800E58825 /* FSCredentialsManager.m */; };
-		07A0535C194AAF4200E58825 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0535B194AAF4200E58825 /* SDWebImage.framework */; };
 		07A0535E194AB16300E58825 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0535D194AB16300E58825 /* ImageIO.framework */; };
 		07C83B2C1948063600C2D00F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B271948063600C2D00F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07C83B2D1948063600C2D00F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07C83B291948063600C2D00F /* SVProgressHUD.bundle */; };
@@ -106,6 +108,21 @@
 		07020E0519497E0E0022D86C /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
 		07020E0619497E0E0022D86C /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
 		07020E0719497E0E0022D86C /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
+		0706DD82194B02A5007F3D07 /* arrow_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_up@2x.png"; sourceTree = "<group>"; };
+		0706DD83194B02A5007F3D07 /* bg_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_login@2x.png"; sourceTree = "<group>"; };
+		0706DD84194B02A5007F3D07 /* btn_drawer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_drawer@2x.png"; sourceTree = "<group>"; };
+		0706DD85194B02A5007F3D07 /* btn_fb-signin_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_fb-signin_normal@2x.png"; sourceTree = "<group>"; };
+		0706DD86194B02A5007F3D07 /* btn_fb-signin_onpress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_fb-signin_onpress@2x.png"; sourceTree = "<group>"; };
+		0706DD87194B02A5007F3D07 /* icn_coins-inline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_coins-inline@2x.png"; sourceTree = "<group>"; };
+		0706DD88194B02A5007F3D07 /* icn_coins@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_coins@2x.png"; sourceTree = "<group>"; };
+		0706DD9D194B060D007F3D07 /* NeutraText-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Book.otf"; sourceTree = "<group>"; };
+		0706DDB1194B060D007F3D07 /* NeutraText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Light.otf"; sourceTree = "<group>"; };
+		0706DDE8194B077D007F3D07 /* UIFont+AppFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AppFonts.h"; sourceTree = "<group>"; };
+		0706DDE9194B077D007F3D07 /* UIFont+AppFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFonts.m"; sourceTree = "<group>"; };
+		0720063F194D676400A77D2F /* UIImage+BlurAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurAdditions.h"; sourceTree = "<group>"; };
+		07200640194D676400A77D2F /* UIImage+BlurAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurAdditions.m"; sourceTree = "<group>"; };
+		07200641194D676400A77D2F /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		07200642194D676400A77D2F /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		07315ABB1947F43E00529D4E /* FSFixturesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFixturesCell.h; sourceTree = "<group>"; };
 		07315ABC1947F43E00529D4E /* FSFixturesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFixturesCell.m; sourceTree = "<group>"; };
 		07315ABD1947F43E00529D4E /* FSFixturesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSFixturesCell.xib; sourceTree = "<group>"; };
@@ -146,23 +163,14 @@
 		07315B011947F44900529D4E /* FSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
 		07315B021947F44900529D4E /* FSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
 		07315B031947F44900529D4E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07315B081947F45700529D4E /* bg_gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_gradient.png; sourceTree = "<group>"; };
-		07315B091947F45700529D4E /* bg_gradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_gradient@2x.png"; sourceTree = "<group>"; };
-		07315B0A1947F45700529D4E /* Chad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chad.png; sourceTree = "<group>"; };
-		07315B0B1947F45700529D4E /* Chad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chad@2x.png"; sourceTree = "<group>"; };
-		07315B0C1947F45700529D4E /* Chile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chile.png; sourceTree = "<group>"; };
-		07315B0D1947F45700529D4E /* Chile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chile@2x.png"; sourceTree = "<group>"; };
-		07315B0E1947F45700529D4E /* China.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = China.png; sourceTree = "<group>"; };
-		07315B0F1947F45700529D4E /* China@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "China@2x.png"; sourceTree = "<group>"; };
-		07315B101947F45700529D4E /* CIS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CIS.png; sourceTree = "<group>"; };
-		07315B111947F45700529D4E /* CIS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CIS@2x.png"; sourceTree = "<group>"; };
-		07315B121947F45700529D4E /* coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coins.png; sourceTree = "<group>"; };
-		07315B131947F45700529D4E /* coins@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coins@2x.png"; sourceTree = "<group>"; };
-		07315B141947F45700529D4E /* Colombia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colombia.png; sourceTree = "<group>"; };
-		07315B151947F45700529D4E /* Colombia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colombia@2x.png"; sourceTree = "<group>"; };
 		07315B161947F45700529D4E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		07315B1B1947F45700529D4E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		07315B1C1947F45700529D4E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		07576081194D966800904291 /* FSBettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingsView.h; sourceTree = "<group>"; };
+		07576082194D966800904291 /* FSBettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettingsView.m; sourceTree = "<group>"; };
+		07576084194D968000904291 /* FSBettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSBettingsView.xib; sourceTree = "<group>"; };
+		077B6CDC194DF698005E541F /* FSBettingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingButton.h; sourceTree = "<group>"; };
+		077B6CDD194DF698005E541F /* FSBettingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettingButton.m; sourceTree = "<group>"; };
 		0787BA541949880700BF03DD /* FSUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUserProfile.h; sourceTree = "<group>"; };
 		0787BA551949880700BF03DD /* FSUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUserProfile.m; sourceTree = "<group>"; };
 		0787BA5719498AC900BF03DD /* FSUtilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtilityManager.h; sourceTree = "<group>"; };
@@ -171,6 +179,8 @@
 		0787BA5B1949953000BF03DD /* FSTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTeam.m; sourceTree = "<group>"; };
 		0787BA5D1949A55700BF03DD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0787BA5F1949A68000BF03DD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		078CB21A194EA0AA002E8B59 /* FSBettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettings.h; sourceTree = "<group>"; };
+		078CB21B194EA0AA002E8B59 /* FSBettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettings.m; sourceTree = "<group>"; };
 		07A05358194AA03800E58825 /* FSCredentialsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCredentialsManager.h; sourceTree = "<group>"; };
 		07A05359194AA03800E58825 /* FSCredentialsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCredentialsManager.m; sourceTree = "<group>"; };
 		07A0535B194AAF4200E58825 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
@@ -229,12 +239,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0706DD90194B0408007F3D07 /* SDWebImage.framework in Frameworks */,
 				07A0535E194AB16300E58825 /* ImageIO.framework in Frameworks */,
 				0787BA601949A68000BF03DD /* MobileCoreServices.framework in Frameworks */,
 				0787BA5E1949A55700BF03DD /* SystemConfiguration.framework in Frameworks */,
 				07FC459A1946AA56005640AF /* CoreGraphics.framework in Frameworks */,
 				07315AFD1947F43E00529D4E /* FacebookSDK.framework in Frameworks */,
-				07A0535C194AAF4200E58825 /* SDWebImage.framework in Frameworks */,
 				07FC459C1946AA56005640AF /* UIKit.framework in Frameworks */,
 				07FC45981946AA56005640AF /* Foundation.framework in Frameworks */,
 			);
@@ -266,6 +276,23 @@
 			path = ViewDeck;
 			sourceTree = "<group>";
 		};
+		0706DD91194B060D007F3D07 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0706DD92194B060D007F3D07 /* Neutra Text */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0706DD92194B060D007F3D07 /* Neutra Text */ = {
+			isa = PBXGroup;
+			children = (
+				0706DD9D194B060D007F3D07 /* NeutraText-Book.otf */,
+				0706DDB1194B060D007F3D07 /* NeutraText-Light.otf */,
+			);
+			path = "Neutra Text";
+			sourceTree = "<group>";
+		};
 		07315AB81947F43E00529D4E /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +305,11 @@
 				07F4444C1949B802002DA76C /* FSSidePanelViewController.h */,
 				07F4444D1949B802002DA76C /* FSSidePanelViewController.m */,
 				07F4444E1949B802002DA76C /* FSSidePanelViewController.xib */,
+				07576081194D966800904291 /* FSBettingsView.h */,
+				07576082194D966800904291 /* FSBettingsView.m */,
+				07576084194D968000904291 /* FSBettingsView.xib */,
+				077B6CDC194DF698005E541F /* FSBettingButton.h */,
+				077B6CDD194DF698005E541F /* FSBettingButton.m */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -360,20 +392,13 @@
 		07315B071947F45700529D4E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				07315B081947F45700529D4E /* bg_gradient.png */,
-				07315B091947F45700529D4E /* bg_gradient@2x.png */,
-				07315B0A1947F45700529D4E /* Chad.png */,
-				07315B0B1947F45700529D4E /* Chad@2x.png */,
-				07315B0C1947F45700529D4E /* Chile.png */,
-				07315B0D1947F45700529D4E /* Chile@2x.png */,
-				07315B0E1947F45700529D4E /* China.png */,
-				07315B0F1947F45700529D4E /* China@2x.png */,
-				07315B101947F45700529D4E /* CIS.png */,
-				07315B111947F45700529D4E /* CIS@2x.png */,
-				07315B121947F45700529D4E /* coins.png */,
-				07315B131947F45700529D4E /* coins@2x.png */,
-				07315B141947F45700529D4E /* Colombia.png */,
-				07315B151947F45700529D4E /* Colombia@2x.png */,
+				0706DD82194B02A5007F3D07 /* arrow_up@2x.png */,
+				0706DD83194B02A5007F3D07 /* bg_login@2x.png */,
+				0706DD84194B02A5007F3D07 /* btn_drawer@2x.png */,
+				0706DD85194B02A5007F3D07 /* btn_fb-signin_normal@2x.png */,
+				0706DD86194B02A5007F3D07 /* btn_fb-signin_onpress@2x.png */,
+				0706DD87194B02A5007F3D07 /* icn_coins-inline@2x.png */,
+				0706DD88194B02A5007F3D07 /* icn_coins@2x.png */,
 				07315B161947F45700529D4E /* Default-568h@2x.png */,
 				07315B1B1947F45700529D4E /* Default.png */,
 				07315B1C1947F45700529D4E /* Default@2x.png */,
@@ -435,6 +460,8 @@
 			children = (
 				07DE6CF8194868ED00CF9563 /* FSBaseModel.h */,
 				07DE6CF9194868ED00CF9563 /* FSBaseModel.m */,
+				078CB21A194EA0AA002E8B59 /* FSBettings.h */,
+				078CB21B194EA0AA002E8B59 /* FSBettings.m */,
 				07DE6CF51948686900CF9563 /* FSTournament.h */,
 				07DE6CF61948686900CF9563 /* FSTournament.m */,
 				07DE6D0519486BFA00CF9563 /* FSMatch.h */,
@@ -452,6 +479,10 @@
 		07DE6CFB19486A6700CF9563 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				0720063F194D676400A77D2F /* UIImage+BlurAdditions.h */,
+				07200640194D676400A77D2F /* UIImage+BlurAdditions.m */,
+				07200641194D676400A77D2F /* UIImage+ImageEffects.h */,
+				07200642194D676400A77D2F /* UIImage+ImageEffects.m */,
 				07DE6CFC19486A6700CF9563 /* NSArray+Additions.h */,
 				07DE6CFD19486A6700CF9563 /* NSArray+Additions.m */,
 				07DE6CFE19486A6700CF9563 /* NSDictionary+Additions.h */,
@@ -460,6 +491,8 @@
 				07DE6D0119486A6700CF9563 /* NSObject+Additions.m */,
 				07DE6D081948790300CF9563 /* ISO8601DateFormatter.h */,
 				07DE6D091948790300CF9563 /* ISO8601DateFormatter.m */,
+				0706DDE8194B077D007F3D07 /* UIFont+AppFonts.h */,
+				0706DDE9194B077D007F3D07 /* UIFont+AppFonts.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -516,6 +549,7 @@
 		07FC459E1946AA56005640AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0706DD91194B060D007F3D07 /* Fonts */,
 				07315B071947F45700529D4E /* Images */,
 				07315AFE1947F44900529D4E /* Others */,
 				07FC45A01946AA56005640AF /* InfoPlist.strings */,
@@ -617,33 +651,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07315B291947F45700529D4E /* Colombia.png in Resources */,
 				07315B041947F44900529D4E /* FantasySoccer-Info.plist in Resources */,
-				07315B281947F45700529D4E /* coins@2x.png in Resources */,
-				07315B1E1947F45700529D4E /* bg_gradient@2x.png in Resources */,
-				07315B221947F45700529D4E /* Chile@2x.png in Resources */,
-				07315B211947F45700529D4E /* Chile.png in Resources */,
 				07FC45A21946AA56005640AF /* InfoPlist.strings in Resources */,
-				07315B1F1947F45700529D4E /* Chad.png in Resources */,
 				07F444501949B802002DA76C /* FSSidePanelViewController.xib in Resources */,
-				07315B2A1947F45700529D4E /* Colombia@2x.png in Resources */,
-				07315B1D1947F45700529D4E /* bg_gradient.png in Resources */,
+				07576085194D968000904291 /* FSBettingsView.xib in Resources */,
 				07315B301947F45700529D4E /* Default.png in Resources */,
 				07FC45AA1946AA56005640AF /* Images.xcassets in Resources */,
-				07315B261947F45700529D4E /* CIS@2x.png in Resources */,
+				0706DD8A194B02A5007F3D07 /* bg_login@2x.png in Resources */,
+				0706DD8F194B02A5007F3D07 /* icn_coins@2x.png in Resources */,
+				0706DD8E194B02A5007F3D07 /* icn_coins-inline@2x.png in Resources */,
+				0706DD8B194B02A5007F3D07 /* btn_drawer@2x.png in Resources */,
 				07315AEF1947F43E00529D4E /* FSLeaderBoardCell.xib in Resources */,
-				07315B271947F45700529D4E /* coins.png in Resources */,
 				07315AF11947F43E00529D4E /* FSLeaderBoardViewController.xib in Resources */,
-				07315B201947F45700529D4E /* Chad@2x.png in Resources */,
 				07315AEA1947F43E00529D4E /* FSFixturesCell.xib in Resources */,
 				07315B2B1947F45700529D4E /* Default-568h@2x.png in Resources */,
-				07315B241947F45700529D4E /* China@2x.png in Resources */,
-				07315B251947F45700529D4E /* CIS.png in Resources */,
+				0706DD8C194B02A5007F3D07 /* btn_fb-signin_normal@2x.png in Resources */,
+				0706DD8D194B02A5007F3D07 /* btn_fb-signin_onpress@2x.png in Resources */,
 				07315AED1947F43E00529D4E /* FSFixturesViewController.xib in Resources */,
 				07C83B2D1948063600C2D00F /* SVProgressHUD.bundle in Resources */,
-				07315B231947F45700529D4E /* China.png in Resources */,
 				07315B311947F45700529D4E /* Default@2x.png in Resources */,
 				07315AF31947F43E00529D4E /* FSLoginViewController.xib in Resources */,
+				0706DD89194B02A5007F3D07 /* arrow_up@2x.png in Resources */,
+				0706DDD9194B060D007F3D07 /* NeutraText-Light.otf in Resources */,
+				0706DDC5194B060D007F3D07 /* NeutraText-Book.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +695,7 @@
 				07DE6D0319486A6700CF9563 /* NSDictionary+Additions.m in Sources */,
 				07315AF41947F43E00529D4E /* AFDownloadRequestOperation.m in Sources */,
 				07315AE91947F43E00529D4E /* FSFixturesCell.m in Sources */,
+				0706DDEA194B077D007F3D07 /* UIFont+AppFonts.m in Sources */,
 				0787BA5919498AC900BF03DD /* FSUtilityManager.m in Sources */,
 				07315B051947F44900529D4E /* FSAppDelegate.m in Sources */,
 				07DE6CF71948686900CF9563 /* FSTournament.m in Sources */,
@@ -676,6 +707,7 @@
 				07315AF61947F43E00529D4E /* AFHTTPRequestOperation.m in Sources */,
 				07DE6CF0194848B600CF9563 /* FSTournamentsManager.m in Sources */,
 				07315AFC1947F43E00529D4E /* AFXMLRequestOperation.m in Sources */,
+				07200644194D676400A77D2F /* UIImage+ImageEffects.m in Sources */,
 				07C83B3D194808BF00C2D00F /* BaseManager.m in Sources */,
 				07315AFB1947F43E00529D4E /* AFURLConnectionOperation.m in Sources */,
 				07315AF71947F43E00529D4E /* AFImageRequestOperation.m in Sources */,
@@ -683,14 +715,17 @@
 				07315AF51947F43E00529D4E /* AFHTTPClient.m in Sources */,
 				07DE6D0419486A6700CF9563 /* NSObject+Additions.m in Sources */,
 				0787BA561949880700BF03DD /* FSUserProfile.m in Sources */,
+				07576083194D966800904291 /* FSBettingsView.m in Sources */,
 				07315AF01947F43E00529D4E /* FSLeaderBoardViewController.m in Sources */,
 				07315AFA1947F43E00529D4E /* AFPropertyListRequestOperation.m in Sources */,
+				078CB21C194EA0AA002E8B59 /* FSBettings.m in Sources */,
 				07315AF91947F43E00529D4E /* AFNetworkActivityIndicatorManager.m in Sources */,
 				07315AF21947F43E00529D4E /* FSLoginViewController.m in Sources */,
 				07315AEE1947F43E00529D4E /* FSLeaderBoardCell.m in Sources */,
 				07020E0A19497E0E0022D86C /* IIWrapController.m in Sources */,
 				07A0535A194AA03800E58825 /* FSCredentialsManager.m in Sources */,
 				07DE6D0D19487C7F00CF9563 /* FSTopScore.m in Sources */,
+				07200643194D676400A77D2F /* UIImage+BlurAdditions.m in Sources */,
 				07DE6CFA194868ED00CF9563 /* FSBaseModel.m in Sources */,
 				07C83B3A1948087F00C2D00F /* Reachability.m in Sources */,
 				07C83B2C1948063600C2D00F /* JSONKit.m in Sources */,
@@ -701,6 +736,7 @@
 				07020E0819497E0E0022D86C /* IISideController.m in Sources */,
 				07315AEC1947F43E00529D4E /* FSFixturesViewController.m in Sources */,
 				07DE6D0719486BFA00CF9563 /* FSMatch.m in Sources */,
+				077B6CDE194DF698005E541F /* FSBettingButton.m in Sources */,
 				07C83B33194806E300C2D00F /* FSNetworkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

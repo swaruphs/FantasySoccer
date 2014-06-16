@@ -9,26 +9,26 @@
 #import "FSFixturesViewController.h"
 #import "FSLeaderBoardViewController.h"
 #import "FSFixturesCell.h"
+#import "UIImage+BlurAdditions.h"
+#import "FSBettingsView.h"
 
-@interface FSFixturesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FSFixturesCellDelegate>
 
-{
-    CGPoint _currentScrollPosition;
-    CGPoint _lastScrollPosition;
-}
+#define COINS_TO_PLAY @"- Coins to play:"
+
+@interface FSFixturesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FSFixturesCellDelegate,FSBettingsViewDelegate>
+
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, retain) NSMutableArray *dataArray;
-@property (nonatomic, retain) NSMutableDictionary *cellSizeDic;
-@property (nonatomic, retain) NSIndexPath *previousIndexpath;
-@property (nonatomic, retain) UILabel *lblScore;
-@property (nonatomic) CGPoint scrollSpeed;
+@property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSMutableDictionary *cellSizeDic;
+@property (nonatomic, strong) NSIndexPath *previousIndexpath;
 @property (nonatomic, strong) FSTournament * tournament;
 @property (nonatomic, strong) NSArray *teamsArray;
+@property (nonatomic, strong) NSMutableDictionary *selectedDataDic;
 
 @end
 
 @implementation FSFixturesViewController
-@dynamic scrollSpeed;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,11 +49,44 @@
 -(void)_init
 {
     NSString *cellIdentifier = NSStringFromClass([self class]);
-    UINib *cellNib= [UINib nibWithNibName:NSStringFromClass([FSFixturesCell class]) bundle:nil];
+    UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([FSFixturesCell class]) bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:cellIdentifier];
     self.cellSizeDic = [[NSMutableDictionary alloc] init];
     self.teamsArray  = [[FSTournamentsManager sharedInstance] teamArray];
+    [self setTitleLabel];
+    [self setBlurImageBackground];
+    
+    UIImage *barbuttonImage = [UIImage imageNamed:@"btn_drawer"];
+    UIBarButtonItem *leftbarButtonItem = [[UIBarButtonItem alloc] initWithImage:barbuttonImage style:UIBarButtonItemStylePlain target:self action:@selector(drawerButtonClick:)];
+    [leftbarButtonItem setTintColor:[UIColor whiteColor]];
+    self.navigationItem.leftBarButtonItem = leftbarButtonItem;
+    
+}
 
+-(void)setTitleLabel
+{
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont neutraTextBookFontNameOfSize:18];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.text = @"MATCHES";
+    self.navigationItem.titleView = titleLabel;
+    
+}
+
+- (void)setBlurImageBackground
+{
+    UIImage *captureView = [UIImage captureView:self.view];
+    UIImage *blurImage =  [captureView applyLightEffectWithReducedRadius];
+    self.backgroundImageView.image = blurImage;
+}
+
+- (void)drawerButtonClick:(id)sender
+{
+    DLog(@"bar button click");
+    FSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.viewDeckController openLeftViewAnimated:TRUE];
 }
 
 - (void)populateData
@@ -119,17 +152,28 @@
 
 - (void)generateDataModel
 {
+    NSDate *currentDate = [NSDate date];
+    
+    NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"startTime > %@ && status != %@",[NSDate date],MATCH_STATUS_FINISHED];
+    NSArray *filteredArray = [self.dataArray filteredArrayUsingPredicate:predicate];
+    filteredArray = [filteredArray sortedArrayWithAttribute:@"startTime" ascending:YES];
+    self.dataArray = [NSMutableArray arrayWithArray:filteredArray];
+    
     NSMutableArray *resultsArray = [NSMutableArray array];
     for (FSMatch *match in self.dataArray) {
-    
+        
         NSNumber *lTeamID = match.lTeamID;
         NSNumber *rTeamID = match.rTeamID;
         FSTeam *lTeam = [self.teamsArray firstObjectWithValue:lTeamID forKeyPath:@"teamID"];
         FSTeam *rTeam = [self.teamsArray firstObjectWithValue:rTeamID forKeyPath:@"teamID"];
         
+        NSInteger days = [FSUtilityManager daysBetweenDate:currentDate andDate:match.startTime];
+        NSString *dateString  = [self getNoOfDaysString:days];
+        
         NSDictionary *aDic = @{@"match":match,
                                @"lteam":lTeam,
-                               @"rteam":rTeam};
+                               @"rteam":rTeam,
+                               @"days":dateString};
         [resultsArray addObject:aDic];
     }
     self.dataArray = resultsArray;
@@ -153,37 +197,32 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.cellSizeDic objectForKey:indexPath]) {
-        NSValue *value =  [self.cellSizeDic objectForKey:indexPath];
-        return [value CGSizeValue];
+    
+    if (self.previousIndexpath && indexPath.row == self.previousIndexpath.row) {
+        return CGSizeMake(320, 108);
     }
     else {
-        NSValue * value  = [NSValue valueWithCGSize:CGSizeMake(320, 60)];
-        [self.cellSizeDic setObject:value forKey:indexPath];
-        return [value CGSizeValue];
+        FSMatch *match = self.dataArray[indexPath.row][@"match"];
+        if (match.bettings) {
+            return CGSizeMake(320, 84);
+        }
+        else {
+            return CGSizeMake(320, 64);
+        }
     }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.previousIndexpath) {
-        [self setNormalHeightForIndexPath:self.previousIndexpath];
+    FSMatch * match = self.dataArray[indexPath.row][@"match"];
+
+    if (self.previousIndexpath && indexPath.row == self.previousIndexpath.row) {
+        self.previousIndexpath = nil;
     }
-    self.previousIndexpath = indexPath;
-    [self setHeightForIndexPath:indexPath];
+    else if(!match.bettings){
+        self.previousIndexpath = indexPath;
+    }
     [self resetCollectionViewLayout];
-}
-
-- (void)setNormalHeightForIndexPath:(NSIndexPath *)indexpath
-{
-    NSValue *value = [NSValue valueWithCGSize:CGSizeMake(320, 60)];
-    [self.cellSizeDic setObject:value forKey:indexpath];
-}
-
-- (void)setHeightForIndexPath:(NSIndexPath *)indexPath
-{
-    NSValue *value  = [NSValue valueWithCGSize:CGSizeMake(320, 100)];
-    [self.cellSizeDic setObject:value forKey:indexPath];
 }
 
 - (void)didReceiveMemoryWarning
@@ -192,22 +231,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fixtureCellDidSelectButton:(NSString *)selection
+- (void)fixtureCellDidSelectButton:(NSString *)selection withData:(NSDictionary *)dataDic
 {
     if (self.previousIndexpath) {
-        [self setNormalHeightForIndexPath:self.previousIndexpath];
         self.previousIndexpath = nil;
         [self resetCollectionViewLayout];
     }
-    
-    FSMatch *match = [self.dataArray objectAtIndex:0][@"match"];
-    
-    
-    [[FSTournamentsManager sharedInstance] postBettingForMatch:match points:@(10) selection:selection success:^(BOOL success) {
-        
-    } failure:^(NSError *error) {
-        
-    }];
+    [self displayBettingsViewWithSelection:selection andData:dataDic];
 }
 
 - (void)resetCollectionViewLayout
@@ -218,25 +248,63 @@
 }
 
 
-#pragma mark  - UIScrollViewDelegate
+#pragma mark - Bettings view
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+- (void)displayBettingsViewWithSelection:(NSString *)selection andData:(NSDictionary *)dataDic
 {
-    _lastScrollPosition = _currentScrollPosition;
-    _currentScrollPosition = scrollView.contentOffset;
+    self.selectedDataDic = [NSMutableDictionary dictionaryWithDictionary:dataDic];
+    self.selectedDataDic[@"selection"] = selection;
+    
+    NSString *title = [self getTitleForBettingsView:self.selectedDataDic];
+    NSNumber *points  = [[FSUserManager sharedInstance].userProfile points];
+    [FSBettingsView showBettingsFromViewController:self withTitle:title points:[points integerValue]];
 }
 
-- (void)waveAnimateCells :(UICollectionViewCell *)cell speed:(float)speed
+- (void)FSBettingsViewDidCancelView:(FSBettingsView *)view
 {
-    if (speed == 0.0) {
-        return;
+    DLog(@"bettings view is cancelled");
+}
+
+- (void)FSBettingsViewDidDismissView:(FSBettingsView *)view withBet:(NSInteger)points
+{
+    FSMatch *match = self.selectedDataDic[@"match"];
+    NSString *selection = self.selectedDataDic[@"selection"];
+    
+    [[FSTournamentsManager sharedInstance] postBettingForMatch:match points:@(points) selection:selection success:^(FSBettings * bettings) {
+        
+        if ([bettings isValidObject]) {
+            [self.collectionView reloadData];
+        }
+        
+        
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+    }];
+}
+
+- (NSString *)getTitleForBettingsView:(NSDictionary *)dataDic
+{
+    NSString *selection = dataDic[@"selection"];
+    if ([selection isEqualToString:MATCH_BET_DRAW]) {
+        selection = [NSString stringWithFormat:@"Draw %@",COINS_TO_PLAY];
     }
-    cell.layer.transform = CATransform3DMakeTranslation(-cell.layer.bounds.size.width/2.0f, 0.0f, 0.0f);
+    else {
+        FSTeam *team  = [selection isEqualToString:MATCH_BET_LEFT] ? dataDic[@"lteam"] : dataDic[@"rteam"];
+        selection = [NSString stringWithFormat:@"%@ Win %@",team.name,COINS_TO_PLAY];
+    }
+    return selection;
 }
 
-- (CGPoint)scrollSpeed
+- (NSString *)getNoOfDaysString:(NSInteger)noOfDays
 {
-    return CGPointMake(_lastScrollPosition.x - _currentScrollPosition.x,
-                       _lastScrollPosition.y - _currentScrollPosition.y);
+    switch (noOfDays) {
+        case 0:
+            return @"Today";
+            case 1:
+            return @"Tomorrow";
+            default:
+            return [NSString stringWithFormat:@"%ld days to go",(long)noOfDays];
+    }
 }
+
 @end

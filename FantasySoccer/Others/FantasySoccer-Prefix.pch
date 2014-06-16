@@ -32,11 +32,13 @@
 #import "NSObject+Additions.h"
 #import "NSArray+Additions.h"
 #import "NSDictionary+Additions.h"
+#import "UIFont+AppFonts.h"
 
 // Models
 
 #import "FSBaseModel.h"
 #import "FSTournament.h"
+#import "FSBettings.h"
 #import "FSMatch.h"
 #import "FSTopScore.h"
 #import "FSUserProfile.h"
@@ -162,3 +164,8 @@
 
 #define CLIENT_ID                  @"732e338b85771042971169e9d6ee9cd546259e28afec8979890fa3dd6b559885"
 #define CLIENT_SECRET              @"b0d6bf3638c58e95755a2f8b29c46d5f3a625b9c22db329fe90bee55fe88f30e"
+
+#define MATCH_BET_LEFT @"left"
+#define MATCH_BET_DRAW @"draw"
+#define MATCH_BET_RIGHT @"right"
+#define MATCH_STATUS_FINISHED @"finished"

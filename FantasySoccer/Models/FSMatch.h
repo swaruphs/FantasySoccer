@@ -13,9 +13,12 @@
 @property (nonatomic,retain) NSString * description;
 @property (nonatomic, retain) NSNumber * matchID;
 @property (nonatomic, retain) NSNumber * lTeamID;
+@property (nonatomic, strong) NSNumber * lTeamScore;
 @property (nonatomic, retain) NSNumber *published;
 @property (nonatomic, retain) NSString *status;
 @property (nonatomic, retain) NSDate * startTime;
 @property (nonatomic, retain) NSNumber * rTeamID;
+@property (nonatomic, strong) NSNumber * rTeamScore;
+@property (nonatomic, strong) FSBettings *bettings;
 
 @end

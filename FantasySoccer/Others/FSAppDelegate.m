@@ -20,12 +20,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+//    [[UINavigationBar appearance] setTranslucent:YES];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [[UINavigationBar appearance] setTintColor:[UIColor grayColor]];
     
-    // Whenever a person opens the app, check for a cached session
-
     if ([[[FSCredentialsManager sharedInstance] getSavedToken] isValidObject]) {
         [self getUserProfile];
         [self showMainView];

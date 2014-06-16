@@ -16,7 +16,7 @@ typedef enum : NSUInteger {
 
 @protocol FSFixturesCellDelegate <NSObject>
 
-- (void)fixtureCellDidSelectButton:(NSString *)selection;
+- (void)fixtureCellDidSelectButton:(NSString *)selection withData:(NSDictionary *)dataDic;
 
 @end
 
@@ -24,6 +24,7 @@ typedef enum : NSUInteger {
 @interface FSFixturesCell : UICollectionViewCell
 
 @property (nonatomic, weak) id<FSFixturesCellDelegate>delegate;
+@property (nonatomic) BOOL showControls;
 
 - (void)configureData:(NSDictionary *)dataDic;
 

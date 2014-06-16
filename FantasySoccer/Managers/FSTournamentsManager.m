@@ -119,7 +119,7 @@ SINGLETON_MACRO
 - (void)postBettingForMatch:(FSMatch *)match
                      points:(NSNumber *)points
                   selection:(NSString *)selection
-                    success:(void(^)(BOOL success))success
+                    success:(void(^)(FSBettings *success))success
                     failure:(void(^)(NSError *error))failure
 {
     if ([match.startTime earlierDate:[NSDate date]] == match.startTime) {
@@ -130,8 +130,16 @@ SINGLETON_MACRO
     NSDictionary *authParams = [[FSUserManager sharedInstance] getAuthParams];
     [params addEntriesFromDictionary:authParams];
     
-    NSString *path = [NSString stringWithFormat:API_BETTINGS,@"1"];
+    NSString *path = [NSString stringWithFormat:API_BETTINGS,match.matchID];
     [[FSNetworkManager sharedInstance] getRawResponseForPath:path parameters:params method:POST_METHOD success:^(id responseObject) {
+        
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            FSBettings *bettings = [[FSBettings alloc] initWithDictionary:responseObject];
+            match.bettings = bettings;
+            [[FSUserManager sharedInstance] updatePoints:[points integerValue]];
+            success(bettings);
+        }
+        
         
     } failure:^(NSError *error) {
         failure(error);

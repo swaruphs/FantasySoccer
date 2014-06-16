@@ -53,41 +53,11 @@
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:cellIdentifier];
     self.cellSizeDic = [[NSMutableDictionary alloc] init];
     self.teamsArray  = [[FSTournamentsManager sharedInstance] teamArray];
-    [self setTitleLabel];
-    [self setBlurImageBackground];
-    
-    UIImage *barbuttonImage = [UIImage imageNamed:@"btn_drawer"];
-    UIBarButtonItem *leftbarButtonItem = [[UIBarButtonItem alloc] initWithImage:barbuttonImage style:UIBarButtonItemStylePlain target:self action:@selector(drawerButtonClick:)];
-    [leftbarButtonItem setTintColor:[UIColor whiteColor]];
-    self.navigationItem.leftBarButtonItem = leftbarButtonItem;
-    
+
+    [self setTitleLabel:@"MATCHES"];
+    [self setDrawerBarButton];
 }
 
--(void)setTitleLabel
-{
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont neutraTextBookFontNameOfSize:18];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.text = @"MATCHES";
-    self.navigationItem.titleView = titleLabel;
-    
-}
-
-- (void)setBlurImageBackground
-{
-    UIImage *captureView = [UIImage captureView:self.view];
-    UIImage *blurImage =  [captureView applyLightEffectWithReducedRadius];
-    self.backgroundImageView.image = blurImage;
-}
-
-- (void)drawerButtonClick:(id)sender
-{
-    DLog(@"bar button click");
-    FSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate.viewDeckController openLeftViewAnimated:TRUE];
-}
 
 - (void)populateData
 {

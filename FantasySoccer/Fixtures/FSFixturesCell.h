@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 typedef enum : NSUInteger {
     FSFixtureCellLeft  = 1,
@@ -24,7 +25,6 @@ typedef enum : NSUInteger {
 @interface FSFixturesCell : UICollectionViewCell
 
 @property (nonatomic, weak) id<FSFixturesCellDelegate>delegate;
-@property (nonatomic) BOOL showControls;
 
 - (void)configureData:(NSDictionary *)dataDic;
 

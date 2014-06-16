@@ -20,10 +20,12 @@
 
 //view controllers
 #import "FSAppDelegate.h"
+#import "FSBaseViewController.h"
 #import "FSLeaderBoardViewController.h"
 #import "FSFixturesViewController.h"
 #import "FSLoginViewController.h"
 #import "FSSidePanelViewController.h"
+#import "FSResultsViewController.h"
 
 
 

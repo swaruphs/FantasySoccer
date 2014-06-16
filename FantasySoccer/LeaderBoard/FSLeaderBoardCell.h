@@ -10,6 +10,6 @@
 
 @interface FSLeaderBoardCell : UITableViewCell
 
-- (void)configureData:(FSTopScore *)topScore;
+- (void)configureData:(FSTopScore *)topScore atIndexPath:(NSIndexPath *)indexpath;
 
 @end

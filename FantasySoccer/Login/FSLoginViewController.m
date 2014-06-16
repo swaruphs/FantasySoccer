@@ -12,6 +12,9 @@
 
 @interface FSLoginViewController ()
 
+@property (nonatomic, weak) IBOutlet UILabel *lblTitle;
+@property (nonatomic, weak) IBOutlet UIButton *fbBtn;
+
 @end
 
 @implementation FSLoginViewController
@@ -28,9 +31,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self _init];
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)_init
+{
+    self.lblTitle.font = [UIFont neutraTextBoldFontNameOfSize:36];
+    
+    NSMutableParagraphStyle * paraStyle= [[NSMutableParagraphStyle alloc] init];
+    paraStyle.lineSpacing = 12;
+    paraStyle.alignment = NSTextAlignmentCenter;
+    NSDictionary *attrDic = @{NSParagraphStyleAttributeName:paraStyle};
+    NSAttributedString *attrString  = [[NSAttributedString alloc] initWithString:@"SOCCER\nFANTASY" attributes:attrDic];
+    
+
+    self.lblTitle.attributedText = attrString;
+    
+}
 
 - (IBAction)buttonTouched:(id)sender
 {

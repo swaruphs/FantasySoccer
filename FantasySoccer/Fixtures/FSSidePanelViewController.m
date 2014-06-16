@@ -72,21 +72,20 @@
 
 - (void)switchToViewController:(NSUInteger)index
 {
-    Class vcClass = nil;
+    UIViewController *aVC =  nil;
     switch (index) {
         case 0:
-            vcClass = [FSFixturesViewController class];
+            aVC = [[FSFixturesViewController alloc] initWithNibName:NSStringFromClass([FSFixturesViewController class]) bundle:nil];
             break;
         case 1:
-            vcClass = [FSLeaderBoardViewController class];
+            aVC = [[FSResultsViewController alloc] initWithNibName:NSStringFromClass([FSFixturesViewController class]) bundle:nil];
             break;
         default:
-            vcClass = [FSFixturesViewController class];
+            aVC = [[FSLeaderBoardViewController alloc] initWithNibName:NSStringFromClass([FSLeaderBoardViewController class]) bundle:nil];
             break;
     }
     
-    UIViewController *controller = [[vcClass alloc] initWithNibName:NSStringFromClass(vcClass) bundle:nil];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:aVC];
     FSAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     [delegate changeCenterViewControllerToViewController:navController];
 }

@@ -16,7 +16,7 @@
     self.matchID = [jsonDic numberForKey:@"id"];
     self.description = [jsonDic stringForKey:@"description"];
     self.lTeamID = [jsonDic numberForKey:@"lteam_id"];
-    self.rTeamScore = [jsonDic numberForKey:@"lscore"];
+    self.lTeamScore = [jsonDic numberForKey:@"lscore"];
     self.published = [jsonDic numberForKey:@"published"];
     self.rTeamID = [jsonDic numberForKey:@"rteam_id"];
     self.rTeamScore = [jsonDic numberForKey:@"rscore"];

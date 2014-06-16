@@ -7,7 +7,7 @@
 //
 
 #import "FSFixturesCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+
 
 
 @interface FSFixturesCell()
@@ -26,7 +26,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *teamTwoImageView;
 @property (nonatomic, weak) IBOutlet UILabel *lblTeamOne;
 @property (nonatomic, weak) IBOutlet UILabel *lblTeamTwo;
-@property (nonatomic, weak) IBOutlet UILabel *lblDays;  
+@property (nonatomic, weak) IBOutlet UILabel *lblDays;
 
 @property (nonatomic, strong) NSDictionary *dataDic;
 

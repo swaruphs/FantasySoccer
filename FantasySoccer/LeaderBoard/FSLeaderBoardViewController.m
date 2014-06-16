@@ -14,6 +14,7 @@ static NSString *cellIdentifier = @"leaderBoardCellIdentifier";
 @interface FSLeaderBoardViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
 @property (nonatomic, retain) NSMutableArray *dataArray;
 
 @end
@@ -33,18 +34,21 @@ static NSString *cellIdentifier = @"leaderBoardCellIdentifier";
 {
     [super viewDidLoad];
     [self _init];
+    [self setTitleLabel:@"LEADERBOARD"];
+    [self setDrawerBarButton];
+    [self populateData];
     // Do any additional setup after loading the view from its nib.
 
 }
 
 - (void)_init
 {
-    self.title =  @"Leader Board";
     self.dataArray = [NSMutableArray array];
     UINib *aNib = [UINib nibWithNibName:@"FSLeaderBoardCell" bundle:nil];
     [self.tableView registerNib:aNib forCellReuseIdentifier:cellIdentifier];
-
-    [self populateData];
+    [self.tableView setTableFooterView:[UIView new]];
+    self.tableView.backgroundView = nil;
+    self.tableView.backgroundColor = [UIColor clearColor];
 }
 
 - (void)populateData
@@ -85,9 +89,8 @@ static NSString *cellIdentifier = @"leaderBoardCellIdentifier";
     FSLeaderBoardCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     FSTopScore *topScore = [self.dataArray objectAtIndex:indexPath.row];
-    [cell configureData:topScore];
+    [cell configureData:topScore atIndexPath:indexPath];
     return cell;
 }
-
 
 @end

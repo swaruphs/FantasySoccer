@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FSLeaderBoardViewController : UIViewController
+@interface FSLeaderBoardViewController : FSBaseViewController
 
 @end

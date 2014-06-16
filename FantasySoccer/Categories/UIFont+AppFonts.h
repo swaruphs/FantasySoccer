@@ -14,4 +14,6 @@
 
 +(UIFont *)neutraTextLightFontNameOfSize:(NSUInteger)fontSize;
 
++(UIFont *)neutraTextBoldFontNameOfSize:(NSUInteger)fontSize;
+
 @end

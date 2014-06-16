@@ -19,4 +19,9 @@
 {
     return [UIFont fontWithName:@"NeutraText-Light" size:fontSize];
 }
+
++(UIFont *)neutraTextBoldFontNameOfSize:(NSUInteger)fontSize
+{
+    return [UIFont fontWithName:@"NeutraText-Bold" size:fontSize];
+}
 @end

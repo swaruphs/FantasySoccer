@@ -12,6 +12,7 @@
 
 @property (nonatomic, weak) IBOutlet UILabel * lblTitle;
 @property (nonatomic, weak) IBOutlet UILabel * lblCoins;
+@property (nonatomic, weak) IBOutlet UILabel * lblIndex;
 
 @end
 
@@ -20,6 +21,9 @@
 - (void)awakeFromNib
 {
     // Initialization code
+    self.lblTitle.font = [UIFont neutraTextLightFontNameOfSize:18];
+    self.lblCoins.font = [UIFont neutraTextLightFontNameOfSize:12];
+    self.lblIndex.font = [UIFont neutraTextLightFontNameOfSize:30];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -30,9 +34,10 @@
 }
 
 
-- (void)configureData:(FSTopScore *)topScore
+- (void)configureData:(FSTopScore *)topScore atIndexPath:(NSIndexPath *)indexpath
 {
     self.lblCoins.text = [NSString stringWithFormat:@"%@",topScore.points];
     self.lblTitle.text = topScore.name;
+    self.lblIndex.text = [NSString stringWithFormat:@"%ld",(long)indexpath.row+1];
 }
 @end

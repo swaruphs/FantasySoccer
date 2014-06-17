@@ -112,7 +112,7 @@
     CGRect frame  = self.bettingsView.frame;
     frame.origin.y = self.frame.size.height + 100;
     self.bettingsView.frame =  frame;
-    [UIView animateWithDuration:0.6 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         self.backgroundView.alpha = 0.6;
         CGRect frame = self.bettingsView.frame;
@@ -126,7 +126,7 @@
 
 - (void)dismissBettingsView:(BOOL)isCancelled
 {
-    [UIView animateWithDuration:0.6 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         self.backgroundView.alpha = 0.0;
         CGRect frame = self.bettingsView.frame;

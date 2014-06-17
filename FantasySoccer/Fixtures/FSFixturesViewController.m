@@ -240,16 +240,16 @@
     FSMatch *match = self.selectedDataDic[@"match"];
     NSString *selection = self.selectedDataDic[@"selection"];
     
-    [[FSTournamentsManager sharedInstance] postBettingForMatch:match points:@(points) selection:selection success:^(FSBettings * bettings) {
-        
-        if ([bettings isValidObject]) {
-            [self.collectionView reloadData];
-        }
-        
-        
-    } failure:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
-    }];
+//    [[FSTournamentsManager sharedInstance] postBettingForMatch:match points:@(points) selection:selection success:^(FSBettings * bettings) {
+//        
+//        if ([bettings isValidObject]) {
+//            [self.collectionView reloadData];
+//        }
+//        
+//        
+//    } failure:^(NSError *error) {
+//        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+//    }];
 }
 
 - (NSString *)getTitleForBettingsView:(NSDictionary *)dataDic

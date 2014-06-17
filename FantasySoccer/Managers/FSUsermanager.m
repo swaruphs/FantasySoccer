@@ -20,7 +20,7 @@
 
 SINGLETON_MACRO
 
-- (void)loginWithUsernameOrEmail:(id<FBGraphUser>)fbUser
+- (void)loginWithUsernameOrEmail:(NSDictionary <FBGraphUser> *)fbUser
                          fbToken:(NSString *)token
                          success:(void (^)(BOOL success))success
                          failure:(void (^)(NSError *error))failure
@@ -36,6 +36,7 @@ SINGLETON_MACRO
         NSLog(@"response got is %@",responseObject);
         self.accessToken = [responseObject stringForKey:@"access_token"];
         [[FSCredentialsManager sharedInstance] saveAccessToken:self.accessToken];
+        [[FSCredentialsManager sharedInstance] saveFBID:[fbUser stringForKey:@"id"]];
         success(TRUE);
         
         
@@ -74,6 +75,7 @@ SINGLETON_MACRO
 {
     self.accessToken = nil;
     [[FSCredentialsManager sharedInstance] clearSavedToken];
+    [[FSTournamentsManager sharedInstance] clearSavedData];
 }
 
 - (void)notifyUserLogout

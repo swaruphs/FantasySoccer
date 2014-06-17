@@ -20,4 +20,12 @@
     self.updatedAt       = [[FSUtilityManager sharedInstance] getISODateFromString:dateString];
 }
 
+- (NSString *)getPointsAsString
+{
+    if (!self.points) {
+        self.points = [NSNumber numberWithInt:0];
+    }
+    return [NSString stringWithFormat:@"%@",self.points];
+}
+
 @end

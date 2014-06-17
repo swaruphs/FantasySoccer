@@ -54,6 +54,7 @@
 #import "FSUtilityManager.h"
 #import "FSTournamentsManager.h"
 #import "FSCredentialsManager.h"
+#import "FSBettingsManager.h"
 
 // vendors
 
@@ -162,6 +163,7 @@
 #define API_BETTINGS API_PREFIX @"/matches/%@/bettings"
 #define API_TOP_SCORES API_PREFIX @"/players/top_scores"
 #define API_PLAYER_PROFILE API_PREFIX @"/players/profile"
+#define API_PLAYER_BETTING_HISTORY API_PREFIX @"/players/betting_history"
 
 
 #define CLIENT_ID                  @"732e338b85771042971169e9d6ee9cd546259e28afec8979890fa3dd6b559885"

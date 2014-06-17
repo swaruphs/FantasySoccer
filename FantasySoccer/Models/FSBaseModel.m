@@ -13,6 +13,9 @@
 
 -(id)initWithDictionary:(NSDictionary *)jsonDic
 {
+    if(![jsonDic isValidObject]) {
+        return nil;
+    }
     self = [super init];
     if (self) {
         [self updateWithDictionary:jsonDic];

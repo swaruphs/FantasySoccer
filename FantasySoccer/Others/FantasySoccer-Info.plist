@@ -25,16 +25,15 @@
 	<key>FacebookAppID</key>
 	<string>625893600789351</string>
 	<key>FacebookDisplayName</key>
-	<string>	
-LoginCustomUISample</string>
+	<string>Soccer Fantasy</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>NeutraText-Book.otf</string>
 		<string>NeutraText-Light.otf</string>
 		<string>NeutraText-Bold.otf</string>
 	</array>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

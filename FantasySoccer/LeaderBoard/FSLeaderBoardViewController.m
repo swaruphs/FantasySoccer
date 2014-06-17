@@ -93,4 +93,9 @@ static NSString *cellIdentifier = @"leaderBoardCellIdentifier";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 65.0;
+}
+
 @end

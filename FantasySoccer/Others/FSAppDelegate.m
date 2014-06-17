@@ -22,12 +22,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
-//    [[UINavigationBar appearance] setTranslucent:YES];
     // Override point for customization after application launch.
-    
+    [self showLoginView:YES];
     if ([[[FSCredentialsManager sharedInstance] getSavedToken] isValidObject]) {
         [self getUserProfile];
-        [self showMainView];
     }
     else  {
         [self accessFBToken];
@@ -69,11 +67,10 @@
 
 - (void)accessFBToken
 {
-    [self showLoginView];
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
         NSLog(@"Found a cached session");
         // If there's one, just open the session silently, without showing the user the login UI
-        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile"]
+        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile",@"email"]
                                            allowLoginUI:NO
                                       completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
                                           // Handler for session state changes
@@ -94,6 +91,7 @@
                 return;
             }
             [self loginUser:user];
+            
         }];
     }
 }
@@ -101,6 +99,7 @@
 
 - (void)loginUser:(NSDictionary<FBGraphUser> *)user
 {
+    DLog(@"%@",FBSession.activeSession.accessTokenData.expirationDate);
     [[FSUserManager sharedInstance] loginWithUsernameOrEmail:user fbToken:FBSession.activeSession.accessTokenData.accessToken  success:^(BOOL success) {
         
         [self getUserProfile];
@@ -121,10 +120,12 @@
     }];
 }
 
-- (void)showLoginView
+- (void)showLoginView:(BOOL)hideControls
 {
     FSLoginViewController *loginViewController = [[FSLoginViewController alloc] initWithNibName:@"FSLoginViewController" bundle:nil];
     self.window.rootViewController = loginViewController;
+    [loginViewController hideControls:hideControls];
+    
 }
 
 - (void)showMainView
@@ -172,7 +173,7 @@
         // If the session is closed
         NSLog(@"Session closed");
         // Show the user the logged-out UI
-        [self showLoginView];
+        [self showLoginView:NO];
     }
     
     // Handle errors
@@ -212,7 +213,7 @@
         // Clear this token
         [FBSession.activeSession closeAndClearTokenInformation];
         // Show the user the logged-out UI
-        [self showLoginView];
+        [self showLoginView:NO];
     }
 }
 @end

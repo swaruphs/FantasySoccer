@@ -9,6 +9,7 @@
 #import "FSCredentialsManager.h"
 
 #define USER_TOKEN @"serverToken"
+#define USER_FB_ID @"fbID"
 @implementation FSCredentialsManager
 
 SINGLETON_MACRO
@@ -31,6 +32,20 @@ SINGLETON_MACRO
 {
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     return [userDefaults stringForKey:USER_TOKEN];
+}
+
+-(void)saveFBID:(NSString *)fbID
+{
+    if ([fbID isValidObject]) {
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:fbID forKey:USER_FB_ID];
+    }
+}
+
+- (NSString *)getFBID
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults stringForKey:USER_FB_ID];
 }
 
 @end

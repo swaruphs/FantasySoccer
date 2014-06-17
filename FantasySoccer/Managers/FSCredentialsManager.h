@@ -14,5 +14,8 @@
 - (NSString *)getSavedToken;
 - (void)clearSavedToken;
 
+-(void)saveFBID:(NSString *)fbID;
+- (NSString *)getFBID;
+
 
 @end

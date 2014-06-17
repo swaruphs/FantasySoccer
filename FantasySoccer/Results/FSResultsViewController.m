@@ -7,7 +7,7 @@
 //
 
 #import "FSResultsViewController.h"
-#import "FSResultsCell.h"
+#import "FSFixturesCell.h"
 
 @interface FSResultsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
     [self _init];
-    [self setTitleLabel:@"RESULTS"];
+    [self setTitleLabel:@"MY HISTORY"];
     [self setDrawerBarButton];
     [self populateData];
     // Do any additional setup after loading the view.
@@ -40,36 +40,31 @@
 
 - (void)_init
 {
-    UINib *aNib = [UINib nibWithNibName:@"FSResultsCell" bundle:nil];
+    UINib *aNib = [UINib nibWithNibName:@"FSFixturesCell" bundle:nil];
     [self.collectionView registerNib:aNib forCellWithReuseIdentifier:NSStringFromClass([self class])];
     
 }
 
 - (void)populateData
 {
-    FSTournament *tournament  = [[[FSTournamentsManager sharedInstance] tournamentArray] firstObjectOrNil];
-    
-    
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
-    [[FSTournamentsManager sharedInstance] getMatchesForTournament:tournament fromCache:TRUE success:^(NSMutableArray *resultsArray) {
+    [[FSBettingsManager sharedInstance] getBettingsHistoryOnSucces:^(NSMutableArray *resultArray) {
+        DLog(@"results are %@", resultArray);
         [SVProgressHUD dismiss];
-        if ([resultsArray isValidObject]) {
-            self.dataArray = resultsArray;
-            [self generateDataModel];
-            [self.collectionView reloadData];
-        }
-
+        self.dataArray =  resultArray;
+        [self generateDataModel];
+        [self.collectionView reloadData];
+        
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
     }];
+    
 }
 
 - (void)generateDataModel
 {
     NSArray *teamsArray = [[FSTournamentsManager sharedInstance] teamArray];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"startTime < %@ && status ==[c]%@",[NSDate date], MATCH_STATUS_FINISHED];
-    NSArray *filteredArray = [self.dataArray filteredArrayUsingPredicate:predicate];
-    filteredArray = [filteredArray sortedArrayWithAttribute:@"startTime" ascending:NO];
+    NSArray *filteredArray = [self.dataArray sortedArrayWithAttribute:@"startTime" ascending:NO];
     
     NSMutableArray *resultsArray = [NSMutableArray array];
     for (FSMatch *match in filteredArray) {
@@ -114,7 +109,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-   FSResultsCell *cell =   [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([self class]) forIndexPath:indexPath];
+   FSFixturesCell *cell =   [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([self class]) forIndexPath:indexPath];
     NSDictionary *dataDic = self.dataArray[indexPath.row];
     [cell configureData:dataDic];
     return cell;
@@ -122,7 +117,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(320, 64);
+    return CGSizeMake(320, 84);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath

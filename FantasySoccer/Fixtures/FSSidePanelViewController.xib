@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FSSidePanelViewController">
             <connections>
-                <outlet property="tableView" destination="kOg-nt-rUl" id="7JR-X3-AWQ"/>
+                <outlet property="btnAllMatches" destination="wQW-QQ-Chu" id="RYK-KY-Dqi"/>
+                <outlet property="btnLeaderboard" destination="TE3-4B-eWa" id="QA1-pL-Xyy"/>
+                <outlet property="btnMyHistory" destination="G4S-S7-8D3" id="D4x-Vj-xEK"/>
+                <outlet property="btnSignout" destination="0cN-Y7-6Jz" id="xvB-oS-c5Q"/>
+                <outlet property="fbButton" destination="ol5-Rv-xYH" id="jIP-A8-iyZ"/>
+                <outlet property="lblName" destination="AXD-E0-jd5" id="Rep-cb-TCl"/>
+                <outlet property="lblPoints" destination="3Wi-uw-nhi" id="fFu-rq-0Fx"/>
+                <outlet property="profilView" destination="zXL-Hg-zbQ" id="bq9-2o-ekj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,18 +22,106 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-nt-rUl">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RDU-wX-hKL">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_coins-inline.png" id="CDl-ld-xPl">
+                    <rect key="frame" x="104" y="176" width="10" height="13"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Wi-uw-nhi">
+                    <rect key="frame" x="125" y="175" width="42" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wQW-QQ-Chu">
+                    <rect key="frame" x="50" y="314" width="170" height="65"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="ALL MATCHES">
+                        <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="dhg-tt-gRU"/>
-                        <outlet property="delegate" destination="-1" id="c59-CD-nVF"/>
+                        <action selector="switchToViewController:" destination="-1" eventType="touchUpInside" id="wti-mF-hZf"/>
                     </connections>
-                </tableView>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G4S-S7-8D3">
+                    <rect key="frame" x="50" y="241" width="170" height="65"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.2156862745" green="0.1960784314" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="MY HISTORY">
+                        <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="switchToViewController:" destination="-1" eventType="touchUpInside" id="P2o-Ac-pmu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TE3-4B-eWa">
+                    <rect key="frame" x="50" y="382" width="170" height="65"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="LEADERBOARD">
+                        <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="switchToViewController:" destination="-1" eventType="touchUpInside" id="bbH-tq-2nE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ol5-Rv-xYH" customClass="FSBettingButton">
+                    <rect key="frame" x="123" y="482" width="28" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <state key="normal" title="f">
+                        <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" id="9ll-na-t3K">
+                    <rect key="frame" x="44" y="496" width="70" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="70P-tE-JMo">
+                    <rect key="frame" x="160" y="496" width="70" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0cN-Y7-6Jz">
+                    <rect key="frame" x="114" y="520" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <state key="normal" title="OUT">
+                        <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBtnsignOut:" destination="-1" eventType="touchUpInside" id="spr-aP-0BA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mourinha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AXD-E0-jd5">
+                    <rect key="frame" x="50" y="143" width="170" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" id="zXL-Hg-zbQ" customClass="FSProfileImageView">
+                    <rect key="frame" x="90" y="45" width="90" height="90"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="icn_coins-inline.png" width="9" height="8"/>
+    </resources>
 </document>

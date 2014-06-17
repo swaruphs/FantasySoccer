@@ -7,12 +7,21 @@
 //
 
 #import "FSSidePanelViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "FSProfileImageView.h"
 
-@interface FSSidePanelViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FSSidePanelViewController ()
 {
     long _currentIndex;
 }
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet FSProfileImageView *profilView;
+@property (nonatomic, weak) IBOutlet UILabel *lblName;
+@property (nonatomic, weak) IBOutlet UILabel *lblPoints;
+@property (nonatomic, weak) IBOutlet UIButton *btnMyHistory;
+@property (nonatomic, weak) IBOutlet UIButton *btnAllMatches;
+@property (nonatomic, weak) IBOutlet UIButton *btnLeaderboard;
+@property (nonatomic, weak) IBOutlet UIButton *fbButton;
+@property (nonatomic, weak) IBOutlet UIButton *btnSignout;
 @property (nonatomic, strong) NSArray * dataArray;
 
 @end
@@ -37,9 +46,32 @@
 
 - (void)_init
 {
-    _currentIndex = 0;
-    self.dataArray = @[@"Matches",@"Results",@"Leaderboard"];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([self class])];
+    self.lblName.font = [UIFont neutraTextLightFontNameOfSize:20];
+    self.lblPoints.font = [UIFont neutraTextLightFontNameOfSize:14];
+    UIFont *btnFont = [UIFont neutraTextLightFontNameOfSize:20];
+    self.btnAllMatches.titleLabel.font = btnFont;
+    self.btnMyHistory.titleLabel.font = btnFont;
+    self.btnLeaderboard.titleLabel.font = btnFont;
+    self.fbButton.titleLabel.font = [UIFont neutraTextBoldFontNameOfSize:14];
+    self.btnSignout.titleLabel.font = btnFont;
+    [self setUserProfile];
+    [self setProfileImage];
+}
+
+- (void)setUserProfile
+{
+    FSUserProfile *userProfile = [[FSUserManager sharedInstance] userProfile];
+    if ([userProfile isValidObject]) {
+        self.lblName.text = userProfile.userName;
+        self.lblPoints.text = [userProfile getPointsAsString];
+    }
+}
+
+- (void)setProfileImage
+{
+    NSString *FBID = [[FSCredentialsManager sharedInstance] getFBID];
+    NSString *urlstring  = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=normal",FBID];
+    [self.profilView.profileImageView setImageWithURL:[NSURL URLWithString:urlstring]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,39 +80,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (IBAction)switchToViewController:(id)sender
 {
-    return [self.dataArray count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
-    cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
-    
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == _currentIndex) {
-        return;
-    }
-    [self switchToViewController:indexPath.row];
-    _currentIndex = indexPath.row;
-}
-
-- (void)switchToViewController:(NSUInteger)index
-{
+    NSUInteger index  = [sender tag];
     UIViewController *aVC =  nil;
     switch (index) {
-        case 0:
+        case 100:
             aVC = [[FSFixturesViewController alloc] initWithNibName:NSStringFromClass([FSFixturesViewController class]) bundle:nil];
             break;
-        case 1:
+        case 101:
             aVC = [[FSResultsViewController alloc] initWithNibName:NSStringFromClass([FSFixturesViewController class]) bundle:nil];
             break;
-        default:
+        case 102:    
             aVC = [[FSLeaderBoardViewController alloc] initWithNibName:NSStringFromClass([FSLeaderBoardViewController class]) bundle:nil];
             break;
     }
@@ -88,6 +99,13 @@
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:aVC];
     FSAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     [delegate changeCenterViewControllerToViewController:navController];
+}
+
+- (IBAction)onBtnsignOut:(id)sender
+{
+    [[FSUserManager sharedInstance] logout];
+    FSAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate showLoginView:YES];
 }
 
 @end

@@ -24,6 +24,14 @@
 
     NSString *dateString = [jsonDic stringForKey:@"start_time"];
     self.startTime = [[FSUtilityManager sharedInstance] getISODateFromString:dateString];
+    NSDictionary *bettingsJson = [jsonDic objectForKey:@"bet"];
+    if ([bettingsJson isValidObject]) {
+        FSBettings *bettings  = [[FSBettings alloc] initWithDictionary:bettingsJson];
+        self.bettings =  bettings;
+    }
 }
+
+
+
 
 @end

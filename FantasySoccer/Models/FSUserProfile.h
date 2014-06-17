@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSNumber *points;
 @property (nonatomic, strong) NSDate *updatedAt;
 
+- (NSString *)getPointsAsString;
+
 @end

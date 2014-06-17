@@ -17,6 +17,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) IIViewDeckController *viewDeckController;
 
+- (void)showLoginView:(BOOL)hideControls;
 - (void)changeCenterViewControllerToViewController:(UIViewController *)controller;
 - (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error;
 

@@ -80,6 +80,7 @@
     self.lblTeamOne.text = lTeam.name;
     self.lblTeamTwo.text = rTeam.name;
     self.lblDays.text = dataDic[@"days"];
+    [self configureResultsInfo];
     [self configureBettingsInfo];
 }
 
@@ -91,6 +92,14 @@
         self.lblBetChosen.text = [match.bettings.selection isEqualToString:MATCH_BET_DRAW] ? @"draw" : @"win";
         self.lblBetPoints.text = [NSString stringWithFormat:@"%@",match.bettings.points];
         [self positionBettingsView];
+    }
+}
+
+- (void)configureResultsInfo
+{
+    FSMatch *match = self.dataDic[@"match"];
+    if ([match.status isEqualToString:MATCH_STATUS_FINISHED]) {
+        [NSString stringWithFormat:@"%@ - %@",match.lTeamScore,match.rTeamScore];
     }
 }
 

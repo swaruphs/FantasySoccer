@@ -11,4 +11,7 @@
 
 @interface FSLoginViewController : UIViewController <FBLoginViewDelegate>
 
+
+- (void)hideControls:(BOOL)hidden;
+
 @end

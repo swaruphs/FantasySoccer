@@ -50,6 +50,12 @@
     
 }
 
+- (void)hideControls:(BOOL)hidden
+{
+    self.lblTitle.hidden = hidden;
+    self.fbBtn.hidden = hidden;
+}
+
 - (IBAction)buttonTouched:(id)sender
 {
     // If the session state is any of the two "open" states when the button is clicked

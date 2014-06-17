@@ -34,11 +34,5 @@
                       success:(void (^)(NSMutableArray *resultsArray))success
                       failure:(void (^)(NSError *error))failure;
 
-- (void)postBettingForMatch:(FSMatch *)match
-                     points:(NSNumber *)points
-                  selection:(NSString *)selection
-                    success:(void(^)(FSBettings *success))success
-                    failure:(void(^)(NSError *error))failure;
-
 - (void)clearSavedData;
 @end

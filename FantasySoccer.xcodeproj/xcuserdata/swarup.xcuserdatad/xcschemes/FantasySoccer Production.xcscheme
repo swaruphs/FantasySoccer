@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07FC45931946AA56005640AF"
-               BuildableName = "Fantasy Soccer.app"
+               BuildableName = "Soccer Fantasy.app"
                BlueprintName = "FantasySoccer"
                ReferencedContainer = "container:FantasySoccer.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07FC45931946AA56005640AF"
-            BuildableName = "Fantasy Soccer.app"
+            BuildableName = "Soccer Fantasy.app"
             BlueprintName = "FantasySoccer"
             ReferencedContainer = "container:FantasySoccer.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07FC45931946AA56005640AF"
-            BuildableName = "Fantasy Soccer.app"
+            BuildableName = "Soccer Fantasy.app"
             BlueprintName = "FantasySoccer"
             ReferencedContainer = "container:FantasySoccer.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07FC45931946AA56005640AF"
-            BuildableName = "Fantasy Soccer.app"
+            BuildableName = "Soccer Fantasy.app"
             BlueprintName = "FantasySoccer"
             ReferencedContainer = "container:FantasySoccer.xcodeproj">
          </BuildableReference>

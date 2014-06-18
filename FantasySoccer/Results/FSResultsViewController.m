@@ -14,7 +14,7 @@
 @property (nonatomic, retain) NSMutableArray *dataArray;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
-@property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (nonatomic, strong)UIRefreshControl *refreshControl;
 
 @end
 
@@ -76,6 +76,9 @@ void (^errorBlock)(NSError *error);
         [SVProgressHUD dismiss];
         [self.refreshControl endRefreshing];
         self.dataArray =  resultArray;
+        if (![self.dataArray isValidObject] || [self.dataArray count] <= 0) {
+            [SVProgressHUD showErrorWithStatus:@"You have not made any guess yet."];
+        }
         [self generateDataModel];
         [self.collectionView reloadData];
         

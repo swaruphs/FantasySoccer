@@ -67,6 +67,7 @@
 		078CB21C194EA0AA002E8B59 /* FSBettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 078CB21B194EA0AA002E8B59 /* FSBettings.m */; };
 		07A0535A194AA03800E58825 /* FSCredentialsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A05359194AA03800E58825 /* FSCredentialsManager.m */; };
 		07A0535E194AB16300E58825 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0535D194AB16300E58825 /* ImageIO.framework */; };
+		07B34BB2195194D700BEC83A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B34BB1195194D700BEC83A /* Default@2x.png */; };
 		07C83B2C1948063600C2D00F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B271948063600C2D00F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07C83B2D1948063600C2D00F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07C83B291948063600C2D00F /* SVProgressHUD.bundle */; };
 		07C83B2E1948063600C2D00F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B2B1948063600C2D00F /* SVProgressHUD.m */; };
@@ -205,6 +206,7 @@
 		07A05359194AA03800E58825 /* FSCredentialsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCredentialsManager.m; sourceTree = "<group>"; };
 		07A0535B194AAF4200E58825 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		07A0535D194AB16300E58825 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		07B34BB1195194D700BEC83A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		07C83B261948063600C2D00F /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		07C83B271948063600C2D00F /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		07C83B291948063600C2D00F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 		07315B071947F45700529D4E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07B34BB1195194D700BEC83A /* Default@2x.png */,
 				07144580195033FA00572633 /* Default-568h@2x.png */,
 				072FC3B7194EF6B200BC09F0 /* bg_matches@2x.png */,
 				0706DD82194B02A5007F3D07 /* arrow_up@2x.png */,
@@ -704,6 +707,7 @@
 				0706DD8B194B02A5007F3D07 /* btn_drawer@2x.png in Resources */,
 				07315AEF1947F43E00529D4E /* FSLeaderBoardCell.xib in Resources */,
 				07315AF11947F43E00529D4E /* FSLeaderBoardViewController.xib in Resources */,
+				07B34BB2195194D700BEC83A /* Default@2x.png in Resources */,
 				07315AEA1947F43E00529D4E /* FSFixturesCell.xib in Resources */,
 				0706DD8C194B02A5007F3D07 /* btn_fb-signin_normal@2x.png in Resources */,
 				0706DD8D194B02A5007F3D07 /* btn_fb-signin_onpress@2x.png in Resources */,
@@ -843,7 +847,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -878,7 +881,7 @@
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Fantasy Soccer";
+				PRODUCT_NAME = "Soccer Fantasy";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
 			};
@@ -918,7 +921,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -956,7 +958,7 @@
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Fantasy Soccer";
+				PRODUCT_NAME = "Soccer Fantasy";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
 			};
@@ -996,7 +998,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1035,7 +1036,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1068,7 +1068,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Fantasy Soccer";
+				PRODUCT_NAME = "Soccer Fantasy";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1090,7 +1090,7 @@
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Fantasy Soccer";
+				PRODUCT_NAME = "Soccer Fantasy";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
 			};

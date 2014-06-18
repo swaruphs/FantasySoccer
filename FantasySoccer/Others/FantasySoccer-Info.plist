@@ -8,8 +8,10 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons </key>
+	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>com.2359Media.FantasySoccer</string>
+	<string>com.2359media.soccerfantasy</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>7.0</string>
 	<key>CFBundleName</key>

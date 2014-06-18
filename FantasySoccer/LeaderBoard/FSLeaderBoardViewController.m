@@ -64,13 +64,16 @@ static NSString *cellIdentifier = @"leaderBoardCellIdentifier";
 
 - (void)populateData
 {
-    if (!self.refreshControl.isRefreshing) {
+    BOOL isRefresh = self.refreshControl.isRefreshing;
+    if (!isRefresh) {
             [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     }
-    [[FSTournamentsManager sharedInstance] getTopScoresFromCache:YES
+    [[FSTournamentsManager sharedInstance] getTopScoresFromCache:!isRefresh
  success:^(NSMutableArray *resultsArray) {
      [SVProgressHUD dismiss];
      self.dataArray = resultsArray;
+     [self.dataArray sortedArrayWithAttribute:@"points" ascending:FALSE];
+     
      [self.tableView reloadData];
      [self.refreshControl endRefreshing];
      

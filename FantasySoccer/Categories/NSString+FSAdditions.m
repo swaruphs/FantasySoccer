@@ -12,12 +12,10 @@
 
 - (CGSize)stringSizeWithFont:(UIFont *)font
 {
-    if(IOS7_OR_ABOVE){
+
         NSDictionary *attributes = @{NSFontAttributeName:font};
-        return [self sizeWithAttributes:attributes];
-    }
-    else {
-        return [self sizeWithFont:font];
-    }
+        CGSize size =  [self sizeWithAttributes:attributes];
+        DLog(@"%lf,%lf",size.width,size.height);
+        return size;
 }
 @end

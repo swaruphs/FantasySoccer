@@ -152,7 +152,7 @@
 
 #else
 
-#define API_SERVER_HOST  @""
+#define API_SERVER_HOST  @"http://worldcup2359.herokuapp.com"
 
 #endif
 

@@ -22,7 +22,6 @@
 		0706DDD9194B060D007F3D07 /* NeutraText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0706DDB1194B060D007F3D07 /* NeutraText-Light.otf */; };
 		0706DDEA194B077D007F3D07 /* UIFont+AppFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0706DDE9194B077D007F3D07 /* UIFont+AppFonts.m */; };
 		071049C4194F4E180098D76F /* FSProfileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 071049C3194F4E180098D76F /* FSProfileImageView.m */; };
-		071049C6194F50B70098D76F /* dummy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 071049C5194F50B70098D76F /* dummy.jpg */; };
 		0714457F194FE6CB00572633 /* FSBettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714457E194FE6CB00572633 /* FSBettingsManager.m */; };
 		07144581195033FA00572633 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07144580195033FA00572633 /* Default-568h@2x.png */; };
 		07144584195037B300572633 /* FSRefreshModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07144583195037B300572633 /* FSRefreshModelManager.m */; };
@@ -129,7 +128,6 @@
 		0706DDE9194B077D007F3D07 /* UIFont+AppFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFonts.m"; sourceTree = "<group>"; };
 		071049C2194F4E180098D76F /* FSProfileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSProfileImageView.h; sourceTree = "<group>"; };
 		071049C3194F4E180098D76F /* FSProfileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSProfileImageView.m; sourceTree = "<group>"; };
-		071049C5194F50B70098D76F /* dummy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dummy.jpg; sourceTree = "<group>"; };
 		0714457D194FE6CB00572633 /* FSBettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingsManager.h; sourceTree = "<group>"; };
 		0714457E194FE6CB00572633 /* FSBettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettingsManager.m; sourceTree = "<group>"; };
 		07144580195033FA00572633 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -243,7 +241,7 @@
 		07F4444C1949B802002DA76C /* FSSidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSidePanelViewController.h; sourceTree = "<group>"; };
 		07F4444D1949B802002DA76C /* FSSidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSidePanelViewController.m; sourceTree = "<group>"; };
 		07F4444E1949B802002DA76C /* FSSidePanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSSidePanelViewController.xib; sourceTree = "<group>"; };
-		07FC45941946AA56005640AF /* FantasySoccer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasySoccer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07FC45941946AA56005640AF /* Fantasy Soccer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fantasy Soccer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FC45971946AA56005640AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07FC45991946AA56005640AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		07FC459B1946AA56005640AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -428,7 +426,6 @@
 			isa = PBXGroup;
 			children = (
 				07144580195033FA00572633 /* Default-568h@2x.png */,
-				071049C5194F50B70098D76F /* dummy.jpg */,
 				072FC3B7194EF6B200BC09F0 /* bg_matches@2x.png */,
 				0706DD82194B02A5007F3D07 /* arrow_up@2x.png */,
 				0706DD83194B02A5007F3D07 /* bg_login@2x.png */,
@@ -551,7 +548,7 @@
 		07FC45951946AA56005640AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07FC45941946AA56005640AF /* FantasySoccer.app */,
+				07FC45941946AA56005640AF /* Fantasy Soccer.app */,
 				07FC45AF1946AA56005640AF /* FantasySoccerTests.xctest */,
 			);
 			name = Products;
@@ -636,7 +633,7 @@
 			);
 			name = FantasySoccer;
 			productName = FantasySoccer;
-			productReference = 07FC45941946AA56005640AF /* FantasySoccer.app */;
+			productReference = 07FC45941946AA56005640AF /* Fantasy Soccer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		07FC45AE1946AA56005640AF /* FantasySoccerTests */ = {
@@ -704,7 +701,6 @@
 				0706DD8A194B02A5007F3D07 /* bg_login@2x.png in Resources */,
 				0706DD8F194B02A5007F3D07 /* icn_coins@2x.png in Resources */,
 				0706DD8E194B02A5007F3D07 /* icn_coins-inline@2x.png in Resources */,
-				071049C6194F50B70098D76F /* dummy.jpg in Resources */,
 				0706DD8B194B02A5007F3D07 /* btn_drawer@2x.png in Resources */,
 				07315AEF1947F43E00529D4E /* FSLeaderBoardCell.xib in Resources */,
 				07315AF11947F43E00529D4E /* FSLeaderBoardViewController.xib in Resources */,
@@ -858,7 +854,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "Fantasy Soccer";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -881,7 +878,7 @@
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fantasy Soccer";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
 			};
@@ -935,7 +932,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "Fantasy Soccer";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -958,7 +956,7 @@
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fantasy Soccer";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1014,8 +1012,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Fantasy Soccer";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1046,7 +1045,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "Fantasy Soccer";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1068,7 +1068,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fantasy Soccer";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1090,7 +1090,7 @@
 				INFOPLIST_FILE = "FantasySoccer/Others/FantasySoccer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fantasy Soccer";
 				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
 				WRAPPER_EXTENSION = app;
 			};

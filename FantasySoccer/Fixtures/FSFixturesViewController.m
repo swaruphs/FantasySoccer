@@ -188,6 +188,7 @@ void (^errorBlock)(NSError *error);
     cell.delegate =  self;
     NSDictionary *datDic = [self.dataArray objectAtIndex:indexPath.row];
     [cell configureData:datDic];
+    [cell setNeedsLayout];
     return cell;
 }
 

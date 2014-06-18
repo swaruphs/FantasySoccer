@@ -41,7 +41,7 @@
 - (void)_init
 {
     UINib *aNib = [UINib nibWithNibName:@"FSFixturesCell" bundle:nil];
-    [self.collectionView registerNib:aNib forCellWithReuseIdentifier:NSStringFromClass([self class])];
+    [self.collectionView registerNib:aNib forCellWithReuseIdentifier:@"FSResultsViewController"];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reloadData:) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
@@ -135,9 +135,10 @@ void (^errorBlock)(NSError *error);
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-   FSFixturesCell *cell =   [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([self class]) forIndexPath:indexPath];
+   FSFixturesCell *cell =   [collectionView dequeueReusableCellWithReuseIdentifier:@"FSResultsViewController" forIndexPath:indexPath];
     NSDictionary *dataDic = self.dataArray[indexPath.row];
     [cell configureData:dataDic];
+    [cell setNeedsLayout];
     return cell;
 }
 
@@ -149,14 +150,6 @@ void (^errorBlock)(NSError *error);
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //empty implementation. Avoid super class call
-}
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-    NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
-    if ([[indexPaths lastObject] row] == [self.dataArray count]) {
-        
-    }
 }
 
 @end

@@ -87,7 +87,6 @@
 
 - (void)configureBettingsInfo
 {
-
     FSMatch *match   =   self.dataDic[@"match"];
     if (match.bettings) {
         self.lblBetChosen.text = [match.bettings.selection isEqualToString:MATCH_BET_DRAW] ? @"draw" : @"win";
@@ -182,8 +181,6 @@
         frame.origin.x = self.frame.size.width - offset - frame.size.width;
     }
     self.bettingsView.frame = frame;
-    
-    
 }
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -204,6 +201,15 @@
     else if(frame.size.height == 108){
         self.chooseBettingsView.hidden =FALSE;
         self.bettingsContainerView.hidden = YES;
+    }
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    FSMatch *match   =   self.dataDic[@"match"];
+    if (match.bettings) {
+        [self positionBettingsView];
     }
 }
 

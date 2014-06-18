@@ -127,7 +127,7 @@
         
         self.backgroundView.alpha = 0.6;
         CGRect frame = self.bettingsView.frame;
-        frame.origin.y = 178;
+        frame.origin.y = CGRectGetMaxY(self.frame) - CGRectGetHeight(self.bettingsView.frame);
         self.bettingsView.frame = frame;
         
     } completion:^(BOOL finished) {

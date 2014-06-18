@@ -50,21 +50,20 @@ void (^errorBlock)(NSError *error);
     [self populateData];
 }
 
+
 -(void)_init
 {
     NSString *cellIdentifier = NSStringFromClass([self class]);
     UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([FSFixturesCell class]) bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:cellIdentifier];
     self.cellSizeDic = [[NSMutableDictionary alloc] init];
-    self.teamsArray  = [[FSTournamentsManager sharedInstance] teamArray];
-    self.userPoints = [[[FSUserManager sharedInstance] userProfile].points integerValue];
     [self setTitleLabel:@"MATCHES"];
     [self setDrawerBarButton];
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(performRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:self.refreshControl];
-    
+    self.userPoints = 0;
     [self _initBlocks];
 }
 
@@ -89,6 +88,8 @@ void (^errorBlock)(NSError *error);
 
 - (void)populateData:(BOOL)fromPullDown
 {
+    self.teamsArray  = [[FSTournamentsManager sharedInstance] teamArray];
+    self.userPoints = [[[FSUserManager sharedInstance] userProfile].points integerValue];
     if (!fromPullDown) {
         [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     }
@@ -145,6 +146,8 @@ void (^errorBlock)(NSError *error);
 
 - (void)generateDataModel
 {
+    self.teamsArray  = [[FSTournamentsManager sharedInstance] teamArray];
+    self.userPoints = [[[FSUserManager sharedInstance] userProfile].points integerValue];
     NSDate *currentDate = [NSDate date];
     
     NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"startTime > %@ && status != %@",[NSDate date],MATCH_STATUS_FINISHED];

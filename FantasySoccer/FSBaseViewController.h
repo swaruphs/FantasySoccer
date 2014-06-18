@@ -13,5 +13,6 @@
 -(void)setTitleLabel:(NSString *)title;
 - (void)setBlurImageBackground:(UIImageView *)imageView;
 - (void)setDrawerBarButton;
+- (void)populateData;
 
 @end

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FSLoginViewController">
             <connections>
+                <outlet property="fbBtn" destination="ZFz-GO-DNK" id="G9C-wM-4Hw"/>
                 <outlet property="lblTitle" destination="Te3-Rz-ILi" id="YCS-IG-d8e"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

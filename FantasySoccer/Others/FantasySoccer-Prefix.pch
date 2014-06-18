@@ -35,6 +35,7 @@
 #import "NSArray+Additions.h"
 #import "NSDictionary+Additions.h"
 #import "UIFont+AppFonts.h"
+#import "NSString+FSAdditions.h"
 
 // Models
 
@@ -55,6 +56,7 @@
 #import "FSTournamentsManager.h"
 #import "FSCredentialsManager.h"
 #import "FSBettingsManager.h"
+#import "FSRefreshModelManager.h"
 
 // vendors
 

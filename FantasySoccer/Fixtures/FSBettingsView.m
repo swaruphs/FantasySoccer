@@ -25,7 +25,7 @@
 @property (nonatomic, strong) NSString *title;
 @property(nonatomic) NSUInteger points;
 
-@property (nonatomic, weak) IBOutletCollection(UIButton) NSArray *buttonArray;
+@property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *buttonArray;
 
 @end
 
@@ -71,7 +71,18 @@
     self.lblSliderMax.text = [NSString stringWithFormat:@"%lu",(unsigned long)self.points];
     self.betingSlider.minimumValue = 0.0;
     self.betingSlider.maximumValue = self.points;
+    [self setUpButtons];
     
+}
+
+-(void)setUpButtons
+{
+    [self.buttonArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        
+        UIButton *aBtn = (UIButton *)obj;
+        aBtn.enabled = aBtn.tag <= self.points ? TRUE :FALSE;
+        aBtn.alpha = aBtn.tag <=self.points ? 1 : 0.5;
+    }];
 }
 
 /*
@@ -166,6 +177,7 @@
 {
     self.points = sender.tag;
     self.lblValue.text = [self.numberFormatter stringFromNumber:@(sender.tag)];
+    self.betingSlider.value = self.points;
 }
 
 - (void)cancelView

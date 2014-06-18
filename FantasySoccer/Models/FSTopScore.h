@@ -13,6 +13,7 @@
 @property (nonatomic, retain) NSNumber *topScoreID;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSNumber *points;
+@property (nonatomic, retain) NSString *faceBookID;
 
 
 @end

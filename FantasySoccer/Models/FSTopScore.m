@@ -15,6 +15,7 @@
     self.topScoreID = [jsonDic numberForKey:@"id"];
     self.name = [jsonDic stringForKey:@"name"];
     self.points = [jsonDic numberForKey:@"point"];
+    self.faceBookID = [jsonDic stringForKey:@"fb_id"];
 }
 
 @end

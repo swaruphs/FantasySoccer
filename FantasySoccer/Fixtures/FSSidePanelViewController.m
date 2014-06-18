@@ -44,16 +44,24 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setUserProfile];
+}
+
 - (void)_init
 {
     self.lblName.font = [UIFont neutraTextLightFontNameOfSize:20];
     self.lblPoints.font = [UIFont neutraTextLightFontNameOfSize:14];
+    self.fbButton.titleLabel.font = [UIFont neutraTextBoldFontNameOfSize:14];
+    
     UIFont *btnFont = [UIFont neutraTextLightFontNameOfSize:20];
     self.btnAllMatches.titleLabel.font = btnFont;
     self.btnMyHistory.titleLabel.font = btnFont;
     self.btnLeaderboard.titleLabel.font = btnFont;
-    self.fbButton.titleLabel.font = [UIFont neutraTextBoldFontNameOfSize:14];
     self.btnSignout.titleLabel.font = btnFont;
+    
     [self setUserProfile];
     [self setProfileImage];
 }
@@ -101,11 +109,10 @@
     [delegate changeCenterViewControllerToViewController:navController];
 }
 
-- (IBAction)onBtnsignOut:(id)sender
+- (IBAction)onBtnSignOut:(id)sender
 {
-    [[FSUserManager sharedInstance] logout];
     FSAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    [delegate showLoginView:YES];
+    [delegate logoutUserAndClearToken];
 }
 
 @end

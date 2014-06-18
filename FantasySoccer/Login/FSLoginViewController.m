@@ -47,11 +47,13 @@
     
 
     self.lblTitle.attributedText = attrString;
+    [self hideControls:self.hideControls];
     
 }
 
 - (void)hideControls:(BOOL)hidden
 {
+    self.hideControls = hidden;
     self.lblTitle.hidden = hidden;
     self.fbBtn.hidden = hidden;
 }
@@ -70,7 +72,7 @@
     } else {
         // Open a session showing the user the login UI
         // You must ALWAYS ask for public_profile permissions when opening a session
-        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile"]
+        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile",@"email"]
                                            allowLoginUI:YES
                                       completionHandler:
          ^(FBSession *session, FBSessionState state, NSError *error) {

@@ -40,7 +40,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wQW-QQ-Chu">
-                    <rect key="frame" x="50" y="314" width="170" height="65"/>
+                    <rect key="frame" x="50" y="241" width="170" height="65"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="ALL MATCHES">
                         <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,7 +51,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G4S-S7-8D3">
-                    <rect key="frame" x="50" y="241" width="170" height="65"/>
+                    <rect key="frame" x="50" y="382" width="170" height="65"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" red="0.2156862745" green="0.1960784314" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="MY HISTORY">
@@ -63,7 +63,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TE3-4B-eWa">
-                    <rect key="frame" x="50" y="382" width="170" height="65"/>
+                    <rect key="frame" x="50" y="314" width="170" height="65"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="LEADERBOARD">
                         <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,6 +80,9 @@
                         <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onBtnSignOut:" destination="-1" eventType="touchUpInside" id="hzh-od-DoH"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" id="9ll-na-t3K">
                     <rect key="frame" x="44" y="496" width="70" height="1"/>
@@ -91,16 +94,13 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0cN-Y7-6Jz">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0cN-Y7-6Jz">
                     <rect key="frame" x="114" y="520" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <state key="normal" title="OUT">
                         <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <connections>
-                        <action selector="onBtnsignOut:" destination="-1" eventType="touchUpInside" id="spr-aP-0BA"/>
-                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mourinha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AXD-E0-jd5">
                     <rect key="frame" x="50" y="143" width="170" height="21"/>

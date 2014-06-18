@@ -16,6 +16,7 @@ static NSString *cellIdentifier = @"leaderBoardCellIdentifier";
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
 @property (nonatomic, retain) NSMutableArray *dataArray;
+@property (nonatomic, retain) UIRefreshControl *refreshControl;
 
 @end
 
@@ -49,19 +50,33 @@ static NSString *cellIdentifier = @"leaderBoardCellIdentifier";
     [self.tableView setTableFooterView:[UIView new]];
     self.tableView.backgroundView = nil;
     self.tableView.backgroundColor = [UIColor clearColor];
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+    [self.tableView addSubview:refreshControl];
+}
+
+- (void)refresh
+{
+    [self populateData];
 }
 
 - (void)populateData
 {
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    if (!self.refreshControl.isRefreshing) {
+            [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    }
     [[FSTournamentsManager sharedInstance] getTopScoresFromCache:YES
  success:^(NSMutableArray *resultsArray) {
      [SVProgressHUD dismiss];
      self.dataArray = resultsArray;
      [self.tableView reloadData];
+     [self.refreshControl endRefreshing];
      
  } failure:^(NSError *error) {
      [SVProgressHUD showErrorWithStatus:@"Error fetching Top scores"];
+     [self.refreshControl endRefreshing];
  }];
 }
 

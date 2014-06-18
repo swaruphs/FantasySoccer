@@ -123,10 +123,13 @@ SINGLETON_MACRO
     [self sendRequest:request success:success failure:failure];
 }
 
+
+
 - (void)sendRequest:(NSURLRequest *)request
             success:(void (^)(NSHTTPURLResponse *response, id responseObject))success
             failure:(void (^)(NSError *error))failure
 {
+    
     AFJSONRequestOperation *operation =    [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id json){
         
         [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
@@ -135,16 +138,15 @@ SINGLETON_MACRO
         if (hasError){
             return;
         }
-        
         if (success){
             success(response, json);
         }
         
-        
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id responseObject) {
         
         [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
-        if (failure){
+        BOOL handled = [self handleServerError:responseObject response:response failure:failure];
+        if (!handled && failure != nil){
             failure(error);
         }
     }];
@@ -158,6 +160,27 @@ SINGLETON_MACRO
 
 - (BOOL)handleServerError:(NSDictionary*)json response:(NSHTTPURLResponse*)response failure:(void (^)(NSError *error))failure
 {
+    if (response.statusCode >= 200 &&  response.statusCode <= 299) {
+        return NO;
+    }
+    else if (response.statusCode == 401) {
+        FSAppDelegate *appDeleate = [[UIApplication sharedApplication] delegate];
+        [appDeleate logoutWithMessage:@"Token expired. Try login again"];
+        return YES;
+    }
+    else {
+        if ([json isKindOfClass:[NSDictionary class]]) {
+            NSNumber *error_code = [json numberForKey:@"error_code"];
+            if ([error_code isValidObject]) {
+                NSDictionary *userInfo = @{NSLocalizedDescriptionKey:[json stringForKey:@"message"]};
+                NSError *error = [NSError errorWithDomain:@"" code:[error_code integerValue] userInfo:userInfo];
+                if (failure) {
+                    failure(error);
+                }
+                return YES;
+            }
+         }
+    }
     return NO;
 }
 @end

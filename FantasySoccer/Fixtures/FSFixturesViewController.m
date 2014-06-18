@@ -25,6 +25,8 @@
 @property (nonatomic, strong) FSTournament * tournament;
 @property (nonatomic, strong) NSArray *teamsArray;
 @property (nonatomic, strong) NSMutableDictionary *selectedDataDic;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (nonatomic) NSUInteger userPoints;
 
 @end
 
@@ -38,6 +40,8 @@
     }
     return self;
 }
+
+void (^errorBlock)(NSError *error);
 
 - (void)viewDidLoad
 {
@@ -53,14 +57,42 @@
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:cellIdentifier];
     self.cellSizeDic = [[NSMutableDictionary alloc] init];
     self.teamsArray  = [[FSTournamentsManager sharedInstance] teamArray];
-
+    self.userPoints = [[[FSUserManager sharedInstance] userProfile].points integerValue];
     [self setTitleLabel:@"MATCHES"];
     [self setDrawerBarButton];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(performRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.refreshControl];
+    
+    [self _initBlocks];
 }
 
+-(void)_initBlocks
+{
+    __block FSFixturesViewController *vc = self;
+    errorBlock =  ^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+        [vc.refreshControl endRefreshing];
+    };
+}
+
+- (void)performRefresh:(id)sender
+{
+    [self populateData:TRUE];
+}
 
 - (void)populateData
 {
+    [self populateData:FALSE];
+}
+
+- (void)populateData:(BOOL)fromPullDown
+{
+    if (!fromPullDown) {
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    }
+
     if (![[FSTournamentsManager sharedInstance] tournamentArray]) {
         [self getTournaments];
     }
@@ -77,13 +109,10 @@
 
 - (void)getTournaments
 {
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     [[FSTournamentsManager sharedInstance] getAllTournamentsOnSuccess:^(NSMutableArray *resultsArray) {
         self.tournament = [resultsArray firstObjectOrNil];
         [self getTeams];
-    } failure:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
-    }];
+    } failure:errorBlock];
 }
 
 - (void)getTeams
@@ -92,32 +121,26 @@
         self.teamsArray = resultsArray;
         [self getAllMatchesForTournament:self.tournament];
         
-    } failure:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
-    }];
+    } failure:errorBlock];
 }
 
 - (void)getAllMatchesForTournament:(FSTournament *)tournament
 {
-    if (![SVProgressHUD isVisible]) {
-        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
-    }
     if (!tournament) {
         [SVProgressHUD showErrorWithStatus:@"Error fetching matches"];
         return;
     }
-    
-    [[FSTournamentsManager sharedInstance] getMatchesForTournament:tournament fromCache:TRUE success:^(NSMutableArray *resultsArray) {
+
+    [[FSTournamentsManager sharedInstance] getMatchesForTournament:tournament fromCache:FALSE success:^(NSMutableArray *resultsArray) {
         [SVProgressHUD dismiss];
         if ([resultsArray isValidObject]) {
             self.dataArray = resultsArray;
             [self generateDataModel];
             [self.collectionView reloadData];
+            [self.refreshControl endRefreshing];
         }
         
-    } failure:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
-    }];
+    } failure:errorBlock];
 }
 
 - (void)generateDataModel
@@ -136,6 +159,9 @@
         NSNumber *rTeamID = match.rTeamID;
         FSTeam *lTeam = [self.teamsArray firstObjectWithValue:lTeamID forKeyPath:@"teamID"];
         FSTeam *rTeam = [self.teamsArray firstObjectWithValue:rTeamID forKeyPath:@"teamID"];
+        if (![lTeam isValidObject] || ![rTeam isValidObject]) {
+            continue;
+        }
         
         NSInteger days = [FSUtilityManager daysBetweenDate:currentDate andDate:match.startTime];
         NSString *dateString  = [self getNoOfDaysString:days];
@@ -189,7 +215,13 @@
     if (self.previousIndexpath && indexPath.row == self.previousIndexpath.row) {
         self.previousIndexpath = nil;
     }
-    else if(!match.bettings){
+    else if([match.bettings isValidObject]) {
+        [SVProgressHUD showErrorWithStatus:@"Sorry, cannot bet more than once !"];
+    }
+    else if(self.userPoints <= 0){
+        [SVProgressHUD showErrorWithStatus:@"Sorry, you are out of points to bet"];
+    }
+    else {
         self.previousIndexpath = indexPath;
     }
     [self resetCollectionViewLayout];
@@ -240,16 +272,13 @@
     FSMatch *match = self.selectedDataDic[@"match"];
     NSString *selection = self.selectedDataDic[@"selection"];
     
-//    [[FSTournamentsManager sharedInstance] postBettingForMatch:match points:@(points) selection:selection success:^(FSBettings * bettings) {
-//        
-//        if ([bettings isValidObject]) {
-//            [self.collectionView reloadData];
-//        }
-//        
-//        
-//    } failure:^(NSError *error) {
-//        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
-//    }];
+    [[FSBettingsManager sharedInstance] postBettingForMatch:match points:@(points) selection:selection success:^(FSBettings *bettings) {
+        if ([bettings isValidObject]) {
+            self.userPoints = [[[FSUserManager sharedInstance] userProfile].points integerValue];
+            [self.collectionView reloadData];
+        }
+        
+    } failure:errorBlock];
 }
 
 - (NSString *)getTitleForBettingsView:(NSDictionary *)dataDic

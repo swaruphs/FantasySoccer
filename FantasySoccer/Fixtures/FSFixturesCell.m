@@ -20,6 +20,7 @@
 @property (nonatomic, weak) IBOutlet UIView *bettingsContainerView;
 @property (nonatomic, weak) IBOutlet UILabel *lblBetChosen;
 @property (nonatomic, weak) IBOutlet UILabel *lblBetPoints;
+@property (nonatomic, weak) IBOutlet UIImageView *arrowImageview;
 @property (nonatomic, weak) IBOutlet UIImageView *coinsImageview;
 
 @property (nonatomic, weak) IBOutlet UIImageView *teamOneImageView;
@@ -72,7 +73,7 @@
 - (void)configureData:(NSDictionary *)dataDic
 {
     self.dataDic = dataDic;
-    
+    self.lblDays.font = [UIFont neutraTextLightFontNameOfSize:12];
     FSTeam *lTeam = [dataDic objectForKey:@"lteam"];
     FSTeam *rTeam = [dataDic objectForKey:@"rteam"];
     [self.teamOneImageView setImageWithURL:[NSURL URLWithString:lTeam.iconURL]];
@@ -99,7 +100,8 @@
 {
     FSMatch *match = self.dataDic[@"match"];
     if ([match.status isEqualToString:MATCH_STATUS_FINISHED]) {
-        [NSString stringWithFormat:@"%@ - %@",match.lTeamScore,match.rTeamScore];
+        self.lblDays.text = [NSString stringWithFormat:@"%@ - %@",match.lTeamScore,match.rTeamScore];
+        self.lblDays.font = [UIFont neutraTextLightFontNameOfSize:14];
     }
 }
 
@@ -126,10 +128,18 @@
 
 - (void)positionBettingsView
 {
+    FSMatch * match  =  self.dataDic[@"match"];
+    self.arrowImageview.hidden  = false;
     CGFloat yOrg = 0.0;
-    CGSize size = [self.lblBetChosen.text sizeWithAttributes:@{NSFontAttributeName:self.lblBetChosen.font}];
+    
+    if ([match.bettings.selection isEqualToString:MATCH_BET_LEFT]) {
+        self.arrowImageview.frame  = CGRectMake(0, 1, 7, 7);
+        yOrg += CGRectGetWidth(self.arrowImageview.frame) + 8;
+    }
+    CGSize size = [self.lblBetChosen.text stringSizeWithFont:self.lblBetChosen.font];
     CGRect frame  = self.lblBetChosen.frame;
     frame.size.width = size.width;
+    frame.origin.x = yOrg;
     self.lblBetChosen.frame = frame;
     yOrg = yOrg + frame.size.width +8;
     
@@ -138,23 +148,30 @@
     coinsFrame.origin.x = yOrg;
     self.coinsImageview.frame = coinsFrame;
     yOrg = yOrg + coinsFrame.size.width + 8;
-    
-    size = [self.lblBetPoints.text sizeWithAttributes:@{NSFontAttributeName:self.lblBetPoints.font}];
+    size = [self.lblBetPoints.text stringSizeWithFont:self.lblBetPoints.font];
     frame = self.lblBetPoints.frame;
     frame.size.width = size.width;
-    frame.origin.y = yOrg;
+    frame.origin.x = yOrg;
+    self.lblBetPoints.frame = frame;
     
     yOrg = yOrg + size.width;
+    
+    if ([match.bettings.selection isEqualToString:MATCH_BET_RIGHT]) {
+        self.arrowImageview.frame = CGRectMake(yOrg+8, 1, 7, 7);
+        yOrg = yOrg +8+7;
+    }
     
     frame = self.bettingsView.frame;
     frame.size.width = yOrg;
     
-    FSMatch * match  =  self.dataDic[@"match"];
+
+    
     if([match.bettings.selection isEqualToString:MATCH_BET_DRAW]) {
         CGPoint center = self.bettingsView.center;
         center.x = self.center.x;
         self.bettingsView.frame = frame;
         self.bettingsView.center = center;
+        self.arrowImageview.hidden = TRUE;
         return;
     }
     else if([match.bettings.selection isEqualToString:MATCH_BET_LEFT]) {

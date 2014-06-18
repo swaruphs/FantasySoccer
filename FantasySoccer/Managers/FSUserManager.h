@@ -24,5 +24,6 @@
 - (NSDictionary *)getAuthParams;
 - (void)clearUserProfile;
 - (BOOL)updatePoints:(NSUInteger)points;
+- (BOOL)isLoggedIn;
 - (void)logout;
 @end

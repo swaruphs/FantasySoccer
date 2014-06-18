@@ -122,7 +122,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="M4P-wG-qMJ"/>
+                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="9Jp-kM-pRX"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Tp-6m-s1s" customClass="FSBettingButton">
@@ -133,7 +133,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="cXI-bX-Aba"/>
+                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="Tn2-vF-dZY"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="250" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qcf-ps-c0w" customClass="FSBettingButton">
@@ -144,7 +144,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="9So-nR-d5U"/>
+                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="zek-kN-z6L"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RuS-PL-h2a" customClass="FSBettingButton">
@@ -155,7 +155,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="SNC-jQ-12s"/>
+                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="a17-kD-MTt"/>
                             </connections>
                         </button>
                     </subviews>
@@ -174,6 +174,11 @@
                 <outlet property="lblSliderMin" destination="jXy-Ix-SvY" id="EeA-kP-vbS"/>
                 <outlet property="lblTitle" destination="6i8-0T-fkq" id="6u7-Mz-pib"/>
                 <outlet property="lblValue" destination="Kad-JI-yz7" id="zU5-Aw-Bt2"/>
+                <outletCollection property="buttonArray" destination="Z2F-hD-uBg" id="WPL-qV-SFb"/>
+                <outletCollection property="buttonArray" destination="RuS-PL-h2a" id="o6p-AT-qYo"/>
+                <outletCollection property="buttonArray" destination="m1a-IK-qwb" id="xld-ID-OA6"/>
+                <outletCollection property="buttonArray" destination="3Tp-6m-s1s" id="J0k-6R-bF3"/>
+                <outletCollection property="buttonArray" destination="qcf-ps-c0w" id="ysO-Yk-y8A"/>
             </connections>
         </view>
     </objects>

@@ -8,10 +8,12 @@
 
 #import "FSAppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "FSRefreshModelManager.h"
 
 @interface FSAppDelegate()
 
 @property (nonatomic, strong) UIImageView *splashImageView;
+@property (nonatomic, strong) FSLoginViewController *loginController;
 
 @end
 
@@ -44,19 +46,24 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    
-    [[FSTournamentsManager sharedInstance] clearSavedData];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    if ([[FSUserManager sharedInstance] isLoggedIn]) {
+        [[FSRefreshModelManager sharedInstance] refreshModels];
+    }
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      [FBAppCall handleDidBecomeActive];
+    
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -79,6 +86,9 @@
                                           [self sessionStateChanged:session state:state error:error];
                                       }];
     }
+    else {
+        [self showLoginView:FALSE];
+    }
 }
 
 - (void)getFBUser
@@ -99,7 +109,6 @@
 
 - (void)loginUser:(NSDictionary<FBGraphUser> *)user
 {
-    DLog(@"%@",FBSession.activeSession.accessTokenData.expirationDate);
     [[FSUserManager sharedInstance] loginWithUsernameOrEmail:user fbToken:FBSession.activeSession.accessTokenData.accessToken  success:^(BOOL success) {
         
         [self getUserProfile];
@@ -111,6 +120,7 @@
 
 - (void)getUserProfile
 {
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     [[FSUserManager sharedInstance] getPlayerProfileWithSuccess:^(FSUserProfile *userProfile) {
         [SVProgressHUD dismiss];
         [self showMainView];
@@ -122,14 +132,17 @@
 
 - (void)showLoginView:(BOOL)hideControls
 {
-    FSLoginViewController *loginViewController = [[FSLoginViewController alloc] initWithNibName:@"FSLoginViewController" bundle:nil];
-    self.window.rootViewController = loginViewController;
-    [loginViewController hideControls:hideControls];
+    if(!self.loginController) {
+        FSLoginViewController *loginViewController = [[FSLoginViewController alloc] initWithNibName:@"FSLoginViewController" bundle:nil];
+        self.window.rootViewController = loginViewController;
+        self.loginController = loginViewController;
+    }
+    [self.loginController hideControls:hideControls];
     
 }
 
 - (void)showMainView
-{    
+{
     FSFixturesViewController *rootViewController = [[FSFixturesViewController alloc] initWithNibName:NSStringFromClass([FSFixturesViewController class]) bundle:nil];
     UINavigationController *fixNavController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
@@ -139,6 +152,7 @@
     IIViewDeckController *viewDeckController = [[IIViewDeckController alloc] initWithCenterViewController:fixNavController leftViewController:spNavController];
     self.viewDeckController =  viewDeckController;
     self.window.rootViewController = viewDeckController;
+    self.loginController = nil;
 }
 
 - (void)changeCenterViewControllerToViewController:(UIViewController *)controller
@@ -174,11 +188,12 @@
         NSLog(@"Session closed");
         // Show the user the logged-out UI
         [self showLoginView:NO];
+        return;
     }
     
     // Handle errors
     if (error){
-        NSLog(@"Error");
+        NSLog(@"Error %@",error);
         NSString *alertText;
         NSString *alertTitle;
         // If the error requires people using an app to make an action outside of the app in order to recover
@@ -215,5 +230,19 @@
         // Show the user the logged-out UI
         [self showLoginView:NO];
     }
+}
+
+
+- (void)logoutWithMessage:(NSString *)message
+{
+    [self logoutUserAndClearToken];
+    [SVProgressHUD showErrorWithStatus:message];
+}
+
+- (void)logoutUserAndClearToken
+{
+    [[FSUserManager sharedInstance] logout];
+    [FBSession.activeSession closeAndClearTokenInformation];
+    [self showLoginView:NO];
 }
 @end

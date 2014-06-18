@@ -19,6 +19,7 @@ SINGLETON_MACRO
     if ([token isValidObject]) {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setObject:token forKey:USER_TOKEN];
+        [userDefaults synchronize];
     }
 }
 
@@ -26,6 +27,8 @@ SINGLETON_MACRO
 {
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults removeObjectForKey:USER_TOKEN];
+    [userDefaults removeObjectForKey:USER_FB_ID];
+    [userDefaults synchronize];
 }
 
 - (NSString *)getSavedToken
@@ -39,6 +42,7 @@ SINGLETON_MACRO
     if ([fbID isValidObject]) {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setObject:fbID forKey:USER_FB_ID];
+        [userDefaults synchronize];
     }
 }
 

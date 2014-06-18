@@ -9,7 +9,7 @@
 #import "FSBaseViewController.h"
 #import "UIImage+BlurAdditions.h"
 
-@interface FSBaseViewController ()
+@interface FSBaseViewController ()<FSRefreshModelManagerDelegate>
 
 @end
 
@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[FSRefreshModelManager sharedInstance] setDelegate:self];
     // Do any additional setup after loading the view.
 }
 
@@ -61,9 +62,8 @@
 {
     DLog(@"bar button click");
     FSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate.viewDeckController openLeftViewAnimated:TRUE];
+    [appDelegate.viewDeckController toggleLeftViewAnimated:TRUE];
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -71,6 +71,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc
+{
+    if ([[[FSRefreshModelManager sharedInstance] delegate] isKindOfClass:[self class]]) {
+         [[FSRefreshModelManager sharedInstance] setDelegate:nil];   
+    }
+    
+}
+
+- (void)populateData
+{
+    // empty implementation. Need to be overridden by the sub class.
+}
+
+#pragma mark - FSRefreshManager Delegate
+
+-(void)refreshManagerDidFinishRefresh:(FSRefreshModelManager *)manager
+{
+    [self populateData];
+}
 /*
 #pragma mark - Navigation
 

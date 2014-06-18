@@ -20,5 +20,6 @@
 - (void)showLoginView:(BOOL)hideControls;
 - (void)changeCenterViewControllerToViewController:(UIViewController *)controller;
 - (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error;
-
+- (void)logoutWithMessage:(NSString *)message;
+- (void)logoutUserAndClearToken;
 @end

@@ -74,10 +74,20 @@ SINGLETON_MACRO
 - (void)logout
 {
     self.accessToken = nil;
+    self.userProfile = nil;
     [[FSCredentialsManager sharedInstance] clearSavedToken];
     [[FSTournamentsManager sharedInstance] clearSavedData];
 }
 
+
+- (BOOL)isLoggedIn
+{
+    NSString *token = [[FSCredentialsManager sharedInstance] getSavedToken];
+    if ([token isValidObject]) {
+        return TRUE;
+    }
+    return FALSE;
+}
 - (void)notifyUserLogout
 {
     

@@ -14,6 +14,7 @@
 @property (nonatomic, retain) NSMutableArray *dataArray;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -35,31 +36,53 @@
     [self setTitleLabel:@"MY HISTORY"];
     [self setDrawerBarButton];
     [self populateData];
-    // Do any additional setup after loading the view.
 }
 
 - (void)_init
 {
     UINib *aNib = [UINib nibWithNibName:@"FSFixturesCell" bundle:nil];
     [self.collectionView registerNib:aNib forCellWithReuseIdentifier:NSStringFromClass([self class])];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(reloadData:) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+    [self.collectionView addSubview:refreshControl];
+    [self _initBlocks];
     
+}
+void (^errorBlock)(NSError *error);
+
+-(void)_initBlocks
+{
+    __block FSResultsViewController *vc = self;
+    errorBlock =  ^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+        [vc.refreshControl endRefreshing];
+    };
+}
+
+- (void)reloadData:(id)sender
+{
+    [self populateData];
 }
 
 - (void)populateData
 {
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    if (!self.refreshControl.isRefreshing) {
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    }
+
     [[FSBettingsManager sharedInstance] getBettingsHistoryOnSucces:^(NSMutableArray *resultArray) {
         DLog(@"results are %@", resultArray);
         [SVProgressHUD dismiss];
+        [self.refreshControl endRefreshing];
         self.dataArray =  resultArray;
         [self generateDataModel];
         [self.collectionView reloadData];
         
-    } failure:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
-    }];
-    
+    } failure:errorBlock];
 }
+
+
 
 - (void)generateDataModel
 {
@@ -74,6 +97,9 @@
         FSTeam *lTeam = [teamsArray firstObjectWithValue:lTeamID forKeyPath:@"teamID"];
         FSTeam *rTeam = [teamsArray firstObjectWithValue:rTeamID forKeyPath:@"teamID"];
         
+        if (![lTeam isValidObject] || ![rTeam isValidObject]) {
+            continue;
+        }
         NSDictionary *aDic = @{@"match":match,
                                @"lteam":lTeam,
                                @"rteam":rTeam};
@@ -125,6 +151,12 @@
     //empty implementation. Avoid super class call
 }
 
-
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
+    if ([[indexPaths lastObject] row] == [self.dataArray count]) {
+        
+    }
+}
 
 @end

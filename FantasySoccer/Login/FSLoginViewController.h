@@ -11,7 +11,7 @@
 
 @interface FSLoginViewController : UIViewController <FBLoginViewDelegate>
 
-
+@property(nonatomic) BOOL hideControls;
 - (void)hideControls:(BOOL)hidden;
 
 @end

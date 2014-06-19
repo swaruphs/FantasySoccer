@@ -220,10 +220,10 @@ void (^errorBlock)(NSError *error);
         self.previousIndexpath = nil;
     }
     else if([match.bettings isValidObject]) {
-        [SVProgressHUD showErrorWithStatus:@"Sorry, cannot bet more than once !"];
+        [SVProgressHUD showErrorWithStatus:@"Sorry, cannot guess more than once !"];
     }
     else if(self.userPoints <= 0){
-        [SVProgressHUD showErrorWithStatus:@"Sorry, you are out of points to bet"];
+        [SVProgressHUD showErrorWithStatus:@"Sorry, you are out of points to guess"];
     }
     else {
         self.previousIndexpath = indexPath;

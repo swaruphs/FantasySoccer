@@ -186,8 +186,8 @@
 		07315B011947F44900529D4E /* FSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
 		07315B021947F44900529D4E /* FSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
 		07315B031947F44900529D4E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0749BF411952732C00E4B7C4 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		0749BF411952732C00E4B7C4 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = FantasySoccer/Images/iTunesArtwork; sourceTree = "<group>"; };
+		0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "FantasySoccer/Images/iTunesArtwork@2x"; sourceTree = "<group>"; };
 		07576081194D966800904291 /* FSBettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingsView.h; sourceTree = "<group>"; };
 		07576082194D966800904291 /* FSBettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettingsView.m; sourceTree = "<group>"; };
 		07576084194D968000904291 /* FSBettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSBettingsView.xib; sourceTree = "<group>"; };
@@ -427,8 +427,6 @@
 		07315B071947F45700529D4E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				0749BF411952732C00E4B7C4 /* iTunesArtwork */,
-				0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */,
 				072FC3B7194EF6B200BC09F0 /* bg_matches@2x.png */,
 				0706DD82194B02A5007F3D07 /* arrow_up@2x.png */,
 				0706DD83194B02A5007F3D07 /* bg_login@2x.png */,
@@ -541,6 +539,8 @@
 		07FC458B1946AA56005640AF = {
 			isa = PBXGroup;
 			children = (
+				0749BF411952732C00E4B7C4 /* iTunesArtwork */,
+				0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */,
 				07FC459D1946AA56005640AF /* FantasySoccer */,
 				07FC45B61946AA56005640AF /* FantasySoccerTests */,
 				07FC45961946AA56005640AF /* Frameworks */,
@@ -871,7 +871,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dynamic Unitrade Sdn Bhd (JC446XCS92)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -948,7 +949,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dynamic Unitrade Sdn Bhd (JC446XCS92)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1059,7 +1061,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dynamic Unitrade Sdn Bhd (JC446XCS92)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1081,7 +1084,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dynamic Unitrade Sdn Bhd (JC446XCS92)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

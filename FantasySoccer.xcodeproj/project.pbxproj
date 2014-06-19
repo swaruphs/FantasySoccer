@@ -23,7 +23,6 @@
 		0706DDEA194B077D007F3D07 /* UIFont+AppFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0706DDE9194B077D007F3D07 /* UIFont+AppFonts.m */; };
 		071049C4194F4E180098D76F /* FSProfileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 071049C3194F4E180098D76F /* FSProfileImageView.m */; };
 		0714457F194FE6CB00572633 /* FSBettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714457E194FE6CB00572633 /* FSBettingsManager.m */; };
-		07144581195033FA00572633 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07144580195033FA00572633 /* Default-568h@2x.png */; };
 		07144584195037B300572633 /* FSRefreshModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07144583195037B300572633 /* FSRefreshModelManager.m */; };
 		0714458719503E5D00572633 /* NSString+FSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714458619503E5D00572633 /* NSString+FSAdditions.m */; };
 		07200643194D676400A77D2F /* UIImage+BlurAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07200640194D676400A77D2F /* UIImage+BlurAdditions.m */; };
@@ -56,6 +55,8 @@
 		07315B041947F44900529D4E /* FantasySoccer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07315AFF1947F44900529D4E /* FantasySoccer-Info.plist */; };
 		07315B051947F44900529D4E /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315B021947F44900529D4E /* FSAppDelegate.m */; };
 		07315B061947F44900529D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315B031947F44900529D4E /* main.m */; };
+		0749BF4B1952732C00E4B7C4 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 0749BF411952732C00E4B7C4 /* iTunesArtwork */; };
+		0749BF4C1952732C00E4B7C4 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */; };
 		07576083194D966800904291 /* FSBettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07576082194D966800904291 /* FSBettingsView.m */; };
 		07576085194D968000904291 /* FSBettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07576084194D968000904291 /* FSBettingsView.xib */; };
 		077B6CDE194DF698005E541F /* FSBettingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B6CDD194DF698005E541F /* FSBettingButton.m */; };
@@ -67,7 +68,6 @@
 		078CB21C194EA0AA002E8B59 /* FSBettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 078CB21B194EA0AA002E8B59 /* FSBettings.m */; };
 		07A0535A194AA03800E58825 /* FSCredentialsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A05359194AA03800E58825 /* FSCredentialsManager.m */; };
 		07A0535E194AB16300E58825 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A0535D194AB16300E58825 /* ImageIO.framework */; };
-		07B34BB2195194D700BEC83A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B34BB1195194D700BEC83A /* Default@2x.png */; };
 		07C83B2C1948063600C2D00F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B271948063600C2D00F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07C83B2D1948063600C2D00F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07C83B291948063600C2D00F /* SVProgressHUD.bundle */; };
 		07C83B2E1948063600C2D00F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B2B1948063600C2D00F /* SVProgressHUD.m */; };
@@ -131,7 +131,6 @@
 		071049C3194F4E180098D76F /* FSProfileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSProfileImageView.m; sourceTree = "<group>"; };
 		0714457D194FE6CB00572633 /* FSBettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingsManager.h; sourceTree = "<group>"; };
 		0714457E194FE6CB00572633 /* FSBettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettingsManager.m; sourceTree = "<group>"; };
-		07144580195033FA00572633 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		07144582195037B300572633 /* FSRefreshModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRefreshModelManager.h; sourceTree = "<group>"; };
 		07144583195037B300572633 /* FSRefreshModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRefreshModelManager.m; sourceTree = "<group>"; };
 		0714458519503E5D00572633 /* NSString+FSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FSAdditions.h"; sourceTree = "<group>"; };
@@ -187,6 +186,8 @@
 		07315B011947F44900529D4E /* FSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
 		07315B021947F44900529D4E /* FSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
 		07315B031947F44900529D4E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0749BF411952732C00E4B7C4 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		07576081194D966800904291 /* FSBettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingsView.h; sourceTree = "<group>"; };
 		07576082194D966800904291 /* FSBettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettingsView.m; sourceTree = "<group>"; };
 		07576084194D968000904291 /* FSBettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSBettingsView.xib; sourceTree = "<group>"; };
@@ -206,7 +207,6 @@
 		07A05359194AA03800E58825 /* FSCredentialsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCredentialsManager.m; sourceTree = "<group>"; };
 		07A0535B194AAF4200E58825 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		07A0535D194AB16300E58825 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		07B34BB1195194D700BEC83A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		07C83B261948063600C2D00F /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		07C83B271948063600C2D00F /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		07C83B291948063600C2D00F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		07F4444C1949B802002DA76C /* FSSidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSidePanelViewController.h; sourceTree = "<group>"; };
 		07F4444D1949B802002DA76C /* FSSidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSidePanelViewController.m; sourceTree = "<group>"; };
 		07F4444E1949B802002DA76C /* FSSidePanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSSidePanelViewController.xib; sourceTree = "<group>"; };
-		07FC45941946AA56005640AF /* Fantasy Soccer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fantasy Soccer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07FC45941946AA56005640AF /* Soccer Fantasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Soccer Fantasy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FC45971946AA56005640AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07FC45991946AA56005640AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		07FC459B1946AA56005640AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -427,8 +427,8 @@
 		07315B071947F45700529D4E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				07B34BB1195194D700BEC83A /* Default@2x.png */,
-				07144580195033FA00572633 /* Default-568h@2x.png */,
+				0749BF411952732C00E4B7C4 /* iTunesArtwork */,
+				0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */,
 				072FC3B7194EF6B200BC09F0 /* bg_matches@2x.png */,
 				0706DD82194B02A5007F3D07 /* arrow_up@2x.png */,
 				0706DD83194B02A5007F3D07 /* bg_login@2x.png */,
@@ -551,7 +551,7 @@
 		07FC45951946AA56005640AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07FC45941946AA56005640AF /* Fantasy Soccer.app */,
+				07FC45941946AA56005640AF /* Soccer Fantasy.app */,
 				07FC45AF1946AA56005640AF /* FantasySoccerTests.xctest */,
 			);
 			name = Products;
@@ -636,7 +636,7 @@
 			);
 			name = FantasySoccer;
 			productName = FantasySoccer;
-			productReference = 07FC45941946AA56005640AF /* Fantasy Soccer.app */;
+			productReference = 07FC45941946AA56005640AF /* Soccer Fantasy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		07FC45AE1946AA56005640AF /* FantasySoccerTests */ = {
@@ -667,6 +667,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "2359 Media";
 				TargetAttributes = {
+					07FC45931946AA56005640AF = {
+						DevelopmentTeam = JC446XCS92;
+					};
 					07FC45AE1946AA56005640AF = {
 						TestTargetID = 07FC45931946AA56005640AF;
 					};
@@ -707,7 +710,6 @@
 				0706DD8B194B02A5007F3D07 /* btn_drawer@2x.png in Resources */,
 				07315AEF1947F43E00529D4E /* FSLeaderBoardCell.xib in Resources */,
 				07315AF11947F43E00529D4E /* FSLeaderBoardViewController.xib in Resources */,
-				07B34BB2195194D700BEC83A /* Default@2x.png in Resources */,
 				07315AEA1947F43E00529D4E /* FSFixturesCell.xib in Resources */,
 				0706DD8C194B02A5007F3D07 /* btn_fb-signin_normal@2x.png in Resources */,
 				0706DD8D194B02A5007F3D07 /* btn_fb-signin_onpress@2x.png in Resources */,
@@ -718,8 +720,9 @@
 				07315AF31947F43E00529D4E /* FSLoginViewController.xib in Resources */,
 				0706DD89194B02A5007F3D07 /* arrow_up@2x.png in Resources */,
 				0706DDD9194B060D007F3D07 /* NeutraText-Light.otf in Resources */,
-				07144581195033FA00572633 /* Default-568h@2x.png in Resources */,
+				0749BF4C1952732C00E4B7C4 /* iTunesArtwork@2x in Resources */,
 				0706DDC5194B060D007F3D07 /* NeutraText-Book.otf in Resources */,
+				0749BF4B1952732C00E4B7C4 /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,7 +871,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -882,7 +885,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
+				PROVISIONING_PROFILE = "8DF503A1-C345-41AF-AB7A-9B9925B09EAD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Production;
@@ -945,7 +948,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -959,7 +962,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
+				PROVISIONING_PROFILE = "8DF503A1-C345-41AF-AB7A-9B9925B09EAD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Staging;
@@ -1056,7 +1059,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1069,7 +1072,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
+				PROVISIONING_PROFILE = "8DF503A1-C345-41AF-AB7A-9B9925B09EAD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1078,7 +1081,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1091,7 +1094,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "89EE6FC8-D12F-4B77-A176-F93970D1A00E";
+				PROVISIONING_PROFILE = "8DF503A1-C345-41AF-AB7A-9B9925B09EAD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

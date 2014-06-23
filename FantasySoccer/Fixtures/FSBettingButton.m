@@ -41,15 +41,10 @@
 - (void)_init
 {
     CAShapeLayer *circle = [CAShapeLayer layer];
-    // Make a circular shape
     circle.path = [UIBezierPath bezierPathWithOvalInRect:self.bounds].CGPath;
-
-    // Configure the apperence of the circle
     circle.fillColor = [UIColor clearColor].CGColor;
     circle.strokeColor = self.titleLabel.textColor.CGColor;
     circle.lineWidth = 1.1;
-    
-    // Add to parent layer
     [self.layer addSublayer:circle];
 }
 

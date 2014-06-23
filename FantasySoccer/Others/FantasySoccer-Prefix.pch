@@ -61,6 +61,8 @@
 // vendors
 
 #import "SVProgressHUD.h"
+#import "DDLog.h"
+#import "DDTTYLogger.h"
 #import "IIViewDeckController.h"
 
 #endif

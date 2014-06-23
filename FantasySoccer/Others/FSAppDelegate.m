@@ -9,7 +9,11 @@
 #import "FSAppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "FSRefreshModelManager.h"
+#import "DDLog.h"
 
+#undef LOG_LEVEL_DEF
+#define LOG_LEVEL_DEF fsLogLevel
+static const int fsLogLevel = LOG_LEVEL_VERBOSE;
 @interface FSAppDelegate()
 
 @property (nonatomic, strong) UIImageView *splashImageView;
@@ -24,6 +28,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
     // Override point for customization after application launch.
     [self showLoginView:YES];
     if ([[[FSCredentialsManager sharedInstance] getSavedToken] isValidObject]) {
@@ -33,6 +40,7 @@
         [self accessFBToken];
     }
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

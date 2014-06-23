@@ -59,6 +59,11 @@
 		0749BF4C1952732C00E4B7C4 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */; };
 		07576083194D966800904291 /* FSBettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07576082194D966800904291 /* FSBettingsView.m */; };
 		07576085194D968000904291 /* FSBettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07576084194D968000904291 /* FSBettingsView.xib */; };
+		077601FC19542179006118C1 /* CLIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 077601F719542179006118C1 /* CLIColor.m */; };
+		077601FD19542179006118C1 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 077601F919542179006118C1 /* DDLog.m */; };
+		077601FE19542179006118C1 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 077601FB19542179006118C1 /* DDTTYLogger.m */; };
+		0776020319542FB5006118C1 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0776020019542FB5006118C1 /* DDASLLogger.m */; };
+		0776020419542FB5006118C1 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0776020219542FB5006118C1 /* DDFileLogger.m */; };
 		077B6CDE194DF698005E541F /* FSBettingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B6CDD194DF698005E541F /* FSBettingButton.m */; };
 		0787BA561949880700BF03DD /* FSUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0787BA551949880700BF03DD /* FSUserProfile.m */; };
 		0787BA5919498AC900BF03DD /* FSUtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0787BA5819498AC900BF03DD /* FSUtilityManager.m */; };
@@ -191,6 +196,16 @@
 		07576081194D966800904291 /* FSBettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingsView.h; sourceTree = "<group>"; };
 		07576082194D966800904291 /* FSBettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettingsView.m; sourceTree = "<group>"; };
 		07576084194D968000904291 /* FSBettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSBettingsView.xib; sourceTree = "<group>"; };
+		077601F619542179006118C1 /* CLIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIColor.h; sourceTree = "<group>"; };
+		077601F719542179006118C1 /* CLIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIColor.m; sourceTree = "<group>"; };
+		077601F819542179006118C1 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		077601F919542179006118C1 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		077601FA19542179006118C1 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		077601FB19542179006118C1 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		077601FF19542FB5006118C1 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		0776020019542FB5006118C1 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		0776020119542FB5006118C1 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		0776020219542FB5006118C1 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
 		077B6CDC194DF698005E541F /* FSBettingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingButton.h; sourceTree = "<group>"; };
 		077B6CDD194DF698005E541F /* FSBettingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettingButton.m; sourceTree = "<group>"; };
 		0787BA541949880700BF03DD /* FSUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUserProfile.h; sourceTree = "<group>"; };
@@ -375,6 +390,7 @@
 		07315ACE1947F43E00529D4E /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				077601F419542179006118C1 /* Lumberjack */,
 				07020E0119497E0E0022D86C /* ViewDeck */,
 				07C83B371948087F00C2D00F /* Reachability */,
 				07C83B251948063600C2D00F /* JSONKit */,
@@ -437,6 +453,31 @@
 				0706DD88194B02A5007F3D07 /* icn_coins@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		077601F419542179006118C1 /* Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				077601F519542179006118C1 /* CLI */,
+				077601FF19542FB5006118C1 /* DDASLLogger.h */,
+				0776020019542FB5006118C1 /* DDASLLogger.m */,
+				0776020119542FB5006118C1 /* DDFileLogger.h */,
+				0776020219542FB5006118C1 /* DDFileLogger.m */,
+				077601F819542179006118C1 /* DDLog.h */,
+				077601F919542179006118C1 /* DDLog.m */,
+				077601FA19542179006118C1 /* DDTTYLogger.h */,
+				077601FB19542179006118C1 /* DDTTYLogger.m */,
+			);
+			path = Lumberjack;
+			sourceTree = "<group>";
+		};
+		077601F519542179006118C1 /* CLI */ = {
+			isa = PBXGroup;
+			children = (
+				077601F619542179006118C1 /* CLIColor.h */,
+				077601F719542179006118C1 /* CLIColor.m */,
+			);
+			path = CLI;
 			sourceTree = "<group>";
 		};
 		07C83B251948063600C2D00F /* JSONKit */ = {
@@ -745,8 +786,10 @@
 				07DE6D0319486A6700CF9563 /* NSDictionary+Additions.m in Sources */,
 				07315AF41947F43E00529D4E /* AFDownloadRequestOperation.m in Sources */,
 				07315AE91947F43E00529D4E /* FSFixturesCell.m in Sources */,
+				0776020419542FB5006118C1 /* DDFileLogger.m in Sources */,
 				0706DDEA194B077D007F3D07 /* UIFont+AppFonts.m in Sources */,
 				0787BA5919498AC900BF03DD /* FSUtilityManager.m in Sources */,
+				077601FD19542179006118C1 /* DDLog.m in Sources */,
 				0714457F194FE6CB00572633 /* FSBettingsManager.m in Sources */,
 				07315B051947F44900529D4E /* FSAppDelegate.m in Sources */,
 				07DE6CF71948686900CF9563 /* FSTournament.m in Sources */,
@@ -766,8 +809,10 @@
 				07C83B361948085900C2D00F /* FSReachabilityManager.m in Sources */,
 				072FC3B2194EDC5600BC09F0 /* FSBaseViewController.m in Sources */,
 				07315AF51947F43E00529D4E /* AFHTTPClient.m in Sources */,
+				077601FE19542179006118C1 /* DDTTYLogger.m in Sources */,
 				07DE6D0419486A6700CF9563 /* NSObject+Additions.m in Sources */,
 				0787BA561949880700BF03DD /* FSUserProfile.m in Sources */,
+				077601FC19542179006118C1 /* CLIColor.m in Sources */,
 				07576083194D966800904291 /* FSBettingsView.m in Sources */,
 				07315AF01947F43E00529D4E /* FSLeaderBoardViewController.m in Sources */,
 				07315AFA1947F43E00529D4E /* AFPropertyListRequestOperation.m in Sources */,
@@ -778,6 +823,7 @@
 				072FC3AC194ED11600BC09F0 /* FSResultsViewController.m in Sources */,
 				07020E0A19497E0E0022D86C /* IIWrapController.m in Sources */,
 				07A0535A194AA03800E58825 /* FSCredentialsManager.m in Sources */,
+				0776020319542FB5006118C1 /* DDASLLogger.m in Sources */,
 				07DE6D0D19487C7F00CF9563 /* FSTopScore.m in Sources */,
 				07200643194D676400A77D2F /* UIImage+BlurAdditions.m in Sources */,
 				07DE6CFA194868ED00CF9563 /* FSBaseModel.m in Sources */,
@@ -872,7 +918,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dynamic Unitrade Sdn Bhd (JC446XCS92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -886,7 +932,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "8DF503A1-C345-41AF-AB7A-9B9925B09EAD";
+				PROVISIONING_PROFILE = "BF9C879F-9709-4D78-8135-031CC0EC7A63";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Production;
@@ -950,7 +996,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dynamic Unitrade Sdn Bhd (JC446XCS92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -964,7 +1010,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "8DF503A1-C345-41AF-AB7A-9B9925B09EAD";
+				PROVISIONING_PROFILE = "BF9C879F-9709-4D78-8135-031CC0EC7A63";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Staging;
@@ -1062,7 +1108,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dynamic Unitrade Sdn Bhd (JC446XCS92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1075,7 +1121,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "8DF503A1-C345-41AF-AB7A-9B9925B09EAD";
+				PROVISIONING_PROFILE = "BF9C879F-9709-4D78-8135-031CC0EC7A63";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1085,7 +1131,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dynamic Unitrade Sdn Bhd (JC446XCS92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1098,7 +1144,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "8DF503A1-C345-41AF-AB7A-9B9925B09EAD";
+				PROVISIONING_PROFILE = "BF9C879F-9709-4D78-8135-031CC0EC7A63";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

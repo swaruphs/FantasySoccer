@@ -60,7 +60,7 @@
 
 - (void)drawerButtonClick:(id)sender
 {
-    DLog(@"bar button click");
+    DDLogDebug(@"bar button click");
     FSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate.viewDeckController toggleLeftViewAnimated:TRUE];
 }

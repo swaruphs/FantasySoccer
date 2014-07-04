@@ -72,7 +72,7 @@ void (^errorBlock)(NSError *error);
     }
 
     [[FSBettingsManager sharedInstance] getBettingsHistoryOnSucces:^(NSMutableArray *resultArray) {
-        DLog(@"results are %@", resultArray);
+        DDLogDebug(@"results are %@", resultArray);
         [SVProgressHUD dismiss];
         [self.refreshControl endRefreshing];
         self.dataArray =  resultArray;

@@ -80,6 +80,9 @@
 		07C83B361948085900C2D00F /* FSReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B351948085900C2D00F /* FSReachabilityManager.m */; };
 		07C83B3A1948087F00C2D00F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B391948087F00C2D00F /* Reachability.m */; };
 		07C83B3D194808BF00C2D00F /* BaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C83B3C194808BF00C2D00F /* BaseManager.m */; };
+		07CA8E0819664C6C001239F0 /* FSResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CA8E0719664C6C001239F0 /* FSResultsCell.xib */; };
+		07CA8E0B19664C83001239F0 /* FSResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA8E0A19664C83001239F0 /* FSResultsCell.m */; };
+		07CA8E1019664E50001239F0 /* FSBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA8E0F19664E50001239F0 /* FSBaseCell.m */; };
 		07DE6CF0194848B600CF9563 /* FSTournamentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */; };
 		07DE6CF3194848DE00CF9563 /* FSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF2194848DE00CF9563 /* FSUserManager.m */; };
 		07DE6CF71948686900CF9563 /* FSTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF61948686900CF9563 /* FSTournament.m */; };
@@ -235,6 +238,11 @@
 		07C83B391948087F00C2D00F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		07C83B3B194808BF00C2D00F /* BaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseManager.h; sourceTree = "<group>"; };
 		07C83B3C194808BF00C2D00F /* BaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseManager.m; sourceTree = "<group>"; };
+		07CA8E0719664C6C001239F0 /* FSResultsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSResultsCell.xib; sourceTree = "<group>"; };
+		07CA8E0919664C83001239F0 /* FSResultsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSResultsCell.h; sourceTree = "<group>"; };
+		07CA8E0A19664C83001239F0 /* FSResultsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSResultsCell.m; sourceTree = "<group>"; };
+		07CA8E0E19664E50001239F0 /* FSBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseCell.h; sourceTree = "<group>"; };
+		07CA8E0F19664E50001239F0 /* FSBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseCell.m; sourceTree = "<group>"; };
 		07DE6CEE194848B600CF9563 /* FSTournamentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTournamentsManager.h; sourceTree = "<group>"; };
 		07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTournamentsManager.m; sourceTree = "<group>"; };
 		07DE6CF1194848DE00CF9563 /* FSUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUserManager.h; sourceTree = "<group>"; };
@@ -337,6 +345,9 @@
 				072FC3AA194ED11600BC09F0 /* FSResultsViewController.h */,
 				072FC3AB194ED11600BC09F0 /* FSResultsViewController.m */,
 				072FC3B3194EDE1F00BC09F0 /* FSResultsViewController.xib */,
+				07CA8E0719664C6C001239F0 /* FSResultsCell.xib */,
+				07CA8E0919664C83001239F0 /* FSResultsCell.h */,
+				07CA8E0A19664C83001239F0 /* FSResultsCell.m */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -533,6 +544,15 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		07CA8E0D19664E3F001239F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07CA8E0E19664E50001239F0 /* FSBaseCell.h */,
+				07CA8E0F19664E50001239F0 /* FSBaseCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		07DE6CF41948684500CF9563 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +637,7 @@
 			children = (
 				072FC3B0194EDC5600BC09F0 /* FSBaseViewController.h */,
 				072FC3B1194EDC5600BC09F0 /* FSBaseViewController.m */,
+				07CA8E0D19664E3F001239F0 /* Views */,
 				072FC3A9194ED0D300BC09F0 /* Results */,
 				07DE6CFB19486A6700CF9563 /* Categories */,
 				07315AB81947F43E00529D4E /* Fixtures */,
@@ -764,6 +785,7 @@
 				0749BF4C1952732C00E4B7C4 /* iTunesArtwork@2x in Resources */,
 				0706DDC5194B060D007F3D07 /* NeutraText-Book.otf in Resources */,
 				0749BF4B1952732C00E4B7C4 /* iTunesArtwork in Resources */,
+				07CA8E0819664C6C001239F0 /* FSResultsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +821,7 @@
 				07315AF81947F43E00529D4E /* AFJSONRequestOperation.m in Sources */,
 				07DE6D0A1948790300CF9563 /* ISO8601DateFormatter.m in Sources */,
 				07DE6CF3194848DE00CF9563 /* FSUserManager.m in Sources */,
+				07CA8E0B19664C83001239F0 /* FSResultsCell.m in Sources */,
 				07315AF61947F43E00529D4E /* AFHTTPRequestOperation.m in Sources */,
 				07DE6CF0194848B600CF9563 /* FSTournamentsManager.m in Sources */,
 				07315AFC1947F43E00529D4E /* AFXMLRequestOperation.m in Sources */,
@@ -813,6 +836,7 @@
 				07DE6D0419486A6700CF9563 /* NSObject+Additions.m in Sources */,
 				0787BA561949880700BF03DD /* FSUserProfile.m in Sources */,
 				077601FC19542179006118C1 /* CLIColor.m in Sources */,
+				07CA8E1019664E50001239F0 /* FSBaseCell.m in Sources */,
 				07576083194D966800904291 /* FSBettingsView.m in Sources */,
 				07315AF01947F43E00529D4E /* FSLeaderBoardViewController.m in Sources */,
 				07315AFA1947F43E00529D4E /* AFPropertyListRequestOperation.m in Sources */,

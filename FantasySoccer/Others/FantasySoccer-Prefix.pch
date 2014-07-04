@@ -147,16 +147,20 @@
 #define DLog(...) do {} while (0)
 #endif
 
+
 #if STAGING
 
 #define API_SERVER_HOST  @"http://worldcup2359.herokuapp.com"
-
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #else
 
+static const int ddLogLevel = LOG_LEVEL_ERROR;
 #define API_SERVER_HOST  @"http://worldcup2359.herokuapp.com"
 
 #endif
+
+
 
 
 #define API_PREFIX          API_SERVER_HOST @"/api/v1"

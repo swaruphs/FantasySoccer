@@ -14,6 +14,7 @@
 @interface FSUtilityManager()
 
 @property (nonatomic, retain) ISO8601DateFormatter *dateFormatter;
+@property (nonatomic, strong) NSDateFormatter *timeFormatter;
 
 @end
 
@@ -40,6 +41,18 @@ SINGLETON_MACRO
     }
     
     return [self.dateFormatter dateFromString:dateString];
+}
+
+- (NSString *)getTimeString:(NSDate *)date
+{
+    if (!date) {
+        return nil;
+    }
+    if (!self.timeFormatter) {
+        self.timeFormatter = [NSDateFormatter new];
+        [self.timeFormatter setDateFormat:@"HH:mm"];
+    }
+    return [self.timeFormatter stringFromDate:date];
 }
 
 - (BOOL)doesRequireUpdate:(NSDate *)lastUpdateTime

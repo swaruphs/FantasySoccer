@@ -11,9 +11,7 @@
 #import "FSRefreshModelManager.h"
 #import "DDLog.h"
 
-#undef LOG_LEVEL_DEF
-#define LOG_LEVEL_DEF fsLogLevel
-static const int fsLogLevel = LOG_LEVEL_VERBOSE;
+
 @interface FSAppDelegate()
 
 @property (nonatomic, strong) UIImageView *splashImageView;
@@ -30,8 +28,13 @@ static const int fsLogLevel = LOG_LEVEL_VERBOSE;
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    
-    // Override point for customization after application launch.
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:LOG_FLAG_DEBUG];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:nil forFlag:LOG_FLAG_INFO];
+
+    DDLogInfo(@"Something funny");
+    DDLogDebug(@"Something funny");
+        // Override point for customization after application launch.
     [self showLoginView:YES];
     if ([[[FSCredentialsManager sharedInstance] getSavedToken] isValidObject]) {
         [self getUserProfile];
@@ -240,12 +243,17 @@ static const int fsLogLevel = LOG_LEVEL_VERBOSE;
     }
 }
 
-
+/**
+ *  Logout user with a error message
+ *
+ *  @param message message to be displayed
+ */
 - (void)logoutWithMessage:(NSString *)message
 {
     [self logoutUserAndClearToken];
     [SVProgressHUD showErrorWithStatus:message];
 }
+
 
 - (void)logoutUserAndClearToken
 {

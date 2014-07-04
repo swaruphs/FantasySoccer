@@ -12,6 +12,7 @@
 
 - (NSDate *)getISODateFromString:(NSString *)dateString;
 - (BOOL)doesRequireUpdate:(NSDate *)lastUpdateTime;
+- (NSString *)getTimeString:(NSDate *)date;
 + (NSInteger)daysBetweenDate:(NSDate*)fromDateTime andDate:(NSDate*)toDateTime;
 
 @end

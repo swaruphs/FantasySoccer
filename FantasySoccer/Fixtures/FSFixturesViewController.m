@@ -168,11 +168,13 @@ void (^errorBlock)(NSError *error);
         
         NSInteger days = [FSUtilityManager daysBetweenDate:currentDate andDate:match.startTime];
         NSString *dateString  = [self getNoOfDaysString:days];
+        NSString *time = [[FSUtilityManager sharedInstance] getTimeString:match.startTime];
         
         NSDictionary *aDic = @{@"match":match,
                                @"lteam":lTeam,
                                @"rteam":rTeam,
-                               @"days":dateString};
+                               @"days":dateString,
+                               @"time":time};
         [resultsArray addObject:aDic];
     }
     self.dataArray = resultsArray;
@@ -214,13 +216,8 @@ void (^errorBlock)(NSError *error);
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    FSMatch * match = self.dataArray[indexPath.row][@"match"];
-
     if (self.previousIndexpath && indexPath.row == self.previousIndexpath.row) {
         self.previousIndexpath = nil;
-    }
-    else if([match.bettings isValidObject]) {
-        [SVProgressHUD showErrorWithStatus:@"Sorry, cannot guess more than once !"];
     }
     else if(self.userPoints <= 0){
         [SVProgressHUD showErrorWithStatus:@"Sorry, you are out of points to guess"];

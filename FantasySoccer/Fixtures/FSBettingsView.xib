@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,49 +17,48 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="8Mb-wM-kex">
-                    <rect key="frame" x="0.0" y="178" width="320" height="390"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <rect key="frame" x="0.0" y="-3.3805633847805439e-08" width="320" height="568.00000003380569"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mexico Win - Coins to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6i8-0T-fkq">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="0.0" y="26" width="320" height="58"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kad-JI-yz7">
-                            <rect key="frame" x="52" y="73" width="219" height="51"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="52" y="99" width="219" height="51"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="60"/>
                             <color key="textColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" id="Mt8-JG-CUJ">
-                            <rect key="frame" x="0.0" y="154" width="320" height="1"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.69803921570000005" green="0.61960784310000006" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="Kxk-fp-tpl">
-                            <rect key="frame" x="1" y="239" width="320" height="1"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="0.0" y="171" width="320" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.69803921570000005" green="0.61960784310000006" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" id="H56-mg-Rmn">
-                            <rect key="frame" x="0.0" y="324" width="320" height="1"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="0.0" y="499.00000003380563" width="320" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" red="0.69803921570000005" green="0.61960784310000006" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_coins.png" id="0QS-eq-lzT">
-                            <rect key="frame" x="20" y="90" width="22" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="20" y="116" width="22" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_coins.png" id="na5-TZ-UV1">
+                            <rect key="frame" x="291" y="24" width="12" height="10"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <view contentMode="scaleToFill" id="r4d-cR-RzH">
-                            <rect key="frame" x="161" y="324" width="1" height="65"/>
+                            <rect key="frame" x="161" y="499.00000003380563" width="1" height="65"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t0N-dG-JNj">
-                            <rect key="frame" x="1" y="324" width="161" height="67"/>
+                            <rect key="frame" x="1" y="499" width="161" height="67"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                             <state key="normal" title="Confirm">
                                 <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,7 +69,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jUC-kO-zap">
-                            <rect key="frame" x="161" y="324" width="161" height="67"/>
+                            <rect key="frame" x="161" y="499" width="161" height="67"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             <state key="normal" title="Cancel">
                                 <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,34 +79,17 @@
                                 <action selector="onBtnCancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="2Wp-aU-FpI"/>
                             </connections>
                         </button>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="650-rm-hrm">
-                            <rect key="frame" x="18" y="274" width="284" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="minimumTrackTintColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="maximumTrackTintColor" red="0.21568627450980393" green="0.19607843137254902" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="thumbTintColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="sliderDidUpdate:" destination="iN0-l3-epB" eventType="valueChanged" id="5kU-a7-esf"/>
-                            </connections>
-                        </slider>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jXy-Ix-SvY">
-                            <rect key="frame" x="20" y="248" width="42" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Huh-7G-ENt">
-                            <rect key="frame" x="258" y="248" width="42" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="164" y="18" width="119" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z2F-hD-uBg" customClass="FSBettingButton">
-                            <rect key="frame" x="15" y="172" width="45" height="45"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="50">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z2F-hD-uBg" customClass="FSBettingButton">
+                            <rect key="frame" x="38" y="191" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="1">
                                 <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -115,10 +97,10 @@
                                 <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="qqo-Qu-TiN"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="150" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m1a-IK-qwb" customClass="FSBettingButton">
-                            <rect key="frame" x="136" y="172" width="45" height="45"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="150">
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m1a-IK-qwb" customClass="FSBettingButton">
+                            <rect key="frame" x="238" y="191" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="3">
                                 <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -126,10 +108,10 @@
                                 <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="9Jp-kM-pRX"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Tp-6m-s1s" customClass="FSBettingButton">
-                            <rect key="frame" x="197" y="172" width="45" height="45"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="200">
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Tp-6m-s1s" customClass="FSBettingButton">
+                            <rect key="frame" x="38" y="261" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="4">
                                 <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -137,10 +119,54 @@
                                 <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="Tn2-vF-dZY"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="250" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qcf-ps-c0w" customClass="FSBettingButton">
-                            <rect key="frame" x="259" y="172" width="45" height="45"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="250">
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4XS-DA-kqD" customClass="FSBettingButton">
+                            <rect key="frame" x="38" y="332" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="7">
+                                <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="FIH-tV-Ww5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uVf-VP-5nc" customClass="FSBettingButton">
+                            <rect key="frame" x="139" y="406" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="0">
+                                <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="4HW-mS-Fy9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Zw-CG-oy4" customClass="FSBettingButton">
+                            <rect key="frame" x="139" y="332" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="8">
+                                <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="S0w-Ts-oM9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cOh-jc-k46" customClass="FSBettingButton">
+                            <rect key="frame" x="238" y="332" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="9">
+                                <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="NJS-76-5lU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qcf-ps-c0w" customClass="FSBettingButton">
+                            <rect key="frame" x="139" y="261" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="5">
                                 <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -148,15 +174,36 @@
                                 <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="zek-kN-z6L"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RuS-PL-h2a" customClass="FSBettingButton">
-                            <rect key="frame" x="75" y="172" width="45" height="45"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="100">
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lsE-cb-f1u" customClass="FSBettingButton">
+                            <rect key="frame" x="238" y="261" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="6">
+                                <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="hK0-Gq-ncx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RuS-PL-h2a" customClass="FSBettingButton">
+                            <rect key="frame" x="139" y="191" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="2">
                                 <color key="titleColor" red="0.95686274510000002" green="0.86274509799999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="onBettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="a17-kD-MTt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dpE-OD-OyO">
+                            <rect key="frame" x="279" y="114" width="24" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="delete.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onDeleteButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="Pw5-TO-XAC"/>
                             </connections>
                         </button>
                     </subviews>
@@ -167,13 +214,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="backgroundView" destination="hDL-3T-qFy" id="OrM-xD-qk9"/>
-                <outlet property="betingSlider" destination="650-rm-hrm" id="Rkk-F2-ILf"/>
                 <outlet property="bettingsView" destination="8Mb-wM-kex" id="vIb-3b-xsN"/>
                 <outlet property="btnCancel" destination="jUC-kO-zap" id="OCh-hW-Ml5"/>
                 <outlet property="btnConfirm" destination="t0N-dG-JNj" id="Z28-dT-HAn"/>
-                <outlet property="lblSliderMax" destination="Huh-7G-ENt" id="JJC-Pz-5DJ"/>
-                <outlet property="lblSliderMin" destination="jXy-Ix-SvY" id="EeA-kP-vbS"/>
                 <outlet property="lblTitle" destination="6i8-0T-fkq" id="6u7-Mz-pib"/>
+                <outlet property="lblUserPoints" destination="Huh-7G-ENt" id="cS1-wB-JK2"/>
                 <outlet property="lblValue" destination="Kad-JI-yz7" id="zU5-Aw-Bt2"/>
                 <outletCollection property="buttonArray" destination="Z2F-hD-uBg" id="WPL-qV-SFb"/>
                 <outletCollection property="buttonArray" destination="RuS-PL-h2a" id="o6p-AT-qYo"/>
@@ -184,6 +229,7 @@
         </view>
     </objects>
     <resources>
+        <image name="delete.png" width="64" height="64"/>
         <image name="icn_coins.png" width="18" height="17"/>
     </resources>
 </document>

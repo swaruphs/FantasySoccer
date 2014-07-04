@@ -83,6 +83,8 @@
 		07CA8E0819664C6C001239F0 /* FSResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CA8E0719664C6C001239F0 /* FSResultsCell.xib */; };
 		07CA8E0B19664C83001239F0 /* FSResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA8E0A19664C83001239F0 /* FSResultsCell.m */; };
 		07CA8E1019664E50001239F0 /* FSBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA8E0F19664E50001239F0 /* FSBaseCell.m */; };
+		07CA8E1319666922001239F0 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CA8E1119666922001239F0 /* delete.png */; };
+		07CA8E1419666922001239F0 /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CA8E1219666922001239F0 /* delete@2x.png */; };
 		07DE6CF0194848B600CF9563 /* FSTournamentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */; };
 		07DE6CF3194848DE00CF9563 /* FSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF2194848DE00CF9563 /* FSUserManager.m */; };
 		07DE6CF71948686900CF9563 /* FSTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF61948686900CF9563 /* FSTournament.m */; };
@@ -243,6 +245,8 @@
 		07CA8E0A19664C83001239F0 /* FSResultsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSResultsCell.m; sourceTree = "<group>"; };
 		07CA8E0E19664E50001239F0 /* FSBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseCell.h; sourceTree = "<group>"; };
 		07CA8E0F19664E50001239F0 /* FSBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseCell.m; sourceTree = "<group>"; };
+		07CA8E1119666922001239F0 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		07CA8E1219666922001239F0 /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
 		07DE6CEE194848B600CF9563 /* FSTournamentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTournamentsManager.h; sourceTree = "<group>"; };
 		07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTournamentsManager.m; sourceTree = "<group>"; };
 		07DE6CF1194848DE00CF9563 /* FSUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUserManager.h; sourceTree = "<group>"; };
@@ -454,6 +458,8 @@
 		07315B071947F45700529D4E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07CA8E1119666922001239F0 /* delete.png */,
+				07CA8E1219666922001239F0 /* delete@2x.png */,
 				072FC3B7194EF6B200BC09F0 /* bg_matches@2x.png */,
 				0706DD82194B02A5007F3D07 /* arrow_up@2x.png */,
 				0706DD83194B02A5007F3D07 /* bg_login@2x.png */,
@@ -763,6 +769,7 @@
 				07315B041947F44900529D4E /* FantasySoccer-Info.plist in Resources */,
 				07FC45A21946AA56005640AF /* InfoPlist.strings in Resources */,
 				07F444501949B802002DA76C /* FSSidePanelViewController.xib in Resources */,
+				07CA8E1319666922001239F0 /* delete.png in Resources */,
 				07576085194D968000904291 /* FSBettingsView.xib in Resources */,
 				072FC3B4194EDE1F00BC09F0 /* FSResultsViewController.xib in Resources */,
 				07FC45AA1946AA56005640AF /* Images.xcassets in Resources */,
@@ -784,6 +791,7 @@
 				0706DDD9194B060D007F3D07 /* NeutraText-Light.otf in Resources */,
 				0749BF4C1952732C00E4B7C4 /* iTunesArtwork@2x in Resources */,
 				0706DDC5194B060D007F3D07 /* NeutraText-Book.otf in Resources */,
+				07CA8E1419666922001239F0 /* delete@2x.png in Resources */,
 				0749BF4B1952732C00E4B7C4 /* iTunesArtwork in Resources */,
 				07CA8E0819664C6C001239F0 /* FSResultsCell.xib in Resources */,
 			);

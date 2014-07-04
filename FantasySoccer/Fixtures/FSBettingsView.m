@@ -12,18 +12,17 @@
 
 @property (nonatomic, weak) IBOutlet UIView *backgroundView;
 @property (nonatomic, weak) IBOutlet UIView *bettingsView;
-@property (nonatomic, weak) IBOutlet UISlider *betingSlider;
 
 @property (nonatomic, weak) IBOutlet UILabel *lblValue;
 @property (nonatomic, weak) IBOutlet UILabel *lblTitle;
-@property (nonatomic, weak) IBOutlet UILabel *lblSliderMin;
-@property (nonatomic, weak) IBOutlet UILabel *lblSliderMax;
+@property (nonatomic, weak) IBOutlet UILabel *lblUserPoints;
 @property (nonatomic, weak) IBOutlet UIButton *btnConfirm;
 @property (nonatomic, weak) IBOutlet UIButton *btnCancel;
 
 @property (nonatomic, strong) NSNumberFormatter *numberFormatter;
 @property (nonatomic, strong) NSString *title;
 @property(nonatomic) NSUInteger points;
+@property(nonatomic) NSUInteger userPoints;
 
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *buttonArray;
 
@@ -50,40 +49,22 @@
 {
     self.btnConfirm.titleLabel.font = [UIFont neutraTextLightFontNameOfSize:24];
     self.btnCancel.titleLabel.font = [UIFont neutraTextLightFontNameOfSize:24];
-    self.lblSliderMin.font = [UIFont neutraTextLightFontNameOfSize:12];
-    self.lblSliderMax.font = [UIFont neutraTextLightFontNameOfSize:12];
+    self.lblUserPoints.font = [UIFont neutraTextLightFontNameOfSize:12];
     self.lblTitle.font = [UIFont neutraTextLightFontNameOfSize:18];
     self.lblValue.font = [UIFont neutraTextLightFontNameOfSize:60];
     
     self.numberFormatter = [[NSNumberFormatter alloc] init];
     [self.numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
     [self.numberFormatter setMaximumFractionDigits:0];
-    
-    //work around for slider thumb tint color.
-    [self.betingSlider setThumbImage:[UIImage new] forState:UIControlStateNormal];
-    [self.betingSlider setThumbTintColor:self.lblValue.textColor];
 }
 
 -(void)configureData
 {
     self.lblTitle.text = self.title;
-    [self.numberFormatter stringFromNumber:@(self.points)];
-    self.lblSliderMax.text = [NSString stringWithFormat:@"%lu",(unsigned long)self.points];
-    self.betingSlider.minimumValue = 0.0;
-    self.betingSlider.maximumValue = self.points;
-    [self setUpButtons];
-    
+    self.lblUserPoints.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithInteger:self.userPoints]];
 }
 
--(void)setUpButtons
-{
-    [self.buttonArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        
-        UIButton *aBtn = (UIButton *)obj;
-        aBtn.enabled = aBtn.tag <= self.points ? TRUE :FALSE;
-        aBtn.alpha = aBtn.tag <=self.points ? 1 : 0.5;
-    }];
-}
+
 
 /*
  // Only override drawRect: if you perform custom drawing.
@@ -98,19 +79,21 @@
 +(FSBettingsView *)showBettingsFromViewController:(UIViewController<FSBettingsViewDelegate>*)viewController
                                         withTitle:(NSString *)title
                                            points:(NSUInteger)points
+                                       userPoints:(NSUInteger)userPoints
 
 {
     FSBettingsView *aView = [[[NSBundle mainBundle] loadNibNamed:@"FSBettingsView" owner:nil options:nil] objectAtIndex:0];
     aView.delegate = viewController;
-    [aView _initWithTitle:title points:points];
+    [aView _initWithTitle:title points:points userPoints:userPoints];
     return aView;
     
 }
 
-- (void)_initWithTitle:(NSString *)title points:(NSUInteger)points
+- (void)_initWithTitle:(NSString *)title points:(NSUInteger)points userPoints:(NSUInteger)userPoints
 {
     self.title = title;
     self.points = points;
+    self.userPoints = userPoints;
     [self configureData];
     [self.delegate.view.window addSubview:self];
     [self animateViews];
@@ -127,7 +110,7 @@
         
         self.backgroundView.alpha = 0.6;
         CGRect frame = self.bettingsView.frame;
-        frame.origin.y = CGRectGetMaxY(self.frame) - CGRectGetHeight(self.bettingsView.frame);
+        frame.origin.y = 0;
         self.bettingsView.frame = frame;
         
     } completion:^(BOOL finished) {
@@ -155,14 +138,6 @@
     }];
 }
 
-- (IBAction)sliderDidUpdate:(id)sender
-{
-    NSUInteger value = round(self.betingSlider.value);
-    self.points = value;
-    NSString *number = [self.numberFormatter stringFromNumber:@(value)];
-    self.lblValue.text = number;
-}
-
 -(IBAction)onBtnCancel:(id)sender
 {
     [self dismissBettingsView:YES];
@@ -175,14 +150,41 @@
 
 -(IBAction)onBettingsButtonTap:(UIButton *)sender
 {
-    self.points = sender.tag;
-    self.lblValue.text = [self.numberFormatter stringFromNumber:@(sender.tag)];
-    self.betingSlider.value = self.points;
+    [self addNumberToDisplay:sender.tag];
+}
+
+- (IBAction)onDeleteButtonTap:(UIButton *)sender
+{
+    [self deleteLastDigit];
 }
 
 - (void)cancelView
 {
     [self dismissBettingsView:NO];
 }
+
+- (void)deleteLastDigit
+{
+    if (self.points == 0) {
+        return;
+    }
+    
+    self.points = self.points /10;
+    self.lblValue.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithInt:self.points]];
+}
+- (void)addNumberToDisplay:(NSUInteger)points
+{
+    if (points > 9) {
+        return;
+    }
+    
+    NSUInteger value  = self.points *10 + points;
+    if (value < self.userPoints) {
+        self.points = value;
+       self.lblValue.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithInteger:value]];
+    }
+    
+}
+
 
 @end

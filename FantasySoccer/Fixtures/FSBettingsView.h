@@ -23,5 +23,8 @@
 
 @property (nonatomic, assign) UIViewController <FSBettingsViewDelegate>  * delegate;
 
-+(FSBettingsView *)showBettingsFromViewController:(UIViewController<FSBettingsViewDelegate>*)viewController withTitle:(NSString *)title points:(NSUInteger)points;
++(FSBettingsView *)showBettingsFromViewController:(UIViewController<FSBettingsViewDelegate>*)viewController
+                                        withTitle:(NSString *)title
+                                           points:(NSUInteger)points
+                                       userPoints:(NSUInteger)userPoints;
 @end

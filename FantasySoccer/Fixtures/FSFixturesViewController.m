@@ -260,7 +260,7 @@ void (^errorBlock)(NSError *error);
     
     NSString *title = [self getTitleForBettingsView:self.selectedDataDic];
     NSNumber *points  = [[FSUserManager sharedInstance].userProfile points];
-    [FSBettingsView showBettingsFromViewController:self withTitle:title points:[points integerValue]];
+    [FSBettingsView showBettingsFromViewController:self withTitle:title points:0 userPoints:[points integerValue]];
 }
 
 - (void)FSBettingsViewDidCancelView:(FSBettingsView *)view
@@ -270,6 +270,9 @@ void (^errorBlock)(NSError *error);
 
 - (void)FSBettingsViewDidDismissView:(FSBettingsView *)view withBet:(NSInteger)points
 {
+    if (points <= 0) {
+        return;
+    }
     FSMatch *match = self.selectedDataDic[@"match"];
     NSString *selection = self.selectedDataDic[@"selection"];
     

@@ -216,8 +216,12 @@ void (^errorBlock)(NSError *error);
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    FSMatch *match = self.dataArray[indexPath.row][@"match"];
     if (self.previousIndexpath && indexPath.row == self.previousIndexpath.row) {
         self.previousIndexpath = nil;
+    }
+    else if(match.startTime > [NSDate date]) {
+        [SVProgressHUD showErrorWithStatus:@"Sorry, the match has begun"];
     }
     else if(self.userPoints <= 0){
         [SVProgressHUD showErrorWithStatus:@"Sorry, you are out of points to guess"];

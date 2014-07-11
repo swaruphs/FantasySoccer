@@ -9,6 +9,7 @@
 #import "FSAppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "FSRefreshModelManager.h"
+#import "FSOnBoardingViewController.h"
 #import "DDLog.h"
 
 
@@ -32,8 +33,6 @@
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:LOG_FLAG_DEBUG];
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:nil forFlag:LOG_FLAG_INFO];
 
-    DDLogInfo(@"Something funny");
-    DDLogDebug(@"Something funny");
         // Override point for customization after application launch.
     [self showLoginView:YES];
     if ([[[FSCredentialsManager sharedInstance] getSavedToken] isValidObject]) {
@@ -42,6 +41,9 @@
     else  {
         [self accessFBToken];
     }
+    
+    FSOnBoardingViewController *controller = [[FSOnBoardingViewController alloc] initWithNibName:NSStringFromClass([FSOnBoardingViewController class]) bundle:nil];
+    self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     
     return YES;

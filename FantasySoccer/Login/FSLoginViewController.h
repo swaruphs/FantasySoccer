@@ -14,4 +14,7 @@
 @property(nonatomic) BOOL hideControls;
 - (void)hideControls:(BOOL)hidden;
 
++ (void)configureLoginLabel:(UILabel *)lblTitle;
++ (void)loginUser;
+
 @end

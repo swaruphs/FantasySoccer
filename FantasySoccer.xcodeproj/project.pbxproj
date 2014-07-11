@@ -36,6 +36,7 @@
 		07123060196F93550074EE38 /* onboarding_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123052196F93550074EE38 /* onboarding_3@2x.png */; };
 		07123061196F93550074EE38 /* onboarding_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123053196F93550074EE38 /* onboarding_4.png */; };
 		07123062196F93550074EE38 /* onboarding_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123054196F93550074EE38 /* onboarding_4@2x.png */; };
+		07123064196FC0730074EE38 /* back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123063196FC0730074EE38 /* back_btn.png */; };
 		0714457F194FE6CB00572633 /* FSBettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714457E194FE6CB00572633 /* FSBettingsManager.m */; };
 		07144584195037B300572633 /* FSRefreshModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07144583195037B300572633 /* FSRefreshModelManager.m */; };
 		0714458719503E5D00572633 /* NSString+FSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714458619503E5D00572633 /* NSString+FSAdditions.m */; };
@@ -183,6 +184,7 @@
 		07123052196F93550074EE38 /* onboarding_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding_3@2x.png"; sourceTree = "<group>"; };
 		07123053196F93550074EE38 /* onboarding_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onboarding_4.png; sourceTree = "<group>"; };
 		07123054196F93550074EE38 /* onboarding_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding_4@2x.png"; sourceTree = "<group>"; };
+		07123063196FC0730074EE38 /* back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_btn.png; sourceTree = "<group>"; };
 		0714457D194FE6CB00572633 /* FSBettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingsManager.h; sourceTree = "<group>"; };
 		0714457E194FE6CB00572633 /* FSBettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBettingsManager.m; sourceTree = "<group>"; };
 		07144582195037B300572633 /* FSRefreshModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRefreshModelManager.h; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 		07315B071947F45700529D4E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07123063196FC0730074EE38 /* back_btn.png */,
 				07123047196F93550074EE38 /* bg_drawer.png */,
 				07123048196F93550074EE38 /* bg_drawer@2x.png */,
 				07123049196F93550074EE38 /* bg_onboarding.png */,
@@ -939,6 +942,7 @@
 				0706DD89194B02A5007F3D07 /* arrow_up@2x.png in Resources */,
 				0712305C196F93550074EE38 /* bg_text@2x.png in Resources */,
 				0706DDD9194B060D007F3D07 /* NeutraText-Light.otf in Resources */,
+				07123064196FC0730074EE38 /* back_btn.png in Resources */,
 				0749BF4C1952732C00E4B7C4 /* iTunesArtwork@2x in Resources */,
 				0706DDC5194B060D007F3D07 /* NeutraText-Book.otf in Resources */,
 				07CA8E1419666922001239F0 /* delete@2x.png in Resources */,

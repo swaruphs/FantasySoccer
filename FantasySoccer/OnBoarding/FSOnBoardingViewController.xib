@@ -6,11 +6,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FSOnBoardingViewController">
             <connections>
+                <outlet property="btnBack" destination="TrA-Ph-IZz" id="jjR-Yf-yJG"/>
+                <outlet property="btnLogin" destination="RtN-vR-C0S" id="RtK-ZM-c4v"/>
                 <outlet property="firstImageView" destination="yOo-jr-VK7" id="G2z-U4-pgS"/>
                 <outlet property="firstOnBoardingView" destination="isV-T8-WFz" id="2a5-oB-R5c"/>
                 <outlet property="fourthImageView" destination="mOK-PC-aQ3" id="mKg-oH-6w7"/>
                 <outlet property="fourthOnBoardingView" destination="oB3-wT-HGi" id="iaC-xt-lXL"/>
+                <outlet property="lblLoginTitle" destination="Qjy-sW-BNr" id="PGP-FQ-3pI"/>
+                <outlet property="loginView" destination="Def-DG-ELT" id="W87-7m-UDe"/>
+                <outlet property="mainScrollView" destination="te3-on-fDa" id="tov-8a-ici"/>
                 <outlet property="onBoardingScrollView" destination="qeS-lM-JkO" id="1PQ-cC-t32"/>
+                <outlet property="pageControl" destination="Bn7-yq-5xP" id="jsj-Ez-9HZ"/>
+                <outlet property="pagingScrollView" destination="Aqj-CL-ooz" id="7fj-Og-5CY"/>
                 <outlet property="secondImageView" destination="diU-rK-wdl" id="HFJ-Hq-FIg"/>
                 <outlet property="secondOnBoardingView" destination="Z5F-4N-mXY" id="YaY-s6-w6L"/>
                 <outlet property="thirdImageView" destination="h8Z-eM-Bku" id="sb4-F4-Lso"/>
@@ -27,64 +34,132 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="qeS-lM-JkO">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" id="te3-on-fDa">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_1.png" id="yOo-jr-VK7">
-                            <rect key="frame" x="20" y="20" width="280" height="500"/>
+                        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Def-DG-ELT">
+                            <rect key="frame" x="320" y="0.0" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_3.png" id="diU-rK-wdl">
-                            <rect key="frame" x="340" y="20" width="280" height="500"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TrA-Ph-IZz">
+                                    <rect key="frame" x="20" y="30" width="14" height="25"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="back_btn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onBackBtn:" destination="-1" eventType="touchUpInside" id="hmu-JH-Bdz"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOCCER FANTACY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qjy-sW-BNr">
+                                    <rect key="frame" x="0.0" y="80" width="320" height="85"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="RtN-vR-C0S">
+                                    <rect key="frame" x="0.0" y="446" width="320" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <state key="normal" image="btn_fb-signin_normal.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="btn_fb-signin_onpress.png"/>
+                                    <state key="highlighted" image="btn_fb-signin_onpress.png"/>
+                                    <connections>
+                                        <action selector="onLoginBtn" destination="-1" eventType="touchUpInside" id="PMD-6m-fFQ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                        </view>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="qeS-lM-JkO">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_3.png" id="h8Z-eM-Bku">
-                            <rect key="frame" x="660" y="20" width="280" height="500"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_4.png" id="mOK-PC-aQ3">
-                            <rect key="frame" x="980" y="20" width="280" height="500"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </imageView>
-                        <view contentMode="scaleToFill" id="isV-T8-WFz" customClass="FSOnBoardingMessageView">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_1.png" id="yOo-jr-VK7">
+                                    <rect key="frame" x="20" y="20" width="280" height="500"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_3.png" id="diU-rK-wdl">
+                                    <rect key="frame" x="340" y="20" width="280" height="500"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_3.png" id="h8Z-eM-Bku">
+                                    <rect key="frame" x="660" y="20" width="280" height="500"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_4.png" id="mOK-PC-aQ3">
+                                    <rect key="frame" x="980" y="20" width="280" height="500"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="8pe-d7-BcB"/>
+                            </connections>
+                        </scrollView>
+                        <view contentMode="scaleToFill" id="i32-7z-dLO">
                             <rect key="frame" x="0.0" y="438" width="320" height="130"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_text_a.png" id="dxI-XW-Wn2">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="Aqj-CL-ooz">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="isV-T8-WFz" customClass="FSOnBoardingMessageView">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="Z5F-4N-mXY" customClass="FSOnBoardingMessageView">
+                                            <rect key="frame" x="320" y="0.0" width="320" height="130"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="xln-qB-Tch" customClass="FSOnBoardingMessageView">
+                                            <rect key="frame" x="640" y="0.0" width="320" height="130"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="oB3-wT-HGi" customClass="FSOnBoardingMessageView">
+                                            <rect key="frame" x="960" y="0.0" width="320" height="130"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </scrollView>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <view contentMode="scaleToFill" id="Z5F-4N-mXY" customClass="FSOnBoardingMessageView">
-                            <rect key="frame" x="320" y="438" width="320" height="130"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="xln-qB-Tch" customClass="FSOnBoardingMessageView">
-                            <rect key="frame" x="640" y="438" width="320" height="130"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="oB3-wT-HGi" customClass="FSOnBoardingMessageView">
-                            <rect key="frame" x="960" y="438" width="320" height="130"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </view>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="Bn7-yq-5xP">
+                            <rect key="frame" x="123" y="436" width="74" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="8pe-d7-BcB"/>
+                        <outlet property="delegate" destination="-1" id="Jnk-ht-5u3"/>
                     </connections>
                 </scrollView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_text_a.png" id="dxI-XW-Wn2">
-                    <rect key="frame" x="0.0" y="438" width="320" height="130"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
+        <image name="back_btn.png" width="14" height="25"/>
         <image name="bg_onboarding.png" width="320" height="568"/>
         <image name="bg_text_a.png" width="320" height="130"/>
+        <image name="btn_fb-signin_normal.png" width="320" height="91"/>
+        <image name="btn_fb-signin_onpress.png" width="320" height="91"/>
         <image name="onboarding_1.png" width="230" height="491"/>
         <image name="onboarding_3.png" width="230" height="491"/>
         <image name="onboarding_4.png" width="230" height="491"/>

@@ -10,6 +10,7 @@
 
 #define USER_TOKEN @"serverToken"
 #define USER_FB_ID @"fbID"
+#define USER_FIRST_TIME @"firstTimeUser"
 @implementation FSCredentialsManager
 
 SINGLETON_MACRO
@@ -52,4 +53,17 @@ SINGLETON_MACRO
     return [userDefaults stringForKey:USER_FB_ID];
 }
 
+- (BOOL)isFirstTimeLogin
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults boolForKey:USER_FIRST_TIME];
+}
+
+- (void)markFirstTimeLogin
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:@(TRUE) forKey:USER_FIRST_TIME];
+    [userDefaults synchronize];
+}
 @end
+

@@ -37,18 +37,20 @@
 
 - (void)_init
 {
-    self.lblTitle.font = [UIFont neutraTextBoldFontNameOfSize:36];
+    [FSLoginViewController configureLoginLabel:self.lblTitle];
+    [self hideControls:self.hideControls];
     
+}
+
++ (void)configureLoginLabel:(UILabel *)lblTitle
+{
+    lblTitle.font = [UIFont neutraTextBoldFontNameOfSize:36];
     NSMutableParagraphStyle * paraStyle= [[NSMutableParagraphStyle alloc] init];
     paraStyle.lineSpacing = 12;
     paraStyle.alignment = NSTextAlignmentCenter;
     NSDictionary *attrDic = @{NSParagraphStyleAttributeName:paraStyle};
     NSAttributedString *attrString  = [[NSAttributedString alloc] initWithString:@"SOCCER\nFANTASY" attributes:attrDic];
-    
-
-    self.lblTitle.attributedText = attrString;
-    [self hideControls:self.hideControls];
-    
+    lblTitle.attributedText = attrString;
 }
 
 - (void)hideControls:(BOOL)hidden
@@ -59,6 +61,18 @@
 }
 
 - (IBAction)buttonTouched:(id)sender
+{
+    [FSLoginViewController loginUser];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
++ (void)loginUser
 {
     // If the session state is any of the two "open" states when the button is clicked
     if (FBSession.activeSession.state == FBSessionStateOpen
@@ -85,12 +99,6 @@
              
          }];
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

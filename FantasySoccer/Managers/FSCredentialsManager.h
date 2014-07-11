@@ -14,8 +14,10 @@
 - (NSString *)getSavedToken;
 - (void)clearSavedToken;
 
--(void)saveFBID:(NSString *)fbID;
+- (void)saveFBID:(NSString *)fbID;
 - (NSString *)getFBID;
+- (BOOL)isFirstTimeLogin;
+- (void)markFirstTimeLogin;
 
 
 @end

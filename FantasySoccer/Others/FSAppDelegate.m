@@ -34,16 +34,22 @@
     [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:nil forFlag:LOG_FLAG_INFO];
 
         // Override point for customization after application launch.
-    [self showLoginView:YES];
-    if ([[[FSCredentialsManager sharedInstance] getSavedToken] isValidObject]) {
-        [self getUserProfile];
+    
+    BOOL alreadyLoggedIn = [[FSCredentialsManager sharedInstance] isFirstTimeLogin];
+    if (!alreadyLoggedIn) {
+        FSOnBoardingViewController *controller = [[FSOnBoardingViewController alloc] initWithNibName:NSStringFromClass([FSOnBoardingViewController class]) bundle:nil];
+        self.window.rootViewController = controller;
     }
-    else  {
-        [self accessFBToken];
+    else {
+        [self showLoginView:YES];
+        if ([[[FSCredentialsManager sharedInstance] getSavedToken] isValidObject]) {
+            [self getUserProfile];
+        }
+        else  {
+            [self accessFBToken];
+        }
     }
     
-    FSOnBoardingViewController *controller = [[FSOnBoardingViewController alloc] initWithNibName:NSStringFromClass([FSOnBoardingViewController class]) bundle:nil];
-    self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -113,6 +119,7 @@
                 [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
                 return;
             }
+            [[FSCredentialsManager sharedInstance] markFirstTimeLogin];
             [self loginUser:user];
             
         }];
@@ -123,7 +130,6 @@
 - (void)loginUser:(NSDictionary<FBGraphUser> *)user
 {
     [[FSUserManager sharedInstance] loginWithUsernameOrEmail:user fbToken:FBSession.activeSession.accessTokenData.accessToken  success:^(BOOL success) {
-        
         [self getUserProfile];
         
     } failure:^(NSError *error) {

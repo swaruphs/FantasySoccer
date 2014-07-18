@@ -119,7 +119,6 @@
                 [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
                 return;
             }
-            [[FSCredentialsManager sharedInstance] markFirstTimeLogin];
             [self loginUser:user];
             
         }];
@@ -129,7 +128,7 @@
 
 - (void)loginUser:(NSDictionary<FBGraphUser> *)user
 {
-    [[FSUserManager sharedInstance] loginWithUsernameOrEmail:user fbToken:FBSession.activeSession.accessTokenData.accessToken  success:^(BOOL success) {
+    [[FSUserManager sharedInstance] loginWithUsernameOrEmail:user fbToken:FBSession.activeSession.accessTokenData.accessToken  success:^(BOOL success) {                    [[FSCredentialsManager sharedInstance] markFirstTimeLogin];
         [self getUserProfile];
         
     } failure:^(NSError *error) {
@@ -151,6 +150,9 @@
 
 - (void)showLoginView:(BOOL)hideControls
 {
+    if ([self.window.rootViewController isKindOfClass:[FSOnBoardingViewController class]]) {
+        return;
+    }
     if(!self.loginController) {
         FSLoginViewController *loginViewController = [[FSLoginViewController alloc] initWithNibName:@"FSLoginViewController" bundle:nil];
         self.window.rootViewController = loginViewController;

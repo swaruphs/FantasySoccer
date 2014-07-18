@@ -9,22 +9,34 @@
 #import "FSFixturesViewController.h"
 #import "FSLeaderBoardViewController.h"
 #import "FSFixturesCell.h"
+#import "FSFixturesSectionHeader.h"
+#import "FSResultsCell.h"
 #import "UIImage+BlurAdditions.h"
 #import "FSBettingsView.h"
 
 
+
 #define COINS_TO_PLAY @"- Coins to play:"
 
-@interface FSFixturesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FSFixturesCellDelegate,FSBettingsViewDelegate>
+@interface FSFixturesViewController ()
+<UICollectionViewDataSource,
+UICollectionViewDelegate,
+UICollectionViewDelegateFlowLayout,
+FSFixturesCellDelegate,
+FSBettingsViewDelegate>
+{
+    BOOL _isUpcomingMatchesAvailable;
+}
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
+@property (nonatomic, strong) NSArray *teamsArray;
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *pastMatchesArray;
 @property (nonatomic, strong) NSMutableDictionary *cellSizeDic;
+@property (nonatomic, strong) NSMutableDictionary *selectedDataDic;
 @property (nonatomic, strong) NSIndexPath *previousIndexpath;
 @property (nonatomic, strong) FSTournament * tournament;
-@property (nonatomic, strong) NSArray *teamsArray;
-@property (nonatomic, strong) NSMutableDictionary *selectedDataDic;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic) NSUInteger userPoints;
 
@@ -53,18 +65,33 @@ void (^errorBlock)(NSError *error);
 
 -(void)_init
 {
-    NSString *cellIdentifier = NSStringFromClass([self class]);
-    UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([FSFixturesCell class]) bundle:nil];
-    [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:cellIdentifier];
-    self.cellSizeDic = [[NSMutableDictionary alloc] init];
+    [self setUpCollectionView];
     [self setTitleLabel:@"MATCHES"];
     [self setDrawerBarButton];
+    [self setUpRefreshControl];
+    [self _initBlocks];
+    self.userPoints             = 0;
+    _isUpcomingMatchesAvailable = FALSE;
+    self.cellSizeDic            = [[NSMutableDictionary alloc] init];
+}
+
+- (void)setUpCollectionView
+{
+    UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([FSFixturesCell class]) bundle:nil];
+    [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"fixturesCell"];
+    cellNib = [UINib nibWithNibName:NSStringFromClass([FSResultsCell class]) bundle:nil];
+    [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"resultsCell"];
     
+    UINib *headerNib = [UINib nibWithNibName:NSStringFromClass([FSFixturesSectionHeader class]) bundle:nil];
+    [self.collectionView registerNib:headerNib forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"cellHeader"];
+    
+}
+
+- (void)setUpRefreshControl
+{
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(performRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:self.refreshControl];
-    self.userPoints = 0;
-    [self _initBlocks];
 }
 
 -(void)_initBlocks
@@ -135,8 +162,7 @@ void (^errorBlock)(NSError *error);
     [[FSTournamentsManager sharedInstance] getMatchesForTournament:tournament fromCache:FALSE success:^(NSMutableArray *resultsArray) {
         [SVProgressHUD dismiss];
         if ([resultsArray isValidObject]) {
-            self.dataArray = resultsArray;
-            [self generateDataModel];
+            [self generateDataModel:resultsArray];
             [self.collectionView reloadData];
             [self.refreshControl endRefreshing];
         }
@@ -144,19 +170,25 @@ void (^errorBlock)(NSError *error);
     } failure:errorBlock];
 }
 
-- (void)generateDataModel
+- (void)generateDataModel:(NSArray *)allMatchesArray
 {
     self.teamsArray  = [[FSTournamentsManager sharedInstance] teamArray];
     self.userPoints = [[[FSUserManager sharedInstance] userProfile].points integerValue];
+    [self generateUpcomingMatchesModel:allMatchesArray];
+    [self generatePastMatchesDataModel:allMatchesArray];
+}
+
+- (void)generateUpcomingMatchesModel:(NSArray *)allMatchesArray
+{
     NSDate *currentDate = [NSDate date];
     
     NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"startTime > %@ && status != %@",[NSDate date],MATCH_STATUS_FINISHED];
-    NSArray *filteredArray = [self.dataArray filteredArrayUsingPredicate:predicate];
+    NSArray *filteredArray = [allMatchesArray filteredArrayUsingPredicate:predicate];
     filteredArray = [filteredArray sortedArrayWithAttribute:@"startTime" ascending:YES];
-    self.dataArray = [NSMutableArray arrayWithArray:filteredArray];
+    allMatchesArray = [NSMutableArray arrayWithArray:filteredArray];
     
     NSMutableArray *resultsArray = [NSMutableArray array];
-    for (FSMatch *match in self.dataArray) {
+    for (FSMatch *match in allMatchesArray) {
         
         NSNumber *lTeamID = match.lTeamID;
         NSNumber *rTeamID = match.rTeamID;
@@ -178,20 +210,65 @@ void (^errorBlock)(NSError *error);
         [resultsArray addObject:aDic];
     }
     self.dataArray = resultsArray;
+    _isUpcomingMatchesAvailable = [self.dataArray isValidObject] && [self.dataArray count] > 0;
 }
 
+
+- (void)generatePastMatchesDataModel:(NSArray *)allMatchesArray
+{
+    NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"startTime < %@",[NSDate date]];
+    NSArray *filteredArray = [allMatchesArray filteredArrayUsingPredicate:predicate];
+    filteredArray = [filteredArray sortedArrayWithAttribute:@"startTime" ascending:NO];
+    allMatchesArray = [NSMutableArray arrayWithArray:filteredArray];
+    
+    NSMutableArray *resultsArray = [NSMutableArray array];
+    for (FSMatch *match in allMatchesArray) {
+        
+        NSNumber *lTeamID = match.lTeamID;
+        NSNumber *rTeamID = match.rTeamID;
+        FSTeam *lTeam = [self.teamsArray firstObjectWithValue:lTeamID forKeyPath:@"teamID"];
+        FSTeam *rTeam = [self.teamsArray firstObjectWithValue:rTeamID forKeyPath:@"teamID"];
+        if (![lTeam isValidObject] || ![rTeam isValidObject]) {
+            continue;
+        }
+        NSDictionary *aDic = @{@"match":match,
+                               @"lteam":lTeam,
+                               @"rteam":rTeam
+                               };
+        [resultsArray addObject:aDic];
+    }
+    self.pastMatchesArray = resultsArray;
+}
 #pragma mark - UICollectionView Datasource
 
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    NSInteger count  = 0;
+    count += [self.pastMatchesArray isValidObject] && [self.pastMatchesArray count] > 0 ? 1 :  0;
+    count += [self.dataArray isValidObject] && [self.dataArray count] > 0 ? 1 : 0;
+    
+    return count;
+}
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return  [self.dataArray count];
+    return  [[self activeArray:[NSIndexPath indexPathForItem:0 inSection:section]] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    FSFixturesCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([self class]) forIndexPath:indexPath];
-    cell.delegate =  self;
-    NSDictionary *datDic = [self.dataArray objectAtIndex:indexPath.row];
+    FSBaseCell *cell = nil;
+    NSDictionary *datDic = [self activeArray:indexPath][indexPath.row];
+    if (indexPath.section == 0 && _isUpcomingMatchesAvailable) {
+        FSFixturesCell  *fixturesCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"fixturesCell" forIndexPath:indexPath];
+        fixturesCell.delegate =  self;
+        cell = fixturesCell;
+
+    }
+    else {
+        FSResultsCell *resultsCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"resultsCell" forIndexPath:indexPath];
+        cell = resultsCell;
+    }
     [cell configureData:datDic];
     [cell setNeedsLayout];
     return cell;
@@ -200,11 +277,12 @@ void (^errorBlock)(NSError *error);
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (self.previousIndexpath && indexPath.row == self.previousIndexpath.row) {
+    if (self.previousIndexpath && [self.previousIndexpath compare:indexPath] == NSOrderedSame) {
         return CGSizeMake(320, 108);
     }
     else {
-        FSMatch *match = self.dataArray[indexPath.row][@"match"];
+        
+        FSMatch *match = [self activeArray:indexPath][indexPath.row][@"match"];
         if (match.bettings) {
             return CGSizeMake(320, 84);
         }
@@ -216,20 +294,51 @@ void (^errorBlock)(NSError *error);
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 1 || (indexPath.section == 0 && !_isUpcomingMatchesAvailable)) {
+        return;
+    }
+    
     FSMatch *match = self.dataArray[indexPath.row][@"match"];
     if (self.previousIndexpath && indexPath.row == self.previousIndexpath.row) {
         self.previousIndexpath = nil;
     }
-    else if(match.startTime > [NSDate date]) {
+    else if([match.startTime compare:[NSDate date]] == NSOrderedAscending) {
         [SVProgressHUD showErrorWithStatus:@"Sorry, the match has begun"];
+        return;
+    }
+    else if(match.bettings) {
+        [self displayBettingsViewWithSelection:match.bettings.selection andData:self.dataArray[indexPath.row]];
     }
     else if(self.userPoints <= 0){
         [SVProgressHUD showErrorWithStatus:@"Sorry, you are out of points to guess"];
+        return;
     }
     else {
         self.previousIndexpath = indexPath;
     }
     [self resetCollectionViewLayout];
+}
+
+#pragma maek  - UIColleciton View Flow Delegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    return CGSizeMake(320, 20);
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    FSFixturesSectionHeader *sectionHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"cellHeader" forIndexPath:indexPath];
+    if ([sectionHeader isKindOfClass:[FSFixturesSectionHeader class]]) {
+        if (indexPath.section == 0 && _isUpcomingMatchesAvailable) {
+            [sectionHeader setTitle:@"UPCOMING MATCHES"];
+        }
+        else {
+            [sectionHeader setTitle:@"PAST MATCHES"];
+        }
+    }
+    
+    return sectionHeader;
 }
 
 - (void)didReceiveMemoryWarning
@@ -265,6 +374,7 @@ void (^errorBlock)(NSError *error);
     NSString *title = [self getTitleForBettingsView:self.selectedDataDic];
     NSNumber *points  = [[FSUserManager sharedInstance].userProfile points];
     [FSBettingsView showBettingsFromViewController:self withTitle:title points:0 userPoints:[points integerValue]];
+    
 }
 
 - (void)FSBettingsViewDidCancelView:(FSBettingsView *)view
@@ -314,4 +424,12 @@ void (^errorBlock)(NSError *error);
     }
 }
 
+- (NSArray *)activeArray:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0 && _isUpcomingMatchesAvailable) {
+        return self.dataArray;
+    }
+    
+    return self.pastMatchesArray;
+}
 @end

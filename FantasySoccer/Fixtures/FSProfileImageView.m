@@ -52,10 +52,10 @@
 - (void)setUpCircleBorder
 {
     CAShapeLayer *circle = [CAShapeLayer layer];
-    circle.path = [UIBezierPath bezierPathWithOvalInRect:self.bounds].CGPath;
-    circle.fillColor = [UIColor clearColor].CGColor;
-    circle.strokeColor = [UIColor colorWithRed:244.0/256.0 green:220.0/256.0 blue:118.0/256.0 alpha:1.0].CGColor;
-    circle.lineWidth = 1.1;
+    circle.path          = [UIBezierPath bezierPathWithOvalInRect:self.bounds].CGPath;
+    circle.fillColor     = [UIColor clearColor].CGColor;
+    circle.strokeColor   = [UIColor colorWithRed:244.0/256.0 green:220.0/256.0 blue:118.0/256.0 alpha:1.0].CGColor;
+    circle.lineWidth     = 1.1;
     [self.layer addSublayer:circle];
 }
 

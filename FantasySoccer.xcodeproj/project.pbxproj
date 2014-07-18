@@ -21,20 +21,16 @@
 		0706DDC5194B060D007F3D07 /* NeutraText-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0706DD9D194B060D007F3D07 /* NeutraText-Book.otf */; };
 		0706DDD9194B060D007F3D07 /* NeutraText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0706DDB1194B060D007F3D07 /* NeutraText-Light.otf */; };
 		0706DDEA194B077D007F3D07 /* UIFont+AppFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0706DDE9194B077D007F3D07 /* UIFont+AppFonts.m */; };
+		0708D5FC196FE893005A2670 /* onboarding_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0708D5FB196FE893005A2670 /* onboarding_2@2x.png */; };
+		0708D5FF196FF75E005A2670 /* FSFixturesSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0708D5FE196FF75E005A2670 /* FSFixturesSectionHeader.m */; };
+		0708D601196FF777005A2670 /* FSFixturesSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0708D600196FF777005A2670 /* FSFixturesSectionHeader.xib */; };
 		071049C4194F4E180098D76F /* FSProfileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 071049C3194F4E180098D76F /* FSProfileImageView.m */; };
-		07123055196F93550074EE38 /* bg_drawer.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123047196F93550074EE38 /* bg_drawer.png */; };
 		07123056196F93550074EE38 /* bg_drawer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123048196F93550074EE38 /* bg_drawer@2x.png */; };
-		07123057196F93550074EE38 /* bg_onboarding.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123049196F93550074EE38 /* bg_onboarding.png */; };
 		07123058196F93550074EE38 /* bg_onboarding@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712304A196F93550074EE38 /* bg_onboarding@2x.png */; };
-		07123059196F93550074EE38 /* bg_text_a.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712304B196F93550074EE38 /* bg_text_a.png */; };
 		0712305A196F93550074EE38 /* bg_text_a@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712304C196F93550074EE38 /* bg_text_a@2x.png */; };
-		0712305B196F93550074EE38 /* bg_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712304D196F93550074EE38 /* bg_text.png */; };
 		0712305C196F93550074EE38 /* bg_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712304E196F93550074EE38 /* bg_text@2x.png */; };
-		0712305D196F93550074EE38 /* onboarding_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712304F196F93550074EE38 /* onboarding_1.png */; };
 		0712305E196F93550074EE38 /* onboarding_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123050196F93550074EE38 /* onboarding_1@2x.png */; };
-		0712305F196F93550074EE38 /* onboarding_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123051196F93550074EE38 /* onboarding_3.png */; };
 		07123060196F93550074EE38 /* onboarding_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123052196F93550074EE38 /* onboarding_3@2x.png */; };
-		07123061196F93550074EE38 /* onboarding_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123053196F93550074EE38 /* onboarding_4.png */; };
 		07123062196F93550074EE38 /* onboarding_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123054196F93550074EE38 /* onboarding_4@2x.png */; };
 		07123064196FC0730074EE38 /* back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 07123063196FC0730074EE38 /* back_btn.png */; };
 		0714457F194FE6CB00572633 /* FSBettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714457E194FE6CB00572633 /* FSBettingsManager.m */; };
@@ -98,7 +94,6 @@
 		07CA8E0819664C6C001239F0 /* FSResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CA8E0719664C6C001239F0 /* FSResultsCell.xib */; };
 		07CA8E0B19664C83001239F0 /* FSResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA8E0A19664C83001239F0 /* FSResultsCell.m */; };
 		07CA8E1019664E50001239F0 /* FSBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA8E0F19664E50001239F0 /* FSBaseCell.m */; };
-		07CA8E1319666922001239F0 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CA8E1119666922001239F0 /* delete.png */; };
 		07CA8E1419666922001239F0 /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CA8E1219666922001239F0 /* delete@2x.png */; };
 		07DE12EF196690E000DFF492 /* FSOnBoardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE12ED196690E000DFF492 /* FSOnBoardingViewController.m */; };
 		07DE12F0196690E000DFF492 /* FSOnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07DE12EE196690E000DFF492 /* FSOnBoardingViewController.xib */; };
@@ -115,7 +110,6 @@
 		07DE131E19669A5300DFF492 /* IFTTTHideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE130D19669A5300DFF492 /* IFTTTHideAnimation.m */; };
 		07DE131F19669A5300DFF492 /* IFTTTScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE131019669A5300DFF492 /* IFTTTScaleAnimation.m */; };
 		07DE132019669A5300DFF492 /* IFTTTTransform3DAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE131219669A5300DFF492 /* IFTTTTransform3DAnimation.m */; };
-		07DE13261966AD8400DFF492 /* iphone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07DE13251966AD8400DFF492 /* iphone.jpg */; };
 		07DE6CF0194848B600CF9563 /* FSTournamentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */; };
 		07DE6CF3194848DE00CF9563 /* FSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF2194848DE00CF9563 /* FSUserManager.m */; };
 		07DE6CF71948686900CF9563 /* FSTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE6CF61948686900CF9563 /* FSTournament.m */; };
@@ -168,21 +162,18 @@
 		0706DDB1194B060D007F3D07 /* NeutraText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Light.otf"; sourceTree = "<group>"; };
 		0706DDE8194B077D007F3D07 /* UIFont+AppFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AppFonts.h"; sourceTree = "<group>"; };
 		0706DDE9194B077D007F3D07 /* UIFont+AppFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFonts.m"; sourceTree = "<group>"; };
+		0708D5FB196FE893005A2670 /* onboarding_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding_2@2x.png"; sourceTree = "<group>"; };
+		0708D5FD196FF75E005A2670 /* FSFixturesSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFixturesSectionHeader.h; sourceTree = "<group>"; };
+		0708D5FE196FF75E005A2670 /* FSFixturesSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFixturesSectionHeader.m; sourceTree = "<group>"; };
+		0708D600196FF777005A2670 /* FSFixturesSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSFixturesSectionHeader.xib; sourceTree = "<group>"; };
 		071049C2194F4E180098D76F /* FSProfileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSProfileImageView.h; sourceTree = "<group>"; };
 		071049C3194F4E180098D76F /* FSProfileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSProfileImageView.m; sourceTree = "<group>"; };
-		07123047196F93550074EE38 /* bg_drawer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_drawer.png; sourceTree = "<group>"; };
 		07123048196F93550074EE38 /* bg_drawer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_drawer@2x.png"; sourceTree = "<group>"; };
-		07123049196F93550074EE38 /* bg_onboarding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_onboarding.png; sourceTree = "<group>"; };
 		0712304A196F93550074EE38 /* bg_onboarding@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_onboarding@2x.png"; sourceTree = "<group>"; };
-		0712304B196F93550074EE38 /* bg_text_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_text_a.png; sourceTree = "<group>"; };
 		0712304C196F93550074EE38 /* bg_text_a@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_text_a@2x.png"; sourceTree = "<group>"; };
-		0712304D196F93550074EE38 /* bg_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_text.png; sourceTree = "<group>"; };
 		0712304E196F93550074EE38 /* bg_text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_text@2x.png"; sourceTree = "<group>"; };
-		0712304F196F93550074EE38 /* onboarding_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onboarding_1.png; sourceTree = "<group>"; };
 		07123050196F93550074EE38 /* onboarding_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding_1@2x.png"; sourceTree = "<group>"; };
-		07123051196F93550074EE38 /* onboarding_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onboarding_3.png; sourceTree = "<group>"; };
 		07123052196F93550074EE38 /* onboarding_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding_3@2x.png"; sourceTree = "<group>"; };
-		07123053196F93550074EE38 /* onboarding_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onboarding_4.png; sourceTree = "<group>"; };
 		07123054196F93550074EE38 /* onboarding_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onboarding_4@2x.png"; sourceTree = "<group>"; };
 		07123063196FC0730074EE38 /* back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_btn.png; sourceTree = "<group>"; };
 		0714457D194FE6CB00572633 /* FSBettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingsManager.h; sourceTree = "<group>"; };
@@ -291,7 +282,6 @@
 		07CA8E0A19664C83001239F0 /* FSResultsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSResultsCell.m; sourceTree = "<group>"; };
 		07CA8E0E19664E50001239F0 /* FSBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseCell.h; sourceTree = "<group>"; };
 		07CA8E0F19664E50001239F0 /* FSBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseCell.m; sourceTree = "<group>"; };
-		07CA8E1119666922001239F0 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		07CA8E1219666922001239F0 /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
 		07DE12EC196690E000DFF492 /* FSOnBoardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOnBoardingViewController.h; sourceTree = "<group>"; };
 		07DE12ED196690E000DFF492 /* FSOnBoardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSOnBoardingViewController.m; sourceTree = "<group>"; };
@@ -323,7 +313,6 @@
 		07DE131019669A5300DFF492 /* IFTTTScaleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFTTTScaleAnimation.m; path = src/IFTTTScaleAnimation.m; sourceTree = "<group>"; };
 		07DE131119669A5300DFF492 /* IFTTTTransform3DAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFTTTTransform3DAnimation.h; path = src/IFTTTTransform3DAnimation.h; sourceTree = "<group>"; };
 		07DE131219669A5300DFF492 /* IFTTTTransform3DAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IFTTTTransform3DAnimation.m; path = src/IFTTTTransform3DAnimation.m; sourceTree = "<group>"; };
-		07DE13251966AD8400DFF492 /* iphone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphone.jpg; sourceTree = "<group>"; };
 		07DE6CEE194848B600CF9563 /* FSTournamentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTournamentsManager.h; sourceTree = "<group>"; };
 		07DE6CEF194848B600CF9563 /* FSTournamentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTournamentsManager.m; sourceTree = "<group>"; };
 		07DE6CF1194848DE00CF9563 /* FSUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUserManager.h; sourceTree = "<group>"; };
@@ -426,9 +415,9 @@
 				072FC3AA194ED11600BC09F0 /* FSResultsViewController.h */,
 				072FC3AB194ED11600BC09F0 /* FSResultsViewController.m */,
 				072FC3B3194EDE1F00BC09F0 /* FSResultsViewController.xib */,
-				07CA8E0719664C6C001239F0 /* FSResultsCell.xib */,
 				07CA8E0919664C83001239F0 /* FSResultsCell.h */,
 				07CA8E0A19664C83001239F0 /* FSResultsCell.m */,
+				07CA8E0719664C6C001239F0 /* FSResultsCell.xib */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -452,6 +441,9 @@
 				077B6CDD194DF698005E541F /* FSBettingButton.m */,
 				071049C2194F4E180098D76F /* FSProfileImageView.h */,
 				071049C3194F4E180098D76F /* FSProfileImageView.m */,
+				0708D5FD196FF75E005A2670 /* FSFixturesSectionHeader.h */,
+				0708D5FE196FF75E005A2670 /* FSFixturesSectionHeader.m */,
+				0708D600196FF777005A2670 /* FSFixturesSectionHeader.xib */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -537,22 +529,14 @@
 			isa = PBXGroup;
 			children = (
 				07123063196FC0730074EE38 /* back_btn.png */,
-				07123047196F93550074EE38 /* bg_drawer.png */,
 				07123048196F93550074EE38 /* bg_drawer@2x.png */,
-				07123049196F93550074EE38 /* bg_onboarding.png */,
 				0712304A196F93550074EE38 /* bg_onboarding@2x.png */,
-				0712304B196F93550074EE38 /* bg_text_a.png */,
 				0712304C196F93550074EE38 /* bg_text_a@2x.png */,
-				0712304D196F93550074EE38 /* bg_text.png */,
 				0712304E196F93550074EE38 /* bg_text@2x.png */,
-				0712304F196F93550074EE38 /* onboarding_1.png */,
 				07123050196F93550074EE38 /* onboarding_1@2x.png */,
-				07123051196F93550074EE38 /* onboarding_3.png */,
+				0708D5FB196FE893005A2670 /* onboarding_2@2x.png */,
 				07123052196F93550074EE38 /* onboarding_3@2x.png */,
-				07123053196F93550074EE38 /* onboarding_4.png */,
 				07123054196F93550074EE38 /* onboarding_4@2x.png */,
-				07DE13251966AD8400DFF492 /* iphone.jpg */,
-				07CA8E1119666922001239F0 /* delete.png */,
 				07CA8E1219666922001239F0 /* delete@2x.png */,
 				072FC3B7194EF6B200BC09F0 /* bg_matches@2x.png */,
 				0706DD82194B02A5007F3D07 /* arrow_up@2x.png */,
@@ -906,34 +890,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				07315B041947F44900529D4E /* FantasySoccer-Info.plist in Resources */,
-				07123057196F93550074EE38 /* bg_onboarding.png in Resources */,
 				07FC45A21946AA56005640AF /* InfoPlist.strings in Resources */,
-				0712305B196F93550074EE38 /* bg_text.png in Resources */,
 				07F444501949B802002DA76C /* FSSidePanelViewController.xib in Resources */,
-				07CA8E1319666922001239F0 /* delete.png in Resources */,
-				0712305D196F93550074EE38 /* onboarding_1.png in Resources */,
 				07576085194D968000904291 /* FSBettingsView.xib in Resources */,
-				07123061196F93550074EE38 /* onboarding_4.png in Resources */,
 				072FC3B4194EDE1F00BC09F0 /* FSResultsViewController.xib in Resources */,
 				07FC45AA1946AA56005640AF /* Images.xcassets in Resources */,
 				0706DD8A194B02A5007F3D07 /* bg_login@2x.png in Resources */,
 				0706DD8F194B02A5007F3D07 /* icn_coins@2x.png in Resources */,
 				07123060196F93550074EE38 /* onboarding_3@2x.png in Resources */,
 				0706DD8E194B02A5007F3D07 /* icn_coins-inline@2x.png in Resources */,
+				0708D5FC196FE893005A2670 /* onboarding_2@2x.png in Resources */,
 				0706DD8B194B02A5007F3D07 /* btn_drawer@2x.png in Resources */,
 				07315AEF1947F43E00529D4E /* FSLeaderBoardCell.xib in Resources */,
-				07123055196F93550074EE38 /* bg_drawer.png in Resources */,
 				07315AF11947F43E00529D4E /* FSLeaderBoardViewController.xib in Resources */,
 				07123056196F93550074EE38 /* bg_drawer@2x.png in Resources */,
-				07123059196F93550074EE38 /* bg_text_a.png in Resources */,
 				07315AEA1947F43E00529D4E /* FSFixturesCell.xib in Resources */,
 				0712305A196F93550074EE38 /* bg_text_a@2x.png in Resources */,
 				07123058196F93550074EE38 /* bg_onboarding@2x.png in Resources */,
 				0706DD8C194B02A5007F3D07 /* btn_fb-signin_normal@2x.png in Resources */,
+				0708D601196FF777005A2670 /* FSFixturesSectionHeader.xib in Resources */,
 				0706DD8D194B02A5007F3D07 /* btn_fb-signin_onpress@2x.png in Resources */,
 				07315AED1947F43E00529D4E /* FSFixturesViewController.xib in Resources */,
 				07123062196F93550074EE38 /* onboarding_4@2x.png in Resources */,
-				0712305F196F93550074EE38 /* onboarding_3.png in Resources */,
 				07C83B2D1948063600C2D00F /* SVProgressHUD.bundle in Resources */,
 				0712305E196F93550074EE38 /* onboarding_1@2x.png in Resources */,
 				072FC3B8194EF6B200BC09F0 /* bg_matches@2x.png in Resources */,
@@ -946,7 +924,6 @@
 				0749BF4C1952732C00E4B7C4 /* iTunesArtwork@2x in Resources */,
 				0706DDC5194B060D007F3D07 /* NeutraText-Book.otf in Resources */,
 				07CA8E1419666922001239F0 /* delete@2x.png in Resources */,
-				07DE13261966AD8400DFF492 /* iphone.jpg in Resources */,
 				0749BF4B1952732C00E4B7C4 /* iTunesArtwork in Resources */,
 				07CA8E0819664C6C001239F0 /* FSResultsCell.xib in Resources */,
 				07DE12F0196690E000DFF492 /* FSOnBoardingViewController.xib in Resources */,
@@ -979,6 +956,7 @@
 				0714457F194FE6CB00572633 /* FSBettingsManager.m in Sources */,
 				07315B051947F44900529D4E /* FSAppDelegate.m in Sources */,
 				07DE12EF196690E000DFF492 /* FSOnBoardingViewController.m in Sources */,
+				0708D5FF196FF75E005A2670 /* FSFixturesSectionHeader.m in Sources */,
 				07DE131C19669A5300DFF492 /* IFTTTColorAnimation.m in Sources */,
 				07DE6CF71948686900CF9563 /* FSTournament.m in Sources */,
 				07DE6D0219486A6700CF9563 /* NSArray+Additions.m in Sources */,
@@ -1120,7 +1098,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1134,7 +1112,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "BF9C879F-9709-4D78-8135-031CC0EC7A63";
+				PROVISIONING_PROFILE = "15FCC95F-6BD5-4736-AA35-A64A20915EDD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Production;
@@ -1198,7 +1176,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1212,7 +1190,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "BF9C879F-9709-4D78-8135-031CC0EC7A63";
+				PROVISIONING_PROFILE = "15FCC95F-6BD5-4736-AA35-A64A20915EDD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Staging;
@@ -1310,7 +1288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1323,7 +1301,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "BF9C879F-9709-4D78-8135-031CC0EC7A63";
+				PROVISIONING_PROFILE = "15FCC95F-6BD5-4736-AA35-A64A20915EDD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1333,7 +1311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1346,7 +1324,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "BF9C879F-9709-4D78-8135-031CC0EC7A63";
+				PROVISIONING_PROFILE = "15FCC95F-6BD5-4736-AA35-A64A20915EDD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

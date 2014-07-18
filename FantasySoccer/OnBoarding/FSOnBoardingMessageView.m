@@ -52,13 +52,16 @@
 - (void)setUpDescLabel
 {
     CGFloat width  =  self.frame.size.width;
-    self.lblMsg = [[UILabel alloc] initWithFrame:CGRectMake(10, 65, width - 20, 60)];
+    self.lblMsg = [[UILabel alloc] initWithFrame:CGRectMake(10, 60, width - 20, 45)];
     self.lblMsg.numberOfLines = 2;
     self.lblMsg.font = [UIFont neutraTextBookFontNameOfSize:18];
     self.lblMsg.textColor = [UIColor whiteColor];
     self.lblMsg.textAlignment = NSTextAlignmentCenter;
+    self.lblMsg.contentMode = UIViewContentModeTop;
+    self.lblMsg.autoresizingMask = UIViewAutoresizingNone;
     [self addSubview:self.lblMsg];
 }
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

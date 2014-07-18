@@ -6,8 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FSOnBoardingViewController">
             <connections>
-                <outlet property="btnBack" destination="TrA-Ph-IZz" id="jjR-Yf-yJG"/>
-                <outlet property="btnLogin" destination="RtN-vR-C0S" id="RtK-ZM-c4v"/>
                 <outlet property="firstImageView" destination="yOo-jr-VK7" id="G2z-U4-pgS"/>
                 <outlet property="firstOnBoardingView" destination="isV-T8-WFz" id="2a5-oB-R5c"/>
                 <outlet property="fourthImageView" destination="mOK-PC-aQ3" id="mKg-oH-6w7"/>
@@ -32,7 +30,7 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_onboarding.png" id="vB3-kd-0W8">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" id="te3-on-fDa">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -42,8 +40,8 @@
                             <rect key="frame" x="320" y="0.0" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TrA-Ph-IZz">
-                                    <rect key="frame" x="20" y="30" width="14" height="25"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TrA-Ph-IZz">
+                                    <rect key="frame" x="20" y="30" width="40" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="back_btn.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,13 +76,13 @@
                         </view>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="qeS-lM-JkO">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_1.png" id="yOo-jr-VK7">
                                     <rect key="frame" x="20" y="20" width="280" height="500"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_3.png" id="diU-rK-wdl">
+                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_2.png" id="diU-rK-wdl">
                                     <rect key="frame" x="340" y="20" width="280" height="500"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
@@ -102,7 +100,7 @@
                                 <outlet property="delegate" destination="-1" id="8pe-d7-BcB"/>
                             </connections>
                         </scrollView>
-                        <view contentMode="scaleToFill" id="i32-7z-dLO">
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="i32-7z-dLO">
                             <rect key="frame" x="0.0" y="438" width="320" height="130"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <subviews>
@@ -139,7 +137,7 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="Bn7-yq-5xP">
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" id="Bn7-yq-5xP">
                             <rect key="frame" x="123" y="436" width="74" height="37"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         </pageControl>
@@ -161,6 +159,7 @@
         <image name="btn_fb-signin_normal.png" width="320" height="91"/>
         <image name="btn_fb-signin_onpress.png" width="320" height="91"/>
         <image name="onboarding_1.png" width="230" height="491"/>
+        <image name="onboarding_2.png" width="230" height="491"/>
         <image name="onboarding_3.png" width="230" height="491"/>
         <image name="onboarding_4.png" width="230" height="491"/>
     </resources>

@@ -7,7 +7,7 @@
 //
 
 #import "FSResultsViewController.h"
-#import "FSFixturesCell.h"
+#import "FSResultsCell.h"
 
 @interface FSResultsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -40,7 +40,7 @@
 
 - (void)_init
 {
-    UINib *aNib = [UINib nibWithNibName:@"FSFixturesCell" bundle:nil];
+    UINib *aNib = [UINib nibWithNibName:@"FSResultsCell" bundle:nil];
     [self.collectionView registerNib:aNib forCellWithReuseIdentifier:@"FSResultsViewController"];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reloadData:) forControlEvents:UIControlEventValueChanged];
@@ -138,7 +138,7 @@ void (^errorBlock)(NSError *error);
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-   FSFixturesCell *cell =   [collectionView dequeueReusableCellWithReuseIdentifier:@"FSResultsViewController" forIndexPath:indexPath];
+   FSResultsCell *cell =   [collectionView dequeueReusableCellWithReuseIdentifier:@"FSResultsViewController" forIndexPath:indexPath];
     NSDictionary *dataDic = self.dataArray[indexPath.row];
     [cell configureData:dataDic];
     [cell setNeedsLayout];

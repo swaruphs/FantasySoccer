@@ -15,13 +15,10 @@
 #define timeForPage(page) (NSInteger)(self.view.frame.size.width * (page - 1))
 @interface FSOnBoardingViewController () <UIScrollViewDelegate>
 {
-    BOOL disableScroll;
+    
 }
 
-
 @property (nonatomic, weak) IBOutlet UILabel *lblLoginTitle;
-@property (nonatomic, weak) IBOutlet UIButton *btnLogin;
-@property (nonatomic, weak) IBOutlet UIButton *btnBack;
 @property (nonatomic, weak) IBOutlet UIScrollView * pagingScrollView;
 @property (nonatomic, weak) IBOutlet UIScrollView * onBoardingScrollView;
 @property (nonatomic, weak) IBOutlet UIScrollView * mainScrollView;
@@ -54,16 +51,18 @@
 {
     [super viewDidLoad];
     [self _init];
-    // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setUpViews];
+}
 - (void)_init
 {
     self.onBoardingAnimator = [IFTTTAnimator new];
     self.mainAnimator = [IFTTTAnimator new];
-    disableScroll = NO;
     self.mainScrollView.scrollEnabled = NO;
-    [self setUpViews];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,34 +86,51 @@
     [self setUpSecondScreen];
     [self setUpThirdScreen];
     [self setUpFourthScreen];
+    [self setUpOnBoardingText];
+    
+    // adding alpha animations to titles.
     [self.onBoardingAnimator addAnimation:[self addAlphaAnimationToView:self.firstOnBoardingView fromPage:0 toPage:1 reverse:TRUE]];
-        [self.onBoardingAnimator addAnimation:[self addAlphaAnimationToView:self.secondOnBoardingView fromPage:1 toPage:2 reverse:TRUE]];
-        [self.onBoardingAnimator addAnimation:[self addAlphaAnimationToView:self.thirdOnBoardingView fromPage:2 toPage:3 reverse:TRUE]];
-        [self.onBoardingAnimator addAnimation:[self addAlphaAnimationToView:self.fourthOnBoardingView fromPage:3 toPage:4 reverse:TRUE]];
+    [self.onBoardingAnimator addAnimation:[self addAlphaAnimationToView:self.secondOnBoardingView fromPage:1 toPage:2 reverse:TRUE]];
+    [self.onBoardingAnimator addAnimation:[self addAlphaAnimationToView:self.thirdOnBoardingView fromPage:2 toPage:3 reverse:TRUE]];
+    [self.onBoardingAnimator addAnimation:[self addAlphaAnimationToView:self.fourthOnBoardingView fromPage:3 toPage:4 reverse:TRUE]];
+}
+
+- (void)setUpOnBoardingText
+{
+    self.firstOnBoardingView.lblTitle.text  = @"Make guesses";
+    self.firstOnBoardingView.lblMsg.text    = @"of soccer matches";
+    self.secondOnBoardingView.lblTitle.text = @"Checkout Leaderboard";
+    self.secondOnBoardingView.lblMsg.text   = @"to see how far are you against your friends";
+    self.thirdOnBoardingView.lblTitle.text  = @"Go to history";
+    self.thirdOnBoardingView.lblMsg.text    = @"to check out the past guess";
+    self.fourthOnBoardingView.lblTitle.text = @"Place the coin";
+    self.fourthOnBoardingView.lblMsg.text   = @"on your guess";
 }
 
 - (void)setUpMainAnimator
 {
-    [self.mainAnimator addAnimation:[self addAlphaAnimationToView:self.loginView fromPage:1 toPage:2 reverse:FALSE]];
+    [self.mainAnimator addAnimation:[self addAlphaAnimationToView:self.loginView
+                                                         fromPage:1
+                                                           toPage:2
+                                                          reverse:FALSE]];
 }
 
 - (IFTTTAlphaAnimation *)addAlphaAnimationToView:(UIView *)view fromPage:(int)fromPage toPage:(int)toPage reverse:(BOOL)reverse
 {
     IFTTTAlphaAnimation *alphaAnimation = [IFTTTAlphaAnimation animationWithView:view];
-    [alphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(fromPage) andAlpha:0.0f]];
-    [alphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(toPage) andAlpha:1.0f]];
+    [alphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(fromPage)
+                                                                andAlpha:0.0f]];
+    [alphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(toPage)
+                                                                andAlpha:1.0f]];
     if(reverse) {
-        [alphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(toPage +1) andAlpha:0.0f]];
+        [alphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(toPage +1)
+                                                                    andAlpha:0.0f]];
     }
-    
     return alphaAnimation;
 }
 
 - (void)setUpFirstScreen
 {
-    self.firstOnBoardingView.lblTitle.text =  @"First Screen";
-    self.firstOnBoardingView.lblMsg.text = @"some random description to fil the screen";
-    
     IFTTTAngleAnimation *firstImageViewAnimation = [IFTTTAngleAnimation animationWithView:self.firstImageView];
     [firstImageViewAnimation addKeyFrames:@[
                                             [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(0) andAngle:(CGFloat)(M_PI/4)],
@@ -124,17 +140,15 @@
     
     IFTTTFrameAnimation *firstImageViewFrameAnimation = [IFTTTFrameAnimation animationWithView:self.firstImageView];
     [firstImageViewFrameAnimation addKeyFrames:@[
-                                                 [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1) andFrame:CGRectOffset(self.firstImageView.frame, 0, 0)],[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andFrame:CGRectOffset(self.firstImageView.frame, -180, 0)]]];
+                                                 [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1) andFrame:CGRectOffset(self.firstImageView.frame, 0, 0)],
+                                                 [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andFrame:CGRectOffset(self.firstImageView.frame, -180, 0)]]];
     [self.onBoardingAnimator addAnimation:firstImageViewAnimation];
     [self.onBoardingAnimator addAnimation:firstImageViewFrameAnimation];
     
 }
 
 - (void)setUpSecondScreen
-{
-    self.secondOnBoardingView.lblTitle.text =  @"Second Screen";
-    self.secondOnBoardingView.lblMsg.text = @"some random description to fil the screen";
-    
+{    
     IFTTTAngleAnimation *secondImageViewAnimation = [IFTTTAngleAnimation animationWithView:self.secondImageView];
     [secondImageViewAnimation addKeyFrames:@[
                                              [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1) andAngle:(CGFloat)(+M_PI/2)],
@@ -149,14 +163,12 @@
     
     [self.onBoardingAnimator addAnimation:secondImageViewAnimation];
     [self.onBoardingAnimator addAnimation:secondImageViewFrameanimation];
-
-
+    
+    
 }
 
 - (void)setUpThirdScreen
 {
-    self.thirdOnBoardingView.lblTitle.text =  @"Third Screen";
-    self.thirdOnBoardingView.lblMsg.text = @"some random description to fil the screen";
     
     IFTTTAngleAnimation *firstImageViewAnimation = [IFTTTAngleAnimation animationWithView:self.thirdImageView];
     [firstImageViewAnimation addKeyFrames:@[
@@ -167,7 +179,7 @@
     
     IFTTTFrameAnimation *thirdImageViewFrameAnimation = [IFTTTFrameAnimation animationWithView:self.thirdImageView];
     [thirdImageViewFrameAnimation addKeyFrames:@[[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andFrame:CGRectOffset(self.thirdImageView.frame, 180, 0)],
-                                                  [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andFrame:CGRectOffset(self.thirdImageView.frame, 0, 0)],[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andFrame:CGRectOffset(self.thirdImageView.frame, -180, 0)]]];
+                                                 [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andFrame:CGRectOffset(self.thirdImageView.frame, 0, 0)],[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andFrame:CGRectOffset(self.thirdImageView.frame, -180, 0)]]];
     [self.onBoardingAnimator addAnimation:firstImageViewAnimation];
     [self.onBoardingAnimator addAnimation:thirdImageViewFrameAnimation];
 }
@@ -175,9 +187,6 @@
 
 - (void)setUpFourthScreen
 {
-    self.fourthOnBoardingView.lblTitle.text =  @"Fourth Screen";
-    self.fourthOnBoardingView.lblMsg.text = @"some random description to fil the screen";
-    
     IFTTTAngleAnimation *firstImageViewAnimation = [IFTTTAngleAnimation animationWithView:self.fourthImageView];
     [firstImageViewAnimation addKeyFrames:@[
                                             [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andAngle:(CGFloat)(M_PI/2)],
@@ -187,7 +196,7 @@
     
     IFTTTFrameAnimation *fourthImageViewFrameAnimation = [IFTTTFrameAnimation animationWithView:self.fourthImageView];
     [fourthImageViewFrameAnimation addKeyFrames:@[[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andFrame:CGRectOffset(self.fourthImageView.frame, 180, 0)],
-                                                 [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andFrame:CGRectOffset(self.fourthImageView.frame, 0, 0)],
+                                                  [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andFrame:CGRectOffset(self.fourthImageView.frame, 0, 0)],
                                                   [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(5) andFrame:CGRectOffset(self.fourthImageView.frame, -180, 0)]]];
     [self.onBoardingAnimator addAnimation:firstImageViewAnimation];
     [self.onBoardingAnimator addAnimation:fourthImageViewFrameAnimation];
@@ -222,11 +231,6 @@
             self.mainScrollView.scrollEnabled = NO;
         }
     }
-}
-
-- (void)animateMainScrollView
-{
-    
 }
 
 - (IBAction)onLoginBtn

@@ -13,7 +13,7 @@
 -(void)updateWithDictionary:(NSDictionary *)jsonDic
 {
     self.name            = [jsonDic stringForKey:@"name"];
-    self.description     = [jsonDic stringForKey:@"description"];
+    self.teamDescription     = [jsonDic stringForKey:@"description"];
     self.iconURL         = [jsonDic stringForKey:@"icon_url"];
     self.teamID          = [jsonDic numberForKey:@"id"];
 

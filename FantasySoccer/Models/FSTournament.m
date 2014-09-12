@@ -14,6 +14,6 @@
 {
     self.tournamentID  = [jsonDic numberForKey:@"id"];
     self.title = [jsonDic stringForKey:@"title"];
-    self.description = [jsonDic stringForKey:@"description"];
+    self.tournamentDescription = [jsonDic stringForKey:@"description"];
 }
 @end

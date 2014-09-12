@@ -39,7 +39,7 @@
     self.lblBetPoints.font = bettingsFont;
     self.bettingsView.hidden = FALSE;
     
-    UIFont *titleFont = [UIFont neutraTextLightFontNameOfSize:18];
+    UIFont *titleFont = [UIFont neutraTextLightFontNameOfSize:16];
     self.lblTeamOne.font = titleFont;
     self.lblTeamTwo.font = titleFont;
     self.lblDays.font = [UIFont neutraTextLightFontNameOfSize:12];

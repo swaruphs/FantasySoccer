@@ -15,6 +15,7 @@
     #import <Foundation/Foundation.h>
     #import <SystemConfiguration/SystemConfiguration.h>
     #import <MobileCoreServices/MobileCoreServices.h>
+    #import <Parse/Parse.h>
 
 
 
@@ -57,6 +58,7 @@
 #import "FSCredentialsManager.h"
 #import "FSBettingsManager.h"
 #import "FSRefreshModelManager.h"
+#import "FSTrackEventManager.h"
 
 // vendors
 
@@ -151,12 +153,16 @@
 #if STAGING
 
 #define API_SERVER_HOST  @"http://worldcup2359.herokuapp.com"
+#define PARSE_APPID @"kHfDYOwULvY4reMM9YlN6co9001aYh3K9fBNVbR6"
+#define PARSE_CLIENTKEY @"vMUENCY1v8bXKPpak74fXoN0PNRoO9V9BpEDr75t"
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #else
 
 static const int ddLogLevel = LOG_LEVEL_ERROR;
 #define API_SERVER_HOST  @"http://worldcup2359.herokuapp.com"
+#define PARSE_APPID @"gqFBg8Zt6RuxkslhT7TQ075M06UeTe0e4chKlDW9"
+#define PARSE_CLIENTKEY @"uLXbsuuhxjD6ahcVzWMVgXpFJeH1csCpJ7Sa4aq3"
 
 #endif
 

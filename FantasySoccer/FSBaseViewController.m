@@ -90,6 +90,7 @@
 {
     [self populateData];
 }
+
 /*
 #pragma mark - Navigation
 
@@ -99,6 +100,14 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+*/- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)trackEvent:(NSString *)name WithDictionary:(NSDictionary *)trackDic
+{
+    [PFAnalytics trackEvent:name dimensions:trackDic];
+}
 
 @end

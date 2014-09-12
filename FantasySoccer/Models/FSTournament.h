@@ -10,9 +10,8 @@
 
 @interface FSTournament : FSBaseModel
 
-@property (nonatomic, retain) NSNumber *tournamentID;
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *description;
-
+@property (nonatomic, strong) NSNumber *tournamentID;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *tournamentDescription;
 
 @end

@@ -38,6 +38,7 @@
 		0714458719503E5D00572633 /* NSString+FSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714458619503E5D00572633 /* NSString+FSAdditions.m */; };
 		07200643194D676400A77D2F /* UIImage+BlurAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07200640194D676400A77D2F /* UIImage+BlurAdditions.m */; };
 		07200644194D676400A77D2F /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 07200642194D676400A77D2F /* UIImage+ImageEffects.m */; };
+		0726D2261979047200EE9F2F /* launcher_320X480.png in Resources */ = {isa = PBXBuildFile; fileRef = 0726D2251979047200EE9F2F /* launcher_320X480.png */; };
 		072FC3AC194ED11600BC09F0 /* FSResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072FC3AB194ED11600BC09F0 /* FSResultsViewController.m */; };
 		072FC3B2194EDC5600BC09F0 /* FSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072FC3B1194EDC5600BC09F0 /* FSBaseViewController.m */; };
 		072FC3B4194EDE1F00BC09F0 /* FSResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 072FC3B3194EDE1F00BC09F0 /* FSResultsViewController.xib */; };
@@ -66,6 +67,16 @@
 		07315B041947F44900529D4E /* FantasySoccer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07315AFF1947F44900529D4E /* FantasySoccer-Info.plist */; };
 		07315B051947F44900529D4E /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315B021947F44900529D4E /* FSAppDelegate.m */; };
 		07315B061947F44900529D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07315B031947F44900529D4E /* main.m */; };
+		073541A619C2CCF4002D55F2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073541A419C2CCF4002D55F2 /* Parse.framework */; };
+		073541A819C2CD10002D55F2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073541A719C2CD10002D55F2 /* AudioToolbox.framework */; };
+		073541AA19C2CD21002D55F2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073541A919C2CD21002D55F2 /* CFNetwork.framework */; };
+		073541AC19C2CD2E002D55F2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073541AB19C2CD2E002D55F2 /* CoreLocation.framework */; };
+		073541AE19C2CD36002D55F2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 073541AD19C2CD36002D55F2 /* libz.dylib */; };
+		073541B019C2CD43002D55F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073541AF19C2CD43002D55F2 /* QuartzCore.framework */; };
+		073541B219C2CD4A002D55F2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073541B119C2CD4A002D55F2 /* Security.framework */; };
+		073541B419C2CD53002D55F2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073541B319C2CD53002D55F2 /* StoreKit.framework */; };
+		073541B619C2D12D002D55F2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073541B519C2D12D002D55F2 /* Social.framework */; };
+		073541B919C2D771002D55F2 /* FSTrackEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 073541B819C2D771002D55F2 /* FSTrackEventManager.m */; };
 		0749BF4B1952732C00E4B7C4 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 0749BF411952732C00E4B7C4 /* iTunesArtwork */; };
 		0749BF4C1952732C00E4B7C4 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */; };
 		07576083194D966800904291 /* FSBettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07576082194D966800904291 /* FSBettingsView.m */; };
@@ -186,6 +197,7 @@
 		07200640194D676400A77D2F /* UIImage+BlurAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurAdditions.m"; sourceTree = "<group>"; };
 		07200641194D676400A77D2F /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		07200642194D676400A77D2F /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		0726D2251979047200EE9F2F /* launcher_320X480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher_320X480.png; sourceTree = "<group>"; };
 		072FC3AA194ED11600BC09F0 /* FSResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSResultsViewController.h; sourceTree = "<group>"; };
 		072FC3AB194ED11600BC09F0 /* FSResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSResultsViewController.m; sourceTree = "<group>"; };
 		072FC3B0194EDC5600BC09F0 /* FSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseViewController.h; sourceTree = "<group>"; };
@@ -233,6 +245,18 @@
 		07315B011947F44900529D4E /* FSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
 		07315B021947F44900529D4E /* FSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
 		07315B031947F44900529D4E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		073541A219C2B3EC002D55F2 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		073541A419C2CCF4002D55F2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		073541A719C2CD10002D55F2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		073541A919C2CD21002D55F2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		073541AB19C2CD2E002D55F2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		073541AD19C2CD36002D55F2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		073541AF19C2CD43002D55F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		073541B119C2CD4A002D55F2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		073541B319C2CD53002D55F2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		073541B519C2D12D002D55F2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		073541B719C2D771002D55F2 /* FSTrackEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTrackEventManager.h; sourceTree = "<group>"; };
+		073541B819C2D771002D55F2 /* FSTrackEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTrackEventManager.m; sourceTree = "<group>"; };
 		0749BF411952732C00E4B7C4 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = FantasySoccer/Images/iTunesArtwork; sourceTree = "<group>"; };
 		0749BF421952732C00E4B7C4 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "FantasySoccer/Images/iTunesArtwork@2x"; sourceTree = "<group>"; };
 		07576081194D966800904291 /* FSBettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBettingsView.h; sourceTree = "<group>"; };
@@ -354,11 +378,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073541B619C2D12D002D55F2 /* Social.framework in Frameworks */,
+				0787BA5E1949A55700BF03DD /* SystemConfiguration.framework in Frameworks */,
+				073541B419C2CD53002D55F2 /* StoreKit.framework in Frameworks */,
+				073541B219C2CD4A002D55F2 /* Security.framework in Frameworks */,
+				073541B019C2CD43002D55F2 /* QuartzCore.framework in Frameworks */,
+				0787BA601949A68000BF03DD /* MobileCoreServices.framework in Frameworks */,
+				073541AE19C2CD36002D55F2 /* libz.dylib in Frameworks */,
+				073541AC19C2CD2E002D55F2 /* CoreLocation.framework in Frameworks */,
+				07FC459A1946AA56005640AF /* CoreGraphics.framework in Frameworks */,
+				073541AA19C2CD21002D55F2 /* CFNetwork.framework in Frameworks */,
+				073541A819C2CD10002D55F2 /* AudioToolbox.framework in Frameworks */,
 				0706DD90194B0408007F3D07 /* SDWebImage.framework in Frameworks */,
 				07A0535E194AB16300E58825 /* ImageIO.framework in Frameworks */,
-				0787BA601949A68000BF03DD /* MobileCoreServices.framework in Frameworks */,
-				0787BA5E1949A55700BF03DD /* SystemConfiguration.framework in Frameworks */,
-				07FC459A1946AA56005640AF /* CoreGraphics.framework in Frameworks */,
+				073541A619C2CCF4002D55F2 /* Parse.framework in Frameworks */,
 				07315AFD1947F43E00529D4E /* FacebookSDK.framework in Frameworks */,
 				07FC459C1946AA56005640AF /* UIKit.framework in Frameworks */,
 				07FC45981946AA56005640AF /* Foundation.framework in Frameworks */,
@@ -528,6 +561,7 @@
 		07315B071947F45700529D4E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0726D2251979047200EE9F2F /* launcher_320X480.png */,
 				07123063196FC0730074EE38 /* back_btn.png */,
 				07123048196F93550074EE38 /* bg_drawer@2x.png */,
 				0712304A196F93550074EE38 /* bg_onboarding@2x.png */,
@@ -587,6 +621,7 @@
 		07C83B281948063600C2D00F /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				073541A219C2B3EC002D55F2 /* SVProgressHUD-Prefix.pch */,
 				07C83B291948063600C2D00F /* SVProgressHUD.bundle */,
 				07C83B2A1948063600C2D00F /* SVProgressHUD.h */,
 				07C83B2B1948063600C2D00F /* SVProgressHUD.m */,
@@ -615,6 +650,8 @@
 				0714457E194FE6CB00572633 /* FSBettingsManager.m */,
 				07144582195037B300572633 /* FSRefreshModelManager.h */,
 				07144583195037B300572633 /* FSRefreshModelManager.m */,
+				073541B719C2D771002D55F2 /* FSTrackEventManager.h */,
+				073541B819C2D771002D55F2 /* FSTrackEventManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -749,6 +786,15 @@
 		07FC45961946AA56005640AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				073541B519C2D12D002D55F2 /* Social.framework */,
+				073541B319C2CD53002D55F2 /* StoreKit.framework */,
+				073541B119C2CD4A002D55F2 /* Security.framework */,
+				073541AF19C2CD43002D55F2 /* QuartzCore.framework */,
+				073541AD19C2CD36002D55F2 /* libz.dylib */,
+				073541AB19C2CD2E002D55F2 /* CoreLocation.framework */,
+				073541A919C2CD21002D55F2 /* CFNetwork.framework */,
+				073541A719C2CD10002D55F2 /* AudioToolbox.framework */,
+				073541A419C2CCF4002D55F2 /* Parse.framework */,
 				07A0535D194AB16300E58825 /* ImageIO.framework */,
 				0787BA5F1949A68000BF03DD /* MobileCoreServices.framework */,
 				0787BA5D1949A55700BF03DD /* SystemConfiguration.framework */,
@@ -859,7 +905,7 @@
 				ORGANIZATIONNAME = "2359 Media";
 				TargetAttributes = {
 					07FC45931946AA56005640AF = {
-						DevelopmentTeam = JC446XCS92;
+						DevelopmentTeam = BXU3B85A8F;
 					};
 					07FC45AE1946AA56005640AF = {
 						TestTargetID = 07FC45931946AA56005640AF;
@@ -917,6 +963,7 @@
 				072FC3B8194EF6B200BC09F0 /* bg_matches@2x.png in Resources */,
 				072FC3BA194EFBEC00BC09F0 /* NeutraText-Bold.otf in Resources */,
 				07315AF31947F43E00529D4E /* FSLoginViewController.xib in Resources */,
+				0726D2261979047200EE9F2F /* launcher_320X480.png in Resources */,
 				0706DD89194B02A5007F3D07 /* arrow_up@2x.png in Resources */,
 				0712305C196F93550074EE38 /* bg_text@2x.png in Resources */,
 				0706DDD9194B060D007F3D07 /* NeutraText-Light.otf in Resources */,
@@ -981,6 +1028,7 @@
 				07315AF51947F43E00529D4E /* AFHTTPClient.m in Sources */,
 				077601FE19542179006118C1 /* DDTTYLogger.m in Sources */,
 				07DE6D0419486A6700CF9563 /* NSObject+Additions.m in Sources */,
+				073541B919C2D771002D55F2 /* FSTrackEventManager.m in Sources */,
 				0787BA561949880700BF03DD /* FSUserProfile.m in Sources */,
 				077601FC19542179006118C1 /* CLIColor.m in Sources */,
 				07DE131B19669A5300DFF492 /* IFTTTAnimator.m in Sources */,
@@ -1098,7 +1146,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				BUNDLE_ID = com.2359media.soccerfantasy.staging;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1112,7 +1161,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "15FCC95F-6BD5-4736-AA35-A64A20915EDD";
+				PROVISIONING_PROFILE = "73d6a357-c08e-45fc-85d4-84230ce95397";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Production;
@@ -1176,7 +1225,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				BUNDLE_ID = com.2359media.soccerfantasy.staging;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1190,7 +1240,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "15FCC95F-6BD5-4736-AA35-A64A20915EDD";
+				PROVISIONING_PROFILE = "73d6a357-c08e-45fc-85d4-84230ce95397";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Staging;
@@ -1288,7 +1338,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				BUNDLE_ID = com.2359media.soccerfantasy.staging;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 2359 Media Pte Ltd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1301,7 +1352,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "15FCC95F-6BD5-4736-AA35-A64A20915EDD";
+				PROVISIONING_PROFILE = "73d6a357-c08e-45fc-85d4-84230ce95397";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1311,7 +1362,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: swarup santhanakrishnan (CDPU9P7FY2)";
+				BUNDLE_ID = com.2359media.soccerfantasy;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dynamic Unitrade Sdn Bhd (JC446XCS92)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1324,7 +1376,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Soccer Fantasy";
-				PROVISIONING_PROFILE = "15FCC95F-6BD5-4736-AA35-A64A20915EDD";
+				PROVISIONING_PROFILE = "8DF503A1-C345-41AF-AB7A-9B9925B09EAD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -10,7 +10,7 @@
 
 @interface FSMatch : FSBaseModel
 
-@property (nonatomic,retain) NSString * description;
+@property (nonatomic,retain) NSString * matchDescription;
 @property (nonatomic, retain) NSNumber * matchID;
 @property (nonatomic, retain) NSNumber * lTeamID;
 @property (nonatomic, strong) NSNumber * lTeamScore;

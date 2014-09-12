@@ -14,7 +14,7 @@
 - (void)updateWithDictionary:(NSDictionary *)jsonDic
 {
     self.matchID = [jsonDic numberForKey:@"id"];
-    self.description = [jsonDic stringForKey:@"description"];
+    self.matchDescription = [jsonDic stringForKey:@"description"];
     self.lTeamID = [jsonDic numberForKey:@"lteam_id"];
     self.lTeamScore = [jsonDic numberForKey:@"lscore"];
     self.published = [jsonDic numberForKey:@"published"];

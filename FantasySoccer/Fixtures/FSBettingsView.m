@@ -170,7 +170,7 @@
     }
     
     self.points = self.points /10;
-    self.lblValue.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithInt:self.points]];
+    self.lblValue.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithInt:(int)self.points]];
 }
 - (void)addNumberToDisplay:(NSUInteger)points
 {
@@ -179,7 +179,7 @@
     }
     
     NSUInteger value  = self.points *10 + points;
-    if (value < self.userPoints) {
+    if (value <= self.userPoints) {
         self.points = value;
        self.lblValue.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithInteger:value]];
     }

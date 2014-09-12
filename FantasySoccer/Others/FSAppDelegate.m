@@ -13,6 +13,7 @@
 #import "DDLog.h"
 
 
+
 @interface FSAppDelegate()
 
 @property (nonatomic, strong) UIImageView *splashImageView;
@@ -27,13 +28,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [self setUpLogger];
+    [self setUpProgressView];
+    [self setUpAnalytics];
     
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
-    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:LOG_FLAG_DEBUG];
-    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:nil forFlag:LOG_FLAG_INFO];
+    // track app with launching options.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
-        // Override point for customization after application launch.
+    // Override point for customization after application launch.
     
     BOOL alreadyLoggedIn = [[FSCredentialsManager sharedInstance] isFirstTimeLogin];
     if (!alreadyLoggedIn) {
@@ -55,6 +58,27 @@
     return YES;
 }
 
+- (void)setUpProgressView
+{
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithRed:47/255.0f green:47/255.0f blue:47/255.0f alpha:1.0]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    
+}
+
+- (void)setUpLogger
+{
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:LOG_FLAG_DEBUG];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor greenColor] backgroundColor:nil forFlag:LOG_FLAG_INFO];
+}
+
+
+- (void)setUpAnalytics
+{
+    [Parse setApplicationId:@"kHfDYOwULvY4reMM9YlN6co9001aYh3K9fBNVbR6"
+                  clientKey:@"vMUENCY1v8bXKPpak74fXoN0PNRoO9V9BpEDr75t"];
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -141,6 +165,8 @@
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     [[FSUserManager sharedInstance] getPlayerProfileWithSuccess:^(FSUserProfile *userProfile) {
         [SVProgressHUD dismiss];
+        
+        [[FSTrackEventManager sharedInstance] trackEventWithName:@"Login" withDimensions:@{@"name":userProfile.userName}];
         [self showMainView];
         
     } failure:^(NSError *error) {

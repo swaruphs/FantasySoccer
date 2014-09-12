@@ -302,16 +302,16 @@ void (^errorBlock)(NSError *error);
     if (self.previousIndexpath && indexPath.row == self.previousIndexpath.row) {
         self.previousIndexpath = nil;
     }
+    else if(self.userPoints <= 0){
+        [SVProgressHUD showErrorWithStatus:@"Sorry, you are out of points to guess"];
+        return;
+    }
     else if([match.startTime compare:[NSDate date]] == NSOrderedAscending) {
         [SVProgressHUD showErrorWithStatus:@"Sorry, the match has begun"];
         return;
     }
     else if(match.bettings) {
         [self displayBettingsViewWithSelection:match.bettings.selection andData:self.dataArray[indexPath.row]];
-    }
-    else if(self.userPoints <= 0){
-        [SVProgressHUD showErrorWithStatus:@"Sorry, you are out of points to guess"];
-        return;
     }
     else {
         self.previousIndexpath = indexPath;

@@ -153,8 +153,8 @@
 #if STAGING
 
 #define API_SERVER_HOST  @"http://worldcup2359.herokuapp.com"
-#define PARSE_APPID @"kHfDYOwULvY4reMM9YlN6co9001aYh3K9fBNVbR6"
-#define PARSE_CLIENTKEY @"vMUENCY1v8bXKPpak74fXoN0PNRoO9V9BpEDr75t"
+//#define PARSE_APPID @"kHfDYOwULvY4reMM9YlN6co9001aYh3K9fBNVbR6"
+//#define PARSE_CLIENTKEY @"vMUENCY1v8bXKPpak74fXoN0PNRoO9V9BpEDr75t"
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #else
